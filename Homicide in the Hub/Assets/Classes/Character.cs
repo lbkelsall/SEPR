@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-abstract public class Character {
+abstract public class Character : MonoBehaviour {
 	private string characterID;
 	private Sprite sprite;
 
