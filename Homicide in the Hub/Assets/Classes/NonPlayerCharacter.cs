@@ -4,12 +4,8 @@ using System.Collections;
 public class NonPlayerCharacter : Character {
 
 	// Use this for initialization
-	void Start () {
+	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname) :  base(characterID, sprite, nickname) {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
