@@ -46,7 +46,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Classes\Character.cs" />
+     <Compile Include="Assets\Classes\Clue.cs" />
+     <Compile Include="Assets\Classes\Item.cs" />
+     <Compile Include="Assets\Classes\NonPlayerCharacter.cs" />
      <Compile Include="Assets\Classes\PlayerCharacter.cs" />
+     <Compile Include="Assets\Classes\Scene.cs" />
+     <Compile Include="Assets\Classes\VerbalClue.cs" />
+     <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SettingsManager.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
