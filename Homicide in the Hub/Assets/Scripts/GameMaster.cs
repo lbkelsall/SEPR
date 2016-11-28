@@ -8,18 +8,20 @@ public class GameMaster : MonoBehaviour {
 	private NonPlayerCharacter[] characters;
 	private Item[] items; 
 	private Scene[] scenes;
+	private PlayerCharacter currentCharacter;
 
-	//Detecive variable declaration
-	public Sprite chaseHunterSprite;
-	public Sprite johnnySlickSprite;
-	public Sprite adamFounderSprite;
-	private PlayerCharacter chaseHunter;
-	private PlayerCharacter johnnySlick;
-	private PlayerCharacter adamFounder;
+
 
 	//NPC variable declaration
 
+	public PlayerCharacter getCurrentCharacter(){
+		return currentCharacter;
+	}
 
+	public void setCurrentCharacter(PlayerCharacter detective){
+		currentCharacter = detective; 
+	}
+		
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -32,9 +34,7 @@ public class GameMaster : MonoBehaviour {
 
 	void InitGame(){
 		//Create Detectives 
-		chaseHunter = new PlayerCharacter ("Chase Hunter", chaseHunterSprite, "The Loose Cannon", "Aggressive", "An ill tempered detective who will do whatever it takes to get to the bottom of a crime." );
-		johnnySlick = new PlayerCharacter ("Johnny Slick", johnnySlickSprite, "The Greaseball", "Wisecracking", "A witty detective who finds the comedic value in everything... even death apparently." );
-		adamFounder = new PlayerCharacter ("Adam Founder", adamFounderSprite, "Good Cop", "By the Book", "A by the book cop who uses proper detective techniques to solve mysteries" );
+
 
 		//Create NPC's
 
