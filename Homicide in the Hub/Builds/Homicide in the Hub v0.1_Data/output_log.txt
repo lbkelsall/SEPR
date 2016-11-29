@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/
 Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data/Mono'
 Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55403
-Multi-casting "[IP] 10.240.111.169 [Port] 55403 [Flags] 2 [Guid] 2859061953 [EditorId] 1997734188 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [10.240.111.169:55403]
+PlayerConnection initialized network socket : 0.0.0.0 55316
+Multi-casting "[IP] 192.168.1.119 [Port] 55316 [Flags] 2 [Guid] 591417121 [EditorId] 2839905800 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.119:55316]
 Initialize engine version: 5.4.3f1 (01f4c123905a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,21 +23,21 @@ Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SE
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.091 seconds
+- Completed reload, in  0.092 seconds
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.088348 ms
+UnloadTime: 1.112034 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.151443 ms
-System memory in use before: 16.2 MB.
-System memory in use after: 16.2 MB.
+UnloadTime: 3.841788 ms
+System memory in use before: 16.3 MB.
+System memory in use after: 16.3 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 297.
-Total: 0.516343 ms (FindLiveObjects: 0.031185 ms CreateObjectMapping: 0.027633 ms MarkObjects: 0.356466 ms  DeleteObjects: 0.100268 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 324.
+Total: 0.395547 ms (FindLiveObjects: 0.039870 ms CreateObjectMapping: 0.020132 ms MarkObjects: 0.288173 ms  DeleteObjects: 0.045791 ms)
 
 Adam Founder
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -62,13 +62,68 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/GameMaster.cs Line: 31)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.844388 ms
-System memory in use before: 16.4 MB.
-System memory in use after: 16.4 MB.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.680168 ms
+System memory in use before: 16.7 MB.
+System memory in use after: 16.7 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 265.
-Total: 0.279883 ms (FindLiveObjects: 0.023685 ms CreateObjectMapping: 0.014211 ms MarkObjects: 0.196589 ms  DeleteObjects: 0.044607 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 729.
+Total: 0.707801 ms (FindLiveObjects: 0.050529 ms CreateObjectMapping: 0.031580 ms MarkObjects: 0.603190 ms  DeleteObjects: 0.020922 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.820702 ms
+System memory in use before: 16.6 MB.
+System memory in use after: 16.6 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 661.
+Total: 0.681747 ms (FindLiveObjects: 0.044212 ms CreateObjectMapping: 0.031975 ms MarkObjects: 0.587400 ms  DeleteObjects: 0.016974 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.858994 ms
+System memory in use before: 16.5 MB.
+System memory in use after: 16.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.383310 ms (FindLiveObjects: 0.025659 ms CreateObjectMapping: 0.020132 ms MarkObjects: 0.288173 ms  DeleteObjects: 0.048555 ms)
+
+Johnny Slick
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+GameMaster:AssignDetective(PlayerCharacter) (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\GameMaster.cs:31)
+CharacterSelector:SelectDetective() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\CharacterSelector.cs:62)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:153)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:634)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:769)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:523)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:422)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:410)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:184)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:277)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/GameMaster.cs Line: 31)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.700696 ms
+System memory in use before: 16.7 MB.
+System memory in use after: 16.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 735.
+Total: 0.684511 ms (FindLiveObjects: 0.048555 ms CreateObjectMapping: 0.031185 ms MarkObjects: 0.587795 ms  DeleteObjects: 0.015790 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.791885 ms
+System memory in use before: 16.6 MB.
+System memory in use after: 16.6 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 667.
+Total: 0.684116 ms (FindLiveObjects: 0.043028 ms CreateObjectMapping: 0.031580 ms MarkObjects: 0.590558 ms  DeleteObjects: 0.017764 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2744 -> priority: 1 
+  Thread -> id: 1d60 -> priority: 1 
