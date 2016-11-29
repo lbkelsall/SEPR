@@ -12,6 +12,8 @@ public class InputManager1 : MonoBehaviour {
 	private PlayerMovement playerMovement;
 	void Start () {
 		playerMovement = detective.GetComponent<PlayerMovement>();
+		Time.timeScale = 1; 
+		playerMovement.enabled = true;
 	}
 
 
