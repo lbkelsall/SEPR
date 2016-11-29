@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelector : MonoBehaviour {
 	
@@ -59,7 +60,7 @@ public class CharacterSelector : MonoBehaviour {
 	//Called when the play button is pressed
 	public void SelectDetective(){
 		GameMaster.instance.AssignDetective (detectives [detectiveCounter]);
-		//Launch game
+		SceneManager.LoadScene ("Control Room");
 	}
 
 }

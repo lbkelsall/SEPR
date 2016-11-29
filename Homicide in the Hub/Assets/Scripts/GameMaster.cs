@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
  public class GameMaster : MonoBehaviour {
 
@@ -44,7 +44,26 @@ using System.Collections;
 
 	}
 
-	void AssignItemsToScenes(){
+	//Puts a randomly chosen item in each scene (assumes there's one item for each scene).
+	void AssignItemsToScenes(Item[] itemsArray, Scene[] sceneArray){
 
+		Dictionary<Scene, Item> itemsInSceneDict = new Dictionary<Scene, Item> ();
+		foreach (Scene sceneObject in sceneArray) {
+
+			int randomItemIndex = Random.Range (0, itemsArray.Length);
+			Item randomItem = itemsArray [randomItemIndex];
+
+			itemsInSceneDict.Add (sceneObject, randomItem);
+
+			Item[] newItemsArray = new Item[itemsArray.Length -1];
+			int index = 0;
+			foreach (Item itemObject in itemsArray) {
+				if (itemObject != randomItem) {
+					newItemsArray [index] = itemObject;
+					index++;
+				}
+			}
+			itemsArray = newItemsArray;
+		}
 	}
 }

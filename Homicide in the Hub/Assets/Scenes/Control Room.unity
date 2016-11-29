@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &782701843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -860,6 +860,7 @@ GameObject:
   - 4: {fileID: 1339755209}
   - 114: {fileID: 1339755208}
   - 114: {fileID: 1339755210}
+  - 114: {fileID: 1339755211}
   m_Layer: 0
   m_Name: Local Scripts
   m_TagString: Untagged
@@ -905,6 +906,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baca82ce8670a9c4b815fa578996c604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1339755211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339755207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644af336f8d80614c8ced85ee6083581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 1422320630}
 --- !u!1 &1422320630
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,10 +927,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1422320632}
   - 212: {fileID: 1422320631}
-  - 114: {fileID: 1422320634}
   - 114: {fileID: 1422320633}
   m_Layer: 0
-  m_Name: Chase Hunter with Shades
+  m_Name: Detective
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,17 +999,6 @@ MonoBehaviour:
   - -5.03
   - -3.4
   isFacingRight: 0
---- !u!114 &1422320634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1422320630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1c2acd2d2c6e3241b65c8f867793bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1725111460
 GameObject:
   m_ObjectHideFlags: 0
