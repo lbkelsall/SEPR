@@ -1,25 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameMaster : MonoBehaviour {
+ public class GameMaster : MonoBehaviour {
 
 	//Arrays 
 	public static GameMaster instance = null;
 	private NonPlayerCharacter[] characters;
 	private Item[] items; 
 	private Scene[] scenes;
-	private PlayerCharacter currentCharacter;
-
-
+	private PlayerCharacter playerCharacter;
 
 	//NPC variable declaration
 
-	public PlayerCharacter getCurrentCharacter(){
-		return currentCharacter;
-	}
-
-	public void setCurrentCharacter(PlayerCharacter detective){
-		currentCharacter = detective; 
+	public PlayerCharacter getPlayerCharacter(){
+		return playerCharacter;
 	}
 		
 	void Awake () {  //Makes this a singleton class on awake
@@ -31,6 +25,12 @@ public class GameMaster : MonoBehaviour {
 		DontDestroyOnLoad (gameObject); //Set this to not be destroyed when reloading scene
 		InitGame();
 	}
+
+	public void AssignDetective(PlayerCharacter detective){
+		playerCharacter = detective;
+		Debug.Log (playerCharacter.getCharacterID ());
+	}
+
 
 	void InitGame(){
 		//Create Detectives 

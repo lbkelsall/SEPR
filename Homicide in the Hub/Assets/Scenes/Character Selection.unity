@@ -117,9 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9dfb0e565681141b5c24c8b9367255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseHunterSprite: {fileID: 21300000, guid: fd3f4a9c586bf074b950db62a7b57c01, type: 3}
-  johnnySlickSprite: {fileID: 21300000, guid: 0d1ea491eaa7ac1479ad0f06116d1aa1, type: 3}
-  adamFounderSprite: {fileID: 21300000, guid: 819b24892f4f9ab47acd55eee8a926a7, type: 3}
 --- !u!4 &109830625
 Transform:
   m_ObjectHideFlags: 0
@@ -144,7 +141,7 @@ GameObject:
   - 224: {fileID: 162439857}
   - 114: {fileID: 162439858}
   m_Layer: 5
-  m_Name: Specs
+  m_Name: Questioning Style
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,7 +641,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700608428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430352099}
+        m_MethodName: CycleUpDetectives
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &700608428
@@ -909,7 +917,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1190088973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430352099}
+        m_MethodName: CycleDownDetectives
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1190088973
@@ -979,8 +998,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 195, y: 550}
+  m_AnchoredPosition: {x: -8, y: 0}
+  m_SizeDelta: {x: 228, y: 558.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267716655
 MonoBehaviour:
@@ -1002,8 +1021,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fd3f4a9c586bf074b950db62a7b57c01, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4eebf425057d7ae4ca85d6dc4ea8003c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1123,9 +1142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae30ac171115ec14d8e32d83f2322b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseHunterSprite: {fileID: 21300000, guid: fd3f4a9c586bf074b950db62a7b57c01, type: 3}
-  johnnySlickSprite: {fileID: 21300000, guid: 0d1ea491eaa7ac1479ad0f06116d1aa1, type: 3}
-  adamFounderSprite: {fileID: 21300000, guid: 819b24892f4f9ab47acd55eee8a926a7, type: 3}
+  chaseHunterSprite: {fileID: 21300000, guid: 4eebf425057d7ae4ca85d6dc4ea8003c, type: 3}
+  johnnySlickSprite: {fileID: 21300000, guid: f1bd913fffe6a574494c712e3d8e7581, type: 3}
+  adamFounderSprite: {fileID: 21300000, guid: dc261099e252edd48a8faed2d0d7cf79, type: 3}
+  GUIName: {fileID: 1591449810}
+  GUIImage: {fileID: 1267716655}
+  GUIQuestioningStyle: {fileID: 759005524}
+  GUIDescription: {fileID: 1416811052}
 --- !u!4 &1430352100
 Transform:
   m_ObjectHideFlags: 0
@@ -1671,8 +1694,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadSelectedLevel
+      - m_Target: {fileID: 1430352099}
+        m_MethodName: SelectDetective
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

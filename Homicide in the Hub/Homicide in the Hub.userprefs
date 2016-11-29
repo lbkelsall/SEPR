@@ -2,15 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterSelector.cs">
     <Files>
-      <File FileName="Assets\Classes\Character.cs" Line="25" Column="3" />
-      <File FileName="Assets\Classes\PlayerCharacter.cs" Line="20" Column="2" />
-      <File FileName="Assets\Scripts\GameMaster.cs" Line="13" Column="2" />
+      <File FileName="Assets\Classes\Character.cs" Line="1" Column="1" />
+      <File FileName="Assets\Classes\PlayerCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameMaster.cs" Line="31" Column="49" />
       <File FileName="Assets\Classes\NonPlayerCharacter.cs" Line="1" Column="1" />
       <File FileName="Assets\Classes\Clue.cs" Line="1" Column="1" />
       <File FileName="Assets\Classes\VerbalClue.cs" Line="1" Column="1" />
       <File FileName="Assets\Classes\Item.cs" Line="1" Column="1" />
       <File FileName="Assets\Classes\Scene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterSelector.cs" Line="19" Column="178" />
+      <File FileName="Assets\Scripts\CharacterSelector.cs" Line="61" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterSelector : MonoBehaviour {
-	private PlayerCharacter[] detectives; 
-
+	
 	//Detecive variable declaration
 	public Sprite chaseHunterSprite;
 	public Sprite johnnySlickSprite;
@@ -11,18 +11,55 @@ public class CharacterSelector : MonoBehaviour {
 	private PlayerCharacter chaseHunter;
 	private PlayerCharacter johnnySlick;
 	private PlayerCharacter adamFounder;
+	PlayerCharacter[] detectives;
+
+	//GUI References
+	public Text GUIName;
+	public Image GUIImage;
+	public Text GUIQuestioningStyle;
+	public Text GUIDescription;
+	private int detectiveCounter = 0;
+
 
 	// Use this for initialization
 	void Start () {
 		chaseHunter = new PlayerCharacter ("Chase Hunter", chaseHunterSprite, "The Loose Cannon", "Aggressive", "An ill tempered detective who will do whatever it takes to get to the bottom of a crime." );
 		johnnySlick = new PlayerCharacter ("Johnny Slick", johnnySlickSprite, "The Greaseball", "Wisecracking", "A witty detective who finds the comedic value in everything... even death apparently." );
 		adamFounder = new PlayerCharacter ("Adam Founder", adamFounderSprite, "Good Cop", "By the Book", "A by the book cop who uses proper detective techniques to solve mysteries" );
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		detectives =  new PlayerCharacter[3] {chaseHunter, johnnySlick, adamFounder};
+		ChangeDetective(); //Sets first detective to be viewed in GUI
 	}
 
+	//Called when right button is pressed
+	public void CycleUpDetectives(){
+		detectiveCounter += 1;
+		if (detectiveCounter >= 3) {
+			detectiveCounter = 0;
+		}
+		ChangeDetective();
+	}
+
+	//Called when left button is pressed
+	public void CycleDownDetectives(){
+		detectiveCounter -= 1;
+		if (detectiveCounter <= -1) {
+			detectiveCounter = 2;
+		}
+		ChangeDetective();
+	}
+
+	//Updates the GUI with the selected detective
+	private void ChangeDetective(){
+		GUIName.text = detectives[detectiveCounter].getCharacterID ();
+		GUIImage.sprite =  detectives[detectiveCounter].getSprite ();
+		GUIQuestioningStyle.text =  "Questioning Style: "+detectives[detectiveCounter].getQuestioningStyle ();
+		GUIDescription.text = detectives [detectiveCounter].getDescription ();
+	}
+
+	//Called when the play button is pressed
+	public void SelectDetective(){
+		GameMaster.instance.AssignDetective (detectives [detectiveCounter]);
+		//Launch game
+	}
 
 }
