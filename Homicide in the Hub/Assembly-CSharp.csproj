@@ -52,6 +52,7 @@
      <Compile Include="Assets\Classes\PlayerCharacter.cs" />
      <Compile Include="Assets\Classes\Scene.cs" />
      <Compile Include="Assets\Classes\VerbalClue.cs" />
+     <Compile Include="Assets\Scripts\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\CharacterSelector.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\InputManager1.cs" />

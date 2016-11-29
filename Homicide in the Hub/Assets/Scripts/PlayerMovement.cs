@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0)) {
 			targetPosition= Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Debug.Log (targetPosition);
 			spriteRenderer.flipX = (targetPosition.x < transform.position.x);
 		}
 		//Boundaries for movement
