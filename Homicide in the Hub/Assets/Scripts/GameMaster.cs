@@ -10,12 +10,32 @@ using System.Collections.Generic;
 	private Scene[] scenes;
 	private PlayerCharacter playerCharacter;
 
-	//NPC variable declaration
+	//MPC Sprites
+	public Sprite pirateSprite;
+	public Sprite mimesSprite;
+	public Sprite millionaireSprite;
+	public Sprite cowgirlSprite;
+	public Sprite romanSprite;
+	public Sprite wizardSprite;
 
-	public PlayerCharacter getPlayerCharacter(){
-		return playerCharacter;
-	}
-		
+	//NPC variable declaration
+	private NonPlayerCharacter pirate;
+	private NonPlayerCharacter mimes;
+	private NonPlayerCharacter millionaire;
+	private NonPlayerCharacter cowgirl;
+	private NonPlayerCharacter roman; 
+	private NonPlayerCharacter wizard;
+
+	//Scene declaration
+	private Scene controlRoom;
+	private Scene kitchen;
+	private Scene lectureTheatre;
+	private Scene lakehouse;
+	private Scene islandOfInteraction;
+	private Scene roof;
+	private Scene atrium;
+	private Scene undergroundLab;
+
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -23,25 +43,35 @@ using System.Collections.Generic;
 			Destroy (gameObject);
 		}
 		DontDestroyOnLoad (gameObject); //Set this to not be destroyed when reloading scene
-		InitGame();
 	}
 
-	public void AssignDetective(PlayerCharacter detective){
-		playerCharacter = detective;
-		Debug.Log (playerCharacter.getCharacterID ());
+	void Start(){
+		//Defining NPC's
+		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog");
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly");
+		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags");
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw");
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire");
+		wizard = new NonPlayerCharacter("Randolf the Light Blue",wizardSprite,"Dodgy Dealer");
+		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
+
+		//Defining Scenes
+		controlRoom = new Scene("Control Room");
+		kitchen = new Scene("Kitchen");
+		lectureTheatre = new Scene("Lecture Theatre");
+		lakehouse = new Scene("Lakehouse");
+		islandOfInteraction = new Scene("Island Of Interaction");
+		roof = new Scene ("Roof");
+		atrium = new Scene("Atrium");
+		undergroundLab = new Scene("Underground Lab");
+		scenes = new Scene[8] {controlRoom,kitchen,lectureTheatre,lakehouse,islandOfInteraction,roof,atrium,undergroundLab};
+
+		AssignNPCsToScenes (characters,scenes);
+
 	}
 
-
-	void InitGame(){
-		//Create Detectives 
-
-
-		//Create NPC's
-
-	}
-
-	void AssignNPCsToScenes(){
-
+	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){
+		
 	}
 
 	//Puts a randomly chosen item in each scene (assumes there's one item for each scene).
@@ -65,5 +95,14 @@ using System.Collections.Generic;
 			}
 			itemsArray = newItemsArray;
 		}
+	}
+
+	public void AssignDetective(PlayerCharacter detective){
+		playerCharacter = detective;
+		Debug.Log (playerCharacter.getCharacterID ());
+	}
+
+	public PlayerCharacter GetPlayerCharacter(){
+		return playerCharacter;
 	}
 }

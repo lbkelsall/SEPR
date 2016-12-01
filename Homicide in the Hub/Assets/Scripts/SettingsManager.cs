@@ -15,11 +15,9 @@ public class SettingsManager : MonoBehaviour {
     public AudioMixer masterMixer;
 
     public Resolution[] resolutions;
-   // public GameSettings gameSettings;
 
     void OnEnable()
     {
-        //gameSettings = new GameSettings();
         fullscreenToggle.onValueChanged.AddListener(delegate { OnFullscreenToggle(); });
         textureQualityDropdown.onValueChanged.AddListener(delegate { OnTextureQualityChange(); });
         vSyncDropdown.onValueChanged.AddListener(delegate { OnVSyncChange(); });

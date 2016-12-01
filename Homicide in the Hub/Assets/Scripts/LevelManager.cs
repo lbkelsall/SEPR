@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Start() {
 		playerSpriteRenderer = playerObject.GetComponent<SpriteRenderer> ();
-		detective = GameMaster.instance.getPlayerCharacter(); 
+		detective = GameMaster.instance.GetPlayerCharacter(); 
 		playerSpriteRenderer.sprite = detective.getSprite ();
 	}
 }
