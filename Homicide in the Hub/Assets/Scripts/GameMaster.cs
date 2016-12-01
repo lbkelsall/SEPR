@@ -66,12 +66,17 @@ using System.Collections.Generic;
 		undergroundLab = new Scene("Underground Lab");
 		scenes = new Scene[8] {controlRoom,kitchen,lectureTheatre,lakehouse,islandOfInteraction,roof,atrium,undergroundLab};
 
-		AssignNPCsToScenes (characters,scenes);
-
 	}
 
 	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){
-		
+		int sceneCounter = 0;
+		Shuffle (characters);
+
+		foreach (NonPlayerCharacter character in characters){
+			scenes [sceneCounter].AddToArray (character);
+			sceneCounter += 1;
+		}
+
 	}
 
 	//Puts a randomly chosen item in each scene (assumes there's one item for each scene).
@@ -100,9 +105,29 @@ using System.Collections.Generic;
 	public void AssignDetective(PlayerCharacter detective){
 		playerCharacter = detective;
 		Debug.Log (playerCharacter.getCharacterID ());
+		AssignNPCsToScenes (characters,scenes);
 	}
 
 	public PlayerCharacter GetPlayerCharacter(){
 		return playerCharacter;
+	}
+
+	private void Shuffle<T>(T[] array){ //Based on Fisher-Yates Shuffle
+		int n = array.Length;
+		for (int i = 0; i < n; i++) {
+			int r = i + (int)(Random.Range(0.0f,1.0f) * (n - i));
+			T t = array[r];
+			array[r] = array[i];
+			array[i] = t;
+		}
+	}
+
+	public Scene GetScene(string sceneName){
+		for (int i = 0; i < scenes.Length; i++) {
+			if (scenes [i].GetName () == sceneName) {
+				return scenes [i];
+			} 
+		}
+		return null;
 	}
 }

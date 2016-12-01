@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/
 Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data/Mono'
 Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.1_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55302
-Multi-casting "[IP] 0.0.0.0 [Port] 55302 [Flags] 2 [Guid] 2010483448 [EditorId] 1885498388 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [0.0.0.0:55302]
+PlayerConnection initialized network socket : 0.0.0.0 55471
+Multi-casting "[IP] 192.168.1.119 [Port] 55471 [Flags] 2 [Guid] 821278233 [EditorId] 3537863671 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.119:55471]
 Initialize engine version: 5.4.3f1 (01f4c123905a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,28 +23,28 @@ Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SE
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.070 seconds
+- Completed reload, in  0.077 seconds
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.319677 ms
+UnloadTime: 0.941498 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.058751 ms
-System memory in use before: 16.2 MB.
-System memory in use after: 16.2 MB.
+UnloadTime: 3.778627 ms
+System memory in use before: 16.3 MB.
+System memory in use after: 16.3 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 324.
-Total: 0.385678 ms (FindLiveObjects: 0.031580 ms CreateObjectMapping: 0.024869 ms MarkObjects: 0.280673 ms  DeleteObjects: 0.046581 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 327.
+Total: 0.578715 ms (FindLiveObjects: 0.043423 ms CreateObjectMapping: 0.020132 ms MarkObjects: 0.360414 ms  DeleteObjects: 0.153561 ms)
 
-Adam Founder
+Chase Hunter
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
 UnityEngine.Debug:Log(Object)
-GameMaster:AssignDetective(PlayerCharacter) (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\GameMaster.cs:31)
+GameMaster:AssignDetective(PlayerCharacter) (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\GameMaster.cs:102)
 CharacterSelector:SelectDetective() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\CharacterSelector.cs:62)
 UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:153)
 UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:634)
@@ -60,36 +60,15 @@ UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\builds
 UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:184)
 UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:277)
  
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/GameMaster.cs Line: 31)
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/GameMaster.cs Line: 102)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.729513 ms
+UnloadTime: 0.786358 ms
 System memory in use before: 16.7 MB.
 System memory in use after: 16.7 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 733.
-Total: 0.604375 ms (FindLiveObjects: 0.041054 ms CreateObjectMapping: 0.026448 ms MarkObjects: 0.521475 ms  DeleteObjects: 0.014211 ms)
-
-Load Level:Control Room
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
-UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
-UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.827413 ms
-System memory in use before: 16.6 MB.
-System memory in use after: 16.6 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 717.
-Total: 0.761883 ms (FindLiveObjects: 0.043818 ms CreateObjectMapping: 0.026054 ms MarkObjects: 0.500553 ms  DeleteObjects: 0.190668 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 734.
+Total: 0.814781 ms (FindLiveObjects: 0.056055 ms CreateObjectMapping: 0.031975 ms MarkObjects: 0.708196 ms  DeleteObjects: 0.017369 ms)
 
 Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
@@ -118,7 +97,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
-Scene 'Underground Lab' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
 UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
 UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
@@ -132,7 +111,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
 [C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
 
-Load Level:Underground Lab
+Load Level:Kitchen
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -145,7 +124,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
-Scene 'Roof' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
 UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
 UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
@@ -159,7 +138,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
 [C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
 
-Load Level:Roof
+Load Level:Kitchen
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -172,7 +151,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
-Scene 'Lakehouse' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
 UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
 UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
@@ -186,7 +165,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
 [C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
 
-Load Level:Lakehouse
+Load Level:Kitchen
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -199,7 +178,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
-Scene 'Atrium' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
 UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
 UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
@@ -213,7 +192,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
 [C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
 
-Load Level:Atrium
+Load Level:Kitchen
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -226,7 +205,7 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
-Scene 'Island of Interaction' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
 To add a scene to the build settings use the menu File->Build Settings...
 UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
 UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
@@ -240,7 +219,169 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
 [C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
 
-Load Level:Island of Interaction
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Kitchen' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Kitchen
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
 UnityEngine.Logger:Log(LogType, Object)
@@ -280,13 +421,243 @@ UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\bui
  
 (Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
 
+Scene 'Lecture Theatre' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Lecture Theatre
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Island of Interaction' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Island of Interaction
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Island of Interaction' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Island of Interaction
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Underground Lab' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Underground Lab
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Underground Lab' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Underground Lab
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Scene 'Lakehouse' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+UnityEngine.SceneManagement.SceneManager:LoadSceneAsyncNameIndexInternal(String, Int32, Boolean, Boolean)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String, LoadSceneMode) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:98)
+UnityEngine.SceneManagement.SceneManager:LoadScene(String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\SceneManagerBindings.gen.cs:93)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:10)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+
+[C:/buildslave/unity/build/Runtime/SceneManager/SceneManager.cpp line 532] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/SceneManagerBindings.gen.cs Line: 98)
+
+Load Level:Lakehouse
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Load Level:Control Room
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+TraverseRooms:OnMouseDown() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\TraverseRooms.cs:11)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:18)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:164)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:144)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/TraverseRooms.cs Line: 11)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.810756 ms
+System memory in use before: 16.7 MB.
+System memory in use after: 16.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 727.
+Total: 2.163276 ms (FindLiveObjects: 0.095136 ms CreateObjectMapping: 0.079741 ms MarkObjects: 1.415208 ms  DeleteObjects: 0.570425 ms)
+
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.737408 ms
+UnloadTime: 0.809254 ms
 System memory in use before: 16.6 MB.
 System memory in use after: 16.6 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 670.
-Total: 0.676221 ms (FindLiveObjects: 0.036317 ms CreateObjectMapping: 0.023290 ms MarkObjects: 0.601217 ms  DeleteObjects: 0.014211 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 673.
+Total: 0.675431 ms (FindLiveObjects: 0.039475 ms CreateObjectMapping: 0.025264 ms MarkObjects: 0.592927 ms  DeleteObjects: 0.015790 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.833334 ms
+System memory in use before: 16.5 MB.
+System memory in use after: 16.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 1.472054 ms (FindLiveObjects: 0.080135 ms CreateObjectMapping: 0.097900 ms MarkObjects: 0.977421 ms  DeleteObjects: 0.313438 ms)
+
+Johnny Slick
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+GameMaster:AssignDetective(PlayerCharacter) (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\GameMaster.cs:102)
+CharacterSelector:SelectDetective() (at C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\CharacterSelector.cs:62)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:153)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:634)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:769)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:523)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:422)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:410)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:184)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:277)
+ 
+(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/GameMaster.cs Line: 102)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.727539 ms
+System memory in use before: 16.7 MB.
+System memory in use after: 16.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 751.
+Total: 0.737803 ms (FindLiveObjects: 0.052897 ms CreateObjectMapping: 0.032370 ms MarkObjects: 0.637140 ms  DeleteObjects: 0.013816 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.943472 ms
+System memory in use before: 16.6 MB.
+System memory in use after: 16.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 679.
+Total: 0.699117 ms (FindLiveObjects: 0.043028 ms CreateObjectMapping: 0.031975 ms MarkObjects: 0.605954 ms  DeleteObjects: 0.016974 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 28b4 -> priority: 1 
+  Thread -> id: 1fc8 -> priority: 1 

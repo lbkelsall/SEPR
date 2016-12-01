@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Scene{
 	private string name;
-	private NonPlayerCharacter[] characters;
+	private List<NonPlayerCharacter> characters = new List<NonPlayerCharacter> ();
 	private Item[] items;
 	// Use this for initialization
-	public Scene (string name,NonPlayerCharacter[] characters = null, Item[] items = null) {
+	public Scene (string name, Item[] items = null) {
 		this.name = name;
-		this.characters = characters;
 		this.items = items;
 	}
 
+	public void AddToArray(NonPlayerCharacter character){
+		characters.Add (character);
+	}
+
+	public string GetName(){
+		return this.name;
+	}
+
+	public List<NonPlayerCharacter> GetCharacters(){
+		return this.characters;
+	}
 }

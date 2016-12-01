@@ -117,6 +117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9dfb0e565681141b5c24c8b9367255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pirateSprite: {fileID: 21300000, guid: 7222c83c8d1007d488ac3a5c0d668d15, type: 3}
+  mimesSprite: {fileID: 21300000, guid: d881c6c02f3934943af13111730a3ade, type: 3}
+  millionaireSprite: {fileID: 21300000, guid: fd315da48a232d54cbe2a584ae63f8b3, type: 3}
+  cowgirlSprite: {fileID: 21300000, guid: fb421342b3e89cd49b5fa644bfd3d6ed, type: 3}
+  romanSprite: {fileID: 21300000, guid: b5b8d687849e2d647872e71b91af6dbc, type: 3}
+  wizardSprite: {fileID: 21300000, guid: 7f0114be155eac948901365d1106d0d9, type: 3}
 --- !u!4 &109830625
 Transform:
   m_ObjectHideFlags: 0
