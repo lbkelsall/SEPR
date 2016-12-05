@@ -2,19 +2,25 @@
 using System.Collections;
 
 public class PlayerCharacter : Character {
-	private string questioningStyle;
+	private string[] questioningStyles;
 	private string description;
+	private string overallStyle; 
 
-	public PlayerCharacter(string characterID,Sprite sprite, string nickname,string questioningStyle, string description) :  base(characterID, sprite,nickname) {
-		this.questioningStyle = questioningStyle;
+	public PlayerCharacter(string characterID,Sprite sprite, string nickname,string overallStyle,string[] questioningStyles, string description) :  base(characterID, sprite,nickname) {
+		this.questioningStyles = questioningStyles;
+		this.overallStyle = overallStyle;
 		this.description = description;
 	}
 
-	public string getQuestioningStyle(){
-		return this.questioningStyle;
+	public string[] GetQuestioningStyles(){
+		return this.questioningStyles;
 	}
 
-	public string getDescription(){
+	public string GetOverallQuestioningStyle(){
+		return this.overallStyle;
+	}
+
+	public string GetDescription(){
 		return this.description;
 	}
 }

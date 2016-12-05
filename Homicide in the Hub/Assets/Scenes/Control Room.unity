@@ -1746,6 +1746,7 @@ MonoBehaviour:
   playerObject: {fileID: 1422320630}
   characterSpawnPoints:
   - {fileID: 1709837841}
+  - {fileID: 0}
   sceneName: Control Room
 --- !u!114 &1339755212
 MonoBehaviour:
@@ -1959,8 +1960,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1709837843}
   - 212: {fileID: 1709837842}
+  - 114: {fileID: 1709837844}
   m_Layer: 0
-  m_Name: Billionaire
+  m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1996,7 +1998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8d26f1692cf51784f9cd0714b3790d54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2008,12 +2010,23 @@ Transform:
   m_PrefabInternal: {fileID: 1771192636}
   m_GameObject: {fileID: 1709837841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.27, y: -0.73, z: 0}
-  m_LocalScale: {x: 0.44749686, y: 0.44749686, z: 0.44749686}
+  m_LocalPosition: {x: 6.33, y: -0.89, z: 0}
+  m_LocalScale: {x: 0.6664679, y: 0.6567907, z: 0.25063822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1709837844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709837841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191a0fdb6cbe18048a44dcaf4a54ecca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1725111460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,11 +2170,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.27
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.73
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2191,6 +2204,23 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 21300000, guid: 8d26f1692cf51784f9cd0714b3790d54,
+        type: 3}
+    - target: {fileID: 1000013506057432, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
+      propertyPath: m_Name
+      value: Spawn Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.6664679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6567907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013576239934, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.25063822
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b07071e7a646df6488a9a9ef41fd1d7b, type: 2}

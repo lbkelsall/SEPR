@@ -25,7 +25,6 @@ public class LevelManager : MonoBehaviour {
 		int spawnPointCounter = 0;
 		SpriteRenderer spriteRenderer;
 		foreach (NonPlayerCharacter character in scene.GetCharacters()){
-			Debug.Log (character.getCharacterID());
 			spriteRenderer = characterSpawnPoints [spawnPointCounter].GetComponent<SpriteRenderer> ();
 			spriteRenderer.sprite = character.getSprite ();
 		}

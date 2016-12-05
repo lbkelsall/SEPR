@@ -64,7 +64,7 @@ using System.Collections.Generic;
 		roof = new Scene ("Roof");
 		atrium = new Scene("Atrium");
 		undergroundLab = new Scene("Underground Lab");
-		scenes = new Scene[8] {controlRoom,kitchen,lectureTheatre,lakehouse,islandOfInteraction,roof,atrium,undergroundLab};
+		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab}; //Larger scenes with more spawn points should be placed towards the start. 
 
 	}
 
@@ -72,9 +72,12 @@ using System.Collections.Generic;
 		int sceneCounter = 0;
 		Shuffle (characters);
 
-		foreach (NonPlayerCharacter character in characters){
-			scenes [sceneCounter].AddToArray (character);
-			sceneCounter += 1;
+		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
+			scenes [sceneCounter].AddToArray (character);		//Assign a character to a scene
+			sceneCounter += 1;									//Increment sceneCounter
+			if (sceneCounter > scenes.Length) {					//If the counter is above the number of scenes cycle to the first scene.  
+				sceneCounter = 0;
+			}
 		}
 
 	}
@@ -104,7 +107,6 @@ using System.Collections.Generic;
 
 	public void AssignDetective(PlayerCharacter detective){
 		playerCharacter = detective;
-		Debug.Log (playerCharacter.getCharacterID ());
 		AssignNPCsToScenes (characters,scenes);
 	}
 
