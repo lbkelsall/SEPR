@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CharacterInteraction : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	private NonPlayerCharacter character;
+
+	public void SetCharacter(NonPlayerCharacter character){
+		this.character = character;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void OnMouseDown() {
+		InterrogationScript.instance.SetInterrogationCharacter (character);
+		InterrogationScript.instance.SetReturnScene (SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene ("Interrogation Room");
 	}
 }
+ 

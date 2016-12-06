@@ -11,4 +11,10 @@ public class ButtonScript : MonoBehaviour {
 	public void QuitGame(){
 		Application.Quit ();
 	}
+
+	public void LoadPreviousScene(){
+		string previousScene;
+		previousScene = InterrogationScript.instance.GetReturnScene ();
+		SceneManager.LoadScene (previousScene);
+	}
 }

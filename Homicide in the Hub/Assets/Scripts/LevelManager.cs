@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -7,8 +8,7 @@ public class LevelManager : MonoBehaviour {
 	public GameObject playerObject;
 	private SpriteRenderer playerSpriteRenderer;
 	public GameObject[] characterSpawnPoints;
-	private Scene scene;
-	public string sceneName;
+	public float characterScaling = 1;
 
 	void Start() {
 		//Assign correct detective
@@ -16,17 +16,26 @@ public class LevelManager : MonoBehaviour {
 		detective = GameMaster.instance.GetPlayerCharacter(); 
 		playerSpriteRenderer.sprite = detective.getSprite ();
 
+
+
 		//Get Scene in scene
-		scene = GameMaster.instance.GetScene(sceneName);
-		AssignCharactersToSpawnPoints ();
+		string sceneName = SceneManager.GetActiveScene().name;
+		Scene scene = GameMaster.instance.GetScene(sceneName);
+		AssignCharactersToSpawnPoints (scene);
 	}
 
-	public void AssignCharactersToSpawnPoints(){
+	private void AssignCharactersToSpawnPoints(Scene scene){
+		CharacterInteraction characterInteraction = null;
+		GameObject prefab = null;
 		int spawnPointCounter = 0;
-		SpriteRenderer spriteRenderer;
+
 		foreach (NonPlayerCharacter character in scene.GetCharacters()){
-			spriteRenderer = characterSpawnPoints [spawnPointCounter].GetComponent<SpriteRenderer> ();
-			spriteRenderer.sprite = character.getSprite ();
+			prefab = Instantiate (character.GetPrefab(),characterSpawnPoints [spawnPointCounter].transform.position, Quaternion.identity ) as GameObject;
+			prefab.transform.localScale *= characterScaling; 
+			spawnPointCounter += 1;
+			characterInteraction = prefab.GetComponent<CharacterInteraction> ();
+			characterInteraction.SetCharacter (character);
 		}
+
 	}
 }

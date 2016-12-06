@@ -16,6 +16,10 @@ public class Scene{
 		characters.Add (character);
 	}
 
+	public void ResetArray(){
+		this.characters.Clear ();
+	}
+
 	public string GetName(){
 		return this.name;
 	}

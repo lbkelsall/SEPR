@@ -26,6 +26,14 @@ using System.Collections.Generic;
 	private NonPlayerCharacter roman; 
 	private NonPlayerCharacter wizard;
 
+	public GameObject piratePref;
+	public GameObject mimesPref;
+	public GameObject millionarePref;
+	public GameObject cowgirlPref;
+	public GameObject romanPref;
+	public GameObject wizardPref;
+
+
 	//Scene declaration
 	private Scene controlRoom;
 	private Scene kitchen;
@@ -47,12 +55,12 @@ using System.Collections.Generic;
 
 	void Start(){
 		//Defining NPC's
-		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog");
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly");
-		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags");
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw");
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire");
-		wizard = new NonPlayerCharacter("Randolf the Light Blue",wizardSprite,"Dodgy Dealer");
+		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref);
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref);
+		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref);
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref);
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref);
+		wizard = new NonPlayerCharacter("Randolf the Light Blue",wizardSprite,"Dodgy Dealer",wizardPref);
 		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
 
 		//Defining Scenes
@@ -71,7 +79,9 @@ using System.Collections.Generic;
 	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){
 		int sceneCounter = 0;
 		Shuffle (characters);
-
+		foreach (Scene scene in scenes) { //When starting a new game remove any characters stored in the scene from a prevoius play through. 
+			scene.ResetArray ();
+		}
 		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
 			scenes [sceneCounter].AddToArray (character);		//Assign a character to a scene
 			sceneCounter += 1;									//Increment sceneCounter

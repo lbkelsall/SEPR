@@ -21,6 +21,6 @@ public class PlayerMovement : MonoBehaviour {
 		//Boundaries for movement
 		if ((targetPosition.x > boundaries [0]) && (targetPosition.x < boundaries [1]) && (targetPosition.y > boundaries [2]) && (targetPosition.y < boundaries [3])) {
 			transform.position = Vector3.MoveTowards (transform.position, targetPosition, speed * Time.deltaTime);
-		}
+		} 
 	}    
 }
