@@ -7,9 +7,8 @@ public class Scene{
 	private List<NonPlayerCharacter> characters = new List<NonPlayerCharacter> ();
 	private List<Item> items = new List<Item> ();
 	// Use this for initialization
-	public Scene (string name, Item[] items = null) {
+	public Scene (string name) {
 		this.name = name;
-		this.items = items;
 	}
 
 	public void AddNPCToArray(NonPlayerCharacter character){

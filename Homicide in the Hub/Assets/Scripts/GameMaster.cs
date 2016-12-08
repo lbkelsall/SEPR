@@ -10,7 +10,7 @@ using System.Collections.Generic;
 	private Scene[] scenes;
 	private PlayerCharacter playerCharacter;
 
-	//MPC Sprites
+	//NPC Sprites
 	public Sprite pirateSprite;
 	public Sprite mimesSprite;
 	public Sprite millionaireSprite;
@@ -61,7 +61,7 @@ using System.Collections.Generic;
 		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref);
 		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref);
 		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref);
-		wizard = new NonPlayerCharacter("Randolf the Light Blue",wizardSprite,"Dodgy Dealer",wizardPref);
+		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref);
 		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
 
 		//Defining Scenes
@@ -75,9 +75,15 @@ using System.Collections.Generic;
 		undergroundLab = new Scene("Underground Lab");
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab}; //Larger scenes with more spawn points should be placed towards the start. 
 
+		//Defining Items
+
+
 		foreach (Scene scene in scenes) {
 			scene.ResetScene ();
 		}	
+
+		AssignNPCsToScenes (characters,scenes);
+		AssignItemsToScenes (items,scenes);
 
 	}
 
@@ -104,11 +110,11 @@ using System.Collections.Generic;
 				sceneIndex = 0;
 			}
 		}
+		Debug.Log (items [0]);
 	}
 
 	public void AssignDetective(PlayerCharacter detective){
 		playerCharacter = detective;
-		AssignNPCsToScenes (characters,scenes);
 	}
 
 	public void AssignMurderer(NonPlayerCharacter[] characters) {

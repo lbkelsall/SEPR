@@ -3,15 +3,16 @@ using System.Collections;
 
 public class Item : Clue {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	private GameObject prefab;
+	private Sprite sprite;
 
-
+	public Item(GameObject prefab, string clueID, string description, Sprite sprite) : base(clueID, description) {
+		this.prefab = prefab;
+		this.sprite = sprite;
+	}
+		
+	public Sprite getSprite(){
+		return this.sprite;
+	}
+		
 }

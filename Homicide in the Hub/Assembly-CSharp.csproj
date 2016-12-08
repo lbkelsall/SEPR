@@ -48,6 +48,7 @@
      <Compile Include="Assets\Classes\Character.cs" />
      <Compile Include="Assets\Classes\Clue.cs" />
      <Compile Include="Assets\Classes\Item.cs" />
+     <Compile Include="Assets\Classes\MurderWeapon.cs" />
      <Compile Include="Assets\Classes\NonPlayerCharacter.cs" />
      <Compile Include="Assets\Classes\PlayerCharacter.cs" />
      <Compile Include="Assets\Classes\Scene.cs" />
