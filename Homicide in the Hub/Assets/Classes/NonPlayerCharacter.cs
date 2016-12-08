@@ -22,4 +22,5 @@ public class NonPlayerCharacter : Character {
 	public GameObject GetPrefab(){
 		return this.prefab;
 	}
+		
 }

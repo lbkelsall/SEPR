@@ -5,19 +5,24 @@ using System.Collections.Generic;
 public class Scene{
 	private string name;
 	private List<NonPlayerCharacter> characters = new List<NonPlayerCharacter> ();
-	private Item[] items;
+	private List<Item> items = new List<Item> ();
 	// Use this for initialization
 	public Scene (string name, Item[] items = null) {
 		this.name = name;
 		this.items = items;
 	}
 
-	public void AddToArray(NonPlayerCharacter character){
+	public void AddNPCToArray(NonPlayerCharacter character){
 		characters.Add (character);
 	}
 
-	public void ResetArray(){
+	public void AddItemToArray(Item item){
+		items.Add (item);
+	}
+
+	public void ResetScene(){
 		this.characters.Clear ();
+		this.items.Clear ();
 	}
 
 	public string GetName(){
