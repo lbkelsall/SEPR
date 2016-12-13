@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-abstract public class Clue : MonoBehaviour {
+abstract public class Clue{
 
 	private string clueID;
 	private string description;

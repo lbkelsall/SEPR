@@ -3,13 +3,8 @@ using System.Collections;
 
 public class VerbalClue : Clue {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	private NonPlayerCharacter owner;
+	public VerbalClue(string clueID, string description,NonPlayerCharacter owner) : base(clueID, description){
+		this.owner = owner;
 	}
 }

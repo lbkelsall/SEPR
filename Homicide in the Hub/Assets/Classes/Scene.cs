@@ -31,4 +31,8 @@ public class Scene{
 	public List<NonPlayerCharacter> GetCharacters(){
 		return this.characters;
 	}
+
+	public List<Item> GetItems(){
+		return this.items;
+	}
 }

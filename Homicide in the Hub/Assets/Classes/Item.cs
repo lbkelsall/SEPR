@@ -11,8 +11,12 @@ public class Item : Clue {
 		this.sprite = sprite;
 	}
 		
-	public Sprite getSprite(){
+	public Sprite GetSprite(){
 		return this.sprite;
+	}
+
+	public GameObject GetPrefab(){
+		return this.prefab;
 	}
 		
 }
