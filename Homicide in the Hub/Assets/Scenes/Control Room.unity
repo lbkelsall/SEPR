@@ -1733,6 +1733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMapvisible: 0
   isMenuvisible: 0
+  isNotebookvisible: 0
   map: {fileID: 782701842}
   pauseMenu: {fileID: 1806560828}
   detective: {fileID: 1422320630}

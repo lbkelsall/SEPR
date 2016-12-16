@@ -18,8 +18,6 @@ public class LevelManager : MonoBehaviour {
 		detective = GameMaster.instance.GetPlayerCharacter(); 
 		playerSpriteRenderer.sprite = detective.getSprite ();
 
-
-
 		//Get Scene in scene
 		string sceneName = SceneManager.GetActiveScene().name;
 		Scene scene = GameMaster.instance.GetScene(sceneName);
@@ -46,6 +44,8 @@ public class LevelManager : MonoBehaviour {
 			GameObject prefab = Instantiate (item.GetPrefab(),itemSpawnPoints [itemSpawnPointCounter].transform.position, Quaternion.identity ) as GameObject;
 			prefab.transform.localScale *= itemScaling; 
 			itemSpawnPointCounter += 1;
+			ItemScript itemScript = prefab.GetComponent<ItemScript> ();
+			itemScript.SetItem(item);
 		}
 	}
 }
