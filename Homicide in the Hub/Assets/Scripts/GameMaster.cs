@@ -189,6 +189,7 @@ using System.Linq; //Used for take in pick items
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
+		ResetAll();
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (items,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;	
