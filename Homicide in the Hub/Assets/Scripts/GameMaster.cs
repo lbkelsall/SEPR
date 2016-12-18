@@ -103,6 +103,8 @@ using System.Linq; //Used for take in pick items
 	public GameObject spellbookPrefab;
 	public GameObject tripwirePrefab;
 
+	//Other
+
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -244,4 +246,5 @@ using System.Linq; //Used for take in pick items
 		}
 
 	}
+		
 }

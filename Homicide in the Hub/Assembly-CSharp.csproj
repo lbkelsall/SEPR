@@ -55,6 +55,7 @@
      <Compile Include="Assets\Classes\PlayerCharacter.cs" />
      <Compile Include="Assets\Classes\Scene.cs" />
      <Compile Include="Assets\Classes\VerbalClue.cs" />
+     <Compile Include="Assets\Scripts\AccuseScript.cs" />
      <Compile Include="Assets\Scripts\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\CharacterInteraction.cs" />
      <Compile Include="Assets\Scripts\CharacterSelector.cs" />
