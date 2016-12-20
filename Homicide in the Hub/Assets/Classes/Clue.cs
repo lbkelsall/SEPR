@@ -6,7 +6,6 @@ abstract public class Clue : MonoBehaviour {
 	private string clueID;
 	private string description;
 
-	// Use this for initialization
 	public Clue(string clueID, string description){
 		this.clueID = clueID;
 		this.description = description;
