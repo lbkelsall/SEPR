@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
-using System;
+using System.Collections;
 
 public class MurderWeapon : Item {
 
+<<<<<<< HEAD
 	private String steve_description;
+=======
+	public MurderWeapon(GameObject prefab, string clueID, string description, Sprite sprite) : base(prefab, clueID, description,sprite) {
+
+	}
+>>>>>>> origin/master
 
 	public MurderWeapon(GameObject prefab, string clueID, string description, Sprite sprite, String steve_description) 
 		: base(clueID, description, prefab, sprite) {

@@ -1,12 +1,26 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Classes/MurderWeapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AccuseScript.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets/Classes/MurderWeapon.cs" Line="13" Column="24" />
       <File FileName="Assets/Classes/Item.cs" Line="16" Column="3" />
       <File FileName="Assets/Classes/Clue.cs" Line="8" Column="2" />
       <File FileName="Assets/Scripts/GameMaster.cs" Line="1" Column="1" />
       <File FileName="Assets/Classes/Scene.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\NotebookManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InputManager1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameMaster.cs" Line="249" Column="3" />
+      <File FileName="Assets\Classes\Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ItemScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Classes\Logbook.cs" Line="1" Column="1" />
+      <File FileName="Assets\Classes\Clue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Classes\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AccuseScript.cs" Line="67" Column="38" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

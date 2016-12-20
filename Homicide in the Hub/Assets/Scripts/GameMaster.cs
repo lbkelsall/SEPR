@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq; //Used for take in pick items
 
  public class GameMaster : MonoBehaviour {
 
@@ -44,6 +45,66 @@ using System.Collections.Generic;
 	private Scene atrium;
 	private Scene undergroundLab;
 
+	//Item Sprite declratation
+	public Sprite cutlassSprite;
+	public Sprite poisonSprite;
+	public Sprite garroteSprite;
+	public Sprite knifeSprite;
+	public Sprite laserGunSprite;
+	public Sprite leadPipeSprite;
+	public Sprite westernPistolSprite;
+	public Sprite wizardStaffSprite;
+	public Sprite beretSprite;
+	public Sprite footprintsSprite;
+	public Sprite glovesSprite;
+	public Sprite wineSprite;
+	public Sprite shatteredGlassSprite;
+	public Sprite shrapnelSprite;
+	public Sprite smellyDeathSprite;
+	public Sprite spellbookSprite;
+	public Sprite tripwireSprite;
+
+	//Item Declaration
+	private MurderWeapon cutlass;
+	private MurderWeapon poison;
+	private MurderWeapon garrote;
+	private MurderWeapon knife;
+	private MurderWeapon laserGun;
+	private MurderWeapon leadPipe;
+	private MurderWeapon westernPistol;
+	private MurderWeapon wizardStaff;
+	private Item beret;
+	private Item footprints;
+	private Item gloves;
+	private Item wine;
+	private Item shatteredGlass;
+	private Item shrapnel;
+	private Item smellyDeath;
+	private Item spellbook;
+	private Item tripwire;
+	private MurderWeapon murderWeapon;
+
+	//Item Prefabs
+	public GameObject cutlassPrefab;
+	public GameObject poisonPrefab;
+	public GameObject garrotePrefab;
+	public GameObject knifePrefab;
+	public GameObject laserGunPrefab;
+	public GameObject leadPipePrefab;
+	public GameObject westernPistolPrefab;
+	public GameObject wizardStaffPrefab;
+	public GameObject beretPrefab;
+	public GameObject footprintsPrefab;
+	public GameObject glovesPrefab;
+	public GameObject winePrefab;
+	public GameObject shatteredGlassPrefab;
+	public GameObject shrapnelPrefab;
+	public GameObject smellyDeathPrefab;
+	public GameObject spellbookPrefab;
+	public GameObject tripwirePrefab;
+
+	//Other
+
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -76,14 +137,29 @@ using System.Collections.Generic;
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab}; //Larger scenes with more spawn points should be placed towards the start. 
 
 		//Defining Items
+		cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite);
+		poison = new MurderWeapon(poisonPrefab,"Emtpy Poison Bottle","An empty poison bottle ",poisonSprite);
+		garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite);
+		knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite);
+		laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm which implies it has been recently fired",laserGunSprite);
+		leadPipe = new MurderWeapon(leadPipePrefab,"Lead Pipe","It's a bit battered with a few dents on the side",leadPipeSprite);
+		westernPistol = new MurderWeapon(westernPistolPrefab,"Western Pistol","The gunpowder residue implies it has been recently fired",westernPistolSprite);
+		wizardStaff = new MurderWeapon(wizardStaffPrefab,"Wizard Staff","The gems still seem to be glow as if it has been used recently",wizardStaffSprite);
+		beret = new Item (beretPrefab,"Beret","A hat most stereotypically worn by the French",beretSprite);
+		footprints = new Item (footprintsPrefab,"Bloody Footprints","Bloody footprints most likely left by the murderer",footprintsSprite);
+		gloves = new Item (glovesPrefab,"Bloddy Gloves","Bloody gloves most likely used by the murderer",glovesSprite);
+		wine = new Item (winePrefab,"Fine Wine","An expensive vintage that's close to 100 years old",wineSprite);
+		shatteredGlass = new Item (shatteredGlassPrefab,"Shattered Glass","Broken glass shards spread quite close together",shatteredGlassSprite);
+		shrapnel = new Item (shrapnelPrefab,"Shrapnel","Shrapnel from an explosion or gun being fired",shrapnelSprite);
+		smellyDeath = new Item (smellyDeathPrefab,"Smelly Death","All that remains of the victim",smellyDeathSprite);
+		spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
+		tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
+		MurderWeapon[] murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
+		murderWeapon = pickMurderWeapon (murderWeapons);
 
-		foreach (Scene scene in scenes) {
-			scene.ResetScene ();
-		}	
-
-		AssignNPCsToScenes (characters,scenes);
-		AssignItemsToScenes (items,scenes);
+		Item[] allItems = new Item [10] {murderWeapon,beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
+		items = pickItems (allItems, scenes.Length);
 
 	}
 
@@ -110,12 +186,16 @@ using System.Collections.Generic;
 				sceneIndex = 0;
 			}
 		}
-		Debug.Log (items [0]);
 	}
 
-	public void AssignDetective(PlayerCharacter detective){
-		playerCharacter = detective;
-	}
+	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
+		NotebookManager.instance.logbook.Reset();	//Reset logbook
+		NotebookManager.instance.inventory.Reset();	//Reset inventory
+		ResetAll();
+		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
+		AssignItemsToScenes (items,scenes);					//Assigns Items to scenes
+		playerCharacter = detective;	
+	}	
 
 	public void AssignMurderer(NonPlayerCharacter[] characters) {
 		int randIndex = Random.Range (0, characters.Length);
@@ -145,4 +225,26 @@ using System.Collections.Generic;
 		}
 		return null;
 	}
+
+	private MurderWeapon pickMurderWeapon(MurderWeapon[] murderWeapons){
+		Shuffle(murderWeapons);
+		return murderWeapons[0];
+	}
+
+	private Item[] pickItems(Item[] allItems, int numberOfItems){
+		Shuffle (allItems);
+		return allItems.Take (numberOfItems).ToArray();
+	}
+
+	public MurderWeapon GetMurderWeapon(){
+		return murderWeapon;
+	}
+
+	public void ResetAll(){
+		foreach (Scene scene in scenes) {
+			scene.ResetScene ();
+		}
+
+	}
+		
 }

@@ -413,6 +413,34 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 796326237}
   m_Script: {fileID: 853051423, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &706350803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 706350804}
+  m_Layer: 0
+  m_Name: Clue Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &706350804
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706350803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.58, y: 3.21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!114 &762946886 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000014288672548, guid: 3e269ead2ce33ea4280eb664f3b85eed,
@@ -1705,6 +1733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMapvisible: 0
   isMenuvisible: 0
+  isNotebookvisible: 0
   map: {fileID: 782701842}
   pauseMenu: {fileID: 1806560828}
   detective: {fileID: 1422320630}
@@ -1746,8 +1775,10 @@ MonoBehaviour:
   playerObject: {fileID: 1422320630}
   characterSpawnPoints:
   - {fileID: 1709837841}
-  sceneName: Control Room
+  itemSpawnPoints:
+  - {fileID: 706350803}
   characterScaling: 1
+  itemScaling: 1
 --- !u!114 &1339755212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2145,7 +2176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011775265398, guid: 11a5a4cec74ede240909d81339630455, type: 2}
       propertyPath: m_Name
-      value: Spawnpoint
+      value: Character Spawnpoint
       objectReference: {fileID: 0}
     - target: {fileID: 212000013928312660, guid: 11a5a4cec74ede240909d81339630455,
         type: 2}
