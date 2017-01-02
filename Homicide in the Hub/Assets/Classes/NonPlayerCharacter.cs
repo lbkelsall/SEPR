@@ -3,7 +3,8 @@ using System.Collections;
 
 public class NonPlayerCharacter : Character {
 
-	private bool isMurderer = false; 
+	private bool isMurderer = false;
+	private VerbalClue verbalClue = null;
 	private GameObject prefab;
 	// Use this for initialization
 
@@ -17,6 +18,14 @@ public class NonPlayerCharacter : Character {
 
 	public void SetAsMurderer(){
 		this.isMurderer = true;
+	}
+
+	public void setVerbalClue (VerbalClue clue) {
+		verbalClue = clue;
+	}
+
+	public VerbalClue getVerbalClue () {
+		return verbalClue;
 	}
 
 	public GameObject GetPrefab(){

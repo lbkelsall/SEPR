@@ -7,4 +7,13 @@ public class VerbalClue : Clue {
 	public VerbalClue(string clueID, string description,NonPlayerCharacter owner) : base(clueID, description){
 		this.owner = owner;
 	}
+
+	public void setOwner (NonPlayerCharacter owner) {
+		this.owner = owner;
+	}
+
+	public NonPlayerCharacter getOwner () {
+		return this.owner;
+	}
+
 }

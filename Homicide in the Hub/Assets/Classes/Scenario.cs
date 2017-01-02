@@ -42,8 +42,11 @@ namespace AssemblyCSharp
 		public NonPlayerCharacter chooseMurderer() {
 			Shuffler shuffler = new Shuffler ();
 			shuffler.Shuffle (npcs);
-			return npcs [0];
+			NonPlayerCharacter murderer = npcs [0];
+			murderer.SetAsMurderer ();
+			return murderer;
 		}
+
 
 		public void BuildCluePools(string motive, NonPlayerCharacter murderer) {
 
@@ -116,6 +119,18 @@ namespace AssemblyCSharp
 
 		}
 
+		public void DistributeVerbalClues() {
+			int index = 0;
+			while (index < verbal_clue_pool.Count()) {
+				NonPlayerCharacter character = npcs [Random.Range (0, npcs.Count ())];
+				if (character.getVerbalClue() == null) {
+					character.setVerbalClue (verbal_clue_pool [index]);
+					verbal_clue_pool [index].setOwner (character); 
+					index++;
+				}
+			}
+		}
+
 		public List<Item> getItemCluePool () {
 			return item_clue_pool; 
 		}
@@ -128,12 +143,8 @@ namespace AssemblyCSharp
 			return weapon;
 		}
 
-		// getter for NPCs, after they've had verbal clues distributed to them.
+		public NonPlayerCharacter[] getNPCs () {
+			return npcs;
+		}
 	}
 }
-
-
-// Build the two clue pools ---> remember to remove items from item_clues etc as they are added to item_clue_pool etc
-// ^ add clues associated w/ weapon, motive, murderer 1st ... then fill in spaces w/ other clues.
-// Distribute verbal clues to NPCs
-// Write get methods for anything that might be needed in GM, e.g. item_clue_pool, murderer etc
