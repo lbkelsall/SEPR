@@ -3,14 +3,14 @@ using System.Collections;
 
 public class MurderWeapon : Item {
 
-	private String steve_description;
+	private string steve_description;
 
-	public MurderWeapon(GameObject prefab, string clueID, string description, Sprite sprite, String steve_description) 
-		: base(clueID, description, prefab, sprite) {
+	public MurderWeapon(GameObject prefab, string clueID, string description, Sprite sprite, string steve_description) 
+		: base(prefab, clueID, description, sprite) {
 		this.steve_description = steve_description;
 	}
 
-	public String getSteveDescription() {
+	public string getSteveDescription() {
 		return this.steve_description;
 	}
 }
