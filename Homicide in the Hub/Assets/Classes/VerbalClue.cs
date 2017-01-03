@@ -4,8 +4,7 @@ using System.Collections;
 public class VerbalClue : Clue {
 
 	private NonPlayerCharacter owner;
-	public VerbalClue(string clueID, string description,NonPlayerCharacter owner) : base(clueID, description){
-		this.owner = owner;
+	public VerbalClue(string clueID, string description) : base(clueID, description){
 	}
 
 	public void setOwner (NonPlayerCharacter owner) {

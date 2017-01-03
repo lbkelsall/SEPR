@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AssemblyCSharp
-{
 	public class Shuffler
 	{
 		public Shuffler ()
@@ -21,5 +19,5 @@ namespace AssemblyCSharp
 		}
 
 	}
-}
+
 

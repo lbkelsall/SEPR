@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq; //Used for take in pick items
 
+
  public class GameMaster : MonoBehaviour {
 
 	//Arrays 
 	public static GameMaster instance = null;
-	private NonPlayerCharacter[] characters;
-	private Item[] items; 
-	private Scene[] scenes;
+	public Scene[] scenes;
+	public Item[] itemClues;
+	public NonPlayerCharacter[] characters;
 	private PlayerCharacter playerCharacter;
 
 	//NPC Sprites
@@ -65,7 +66,6 @@ using System.Linq; //Used for take in pick items
 	public Sprite tripwireSprite;
 
 	//Item Declaration
-	private MurderWeapon cutlass;
 	private MurderWeapon poison;
 	private MurderWeapon garrote;
 	private MurderWeapon knife;
@@ -116,6 +116,15 @@ using System.Linq; //Used for take in pick items
 
 	void Start(){
 
+		//Defining Placeholder Verbal Clues
+		VerbalClue vc1 = new VerbalClue ("ID1", "D1");
+		VerbalClue vc2 = new VerbalClue ("ID2", "D2");
+		VerbalClue vc3 = new VerbalClue ("ID3", "D3");
+		VerbalClue vc4 = new VerbalClue ("ID4", "D4");
+		VerbalClue vc5 = new VerbalClue ("ID5", "D5");
+		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
+		VerbalClue vc7 = new VerbalClue ("ID7", "D7");
+
 		//Defining NPC's
 		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref);
 		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref);
@@ -123,7 +132,6 @@ using System.Linq; //Used for take in pick items
 		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref);
 		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref);
 		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref);
-		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
 
 		//Defining Scenes
 		controlRoom = new Scene("Control Room");
@@ -134,10 +142,9 @@ using System.Linq; //Used for take in pick items
 		roof = new Scene ("Roof");
 		atrium = new Scene("Atrium");
 		undergroundLab = new Scene("Underground Lab");
-		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab}; //Larger scenes with more spawn points should be placed towards the start. 
 
 		//Defining Items
-		cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite, "SD");
+		MurderWeapon cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite, "SD");
 		poison = new MurderWeapon(poisonPrefab,"Emtpy Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
 		garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite, "SD");
 		knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite, "SD");
@@ -156,16 +163,30 @@ using System.Linq; //Used for take in pick items
 		tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
 		MurderWeapon[] murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
-		murderWeapon = pickMurderWeapon (murderWeapons);
+		Item[] itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
+		NonPlayerCharacter[] characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
+		Scene[] scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
+		VerbalClue[] verbalClues = new VerbalClue[7] { vc1, vc2, vc3, vc4, vc5, vc6, vc7 };
 
-		Item[] allItems = new Item [10] {murderWeapon,beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
-		items = pickItems (allItems, scenes.Length);
+		Scenario scenario = new Scenario (murderWeapons, itemClues, verbalClues, characters);
+
+		string motive = scenario.chooseMotive ();
+		NonPlayerCharacter murderer = scenario.chooseMurderer ();
+		scenario.chooseWeapon ();
+		MurderWeapon weapon = scenario.getWeapon ();
+		scenario.BuildCluePools (motive, murderer, weapon);
+		scenario.DistributeVerbalClues ();
+
+		itemClues = scenario.getItemCluePool ().ToArray ();
+		characters = scenario.getNPCs ();
+		verbalClues = scenario.getVerbalCluePool ().ToArray ();
 
 	}
 
 	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){
 		int sceneCounter = 0;
-		Shuffle (characters);
+		Shuffler shuffler = new Shuffler ();
+		shuffler.Shuffle (characters);
 		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
 			scenes [sceneCounter].AddNPCToArray (character);		//Assign a character to a scene
 			sceneCounter += 1;									//Increment sceneCounter
@@ -178,7 +199,8 @@ using System.Linq; //Used for take in pick items
 
 	void AssignItemsToScenes(Item[] items, Scene[] scenes) {
 		int sceneIndex = 0;
-		Shuffle (items);
+		Shuffler shuffler = new Shuffler ();
+		shuffler.Shuffle (items);
 		foreach (Item item in items) {
 			scenes [sceneIndex].AddItemToArray (item);
 			sceneIndex++;
@@ -191,30 +213,15 @@ using System.Linq; //Used for take in pick items
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
-		ResetAll();
+		ResetAll(scenes);
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
-		AssignItemsToScenes (items,scenes);					//Assigns Items to scenes
+		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;	
 	}	
-
-	public void AssignMurderer(NonPlayerCharacter[] characters) {
-		int randIndex = Random.Range (0, characters.Length);
-		NonPlayerCharacter murderer = characters [randIndex];
-		murderer.SetAsMurderer ();
-	}
+		
 
 	public PlayerCharacter GetPlayerCharacter(){
 		return playerCharacter;
-	}
-
-	private void Shuffle<T>(T[] array){ //Based on Fisher-Yates Shuffle
-		int n = array.Length;
-		for (int i = 0; i < n; i++) {
-			int r = i + (int)(Random.Range(0.0f,1.0f) * (n - i));
-			T t = array[r];
-			array[r] = array[i];
-			array[i] = t;
-		}
 	}
 
 	public Scene GetScene(string sceneName){
@@ -226,21 +233,7 @@ using System.Linq; //Used for take in pick items
 		return null;
 	}
 
-	private MurderWeapon pickMurderWeapon(MurderWeapon[] murderWeapons){
-		Shuffle(murderWeapons);
-		return murderWeapons[0];
-	}
-
-	private Item[] pickItems(Item[] allItems, int numberOfItems){
-		Shuffle (allItems);
-		return allItems.Take (numberOfItems).ToArray();
-	}
-
-	public MurderWeapon GetMurderWeapon(){
-		return murderWeapon;
-	}
-
-	public void ResetAll(){
+	public void ResetAll(Scene[] scenes){
 		foreach (Scene scene in scenes) {
 			scene.ResetScene ();
 		}

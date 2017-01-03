@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AssemblyCSharp
-{
-	public class Scenario
+	public class Scenario : MonoBehaviour 
 	{
 
 		private MurderWeapon[] weapons;
@@ -48,7 +46,7 @@ namespace AssemblyCSharp
 		}
 
 
-		public void BuildCluePools(string motive, NonPlayerCharacter murderer) {
+		public void BuildCluePools(string motive, NonPlayerCharacter murderer, MurderWeapon weapon) {
 
 			item_clue_pool.Add (weapon);
 
@@ -147,4 +145,3 @@ namespace AssemblyCSharp
 			return npcs;
 		}
 	}
-}
