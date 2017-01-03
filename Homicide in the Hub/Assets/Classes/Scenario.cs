@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-	public class Scenario : MonoBehaviour 
+public class Scenario
 	{
 
 		private MurderWeapon[] weapons;

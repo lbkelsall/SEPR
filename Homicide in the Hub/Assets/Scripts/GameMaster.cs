@@ -7,7 +7,7 @@ using System.Linq; //Used for take in pick items
 
 	//Arrays 
 	public static GameMaster instance = null;
-	public Scene[] scenes;
+	static public Scene[] scenes;
 	public Item[] itemClues;
 	public NonPlayerCharacter[] characters;
 	private PlayerCharacter playerCharacter;
@@ -163,9 +163,9 @@ using System.Linq; //Used for take in pick items
 		tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
 		MurderWeapon[] murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
-		Item[] itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
-		NonPlayerCharacter[] characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
-		Scene[] scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
+		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
+		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
+		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 		VerbalClue[] verbalClues = new VerbalClue[7] { vc1, vc2, vc3, vc4, vc5, vc6, vc7 };
 
 		Scenario scenario = new Scenario (murderWeapons, itemClues, verbalClues, characters);
