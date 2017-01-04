@@ -41,11 +41,13 @@ public class LevelManager : MonoBehaviour {
 	private void AssignItemsToSpawnPoints(Scene scene){
 		int itemSpawnPointCounter = 0;
 		foreach (Item item in scene.GetItems()) {
-			GameObject prefab = Instantiate (item.GetPrefab(),itemSpawnPoints [itemSpawnPointCounter].transform.position, Quaternion.identity ) as GameObject;
-			prefab.transform.localScale *= itemScaling; 
-			itemSpawnPointCounter += 1;
-			ItemScript itemScript = prefab.GetComponent<ItemScript> ();
-			itemScript.SetItem(item);
+			if (!NotebookManager.instance.inventory.GetInventory ().Contains (item)) {
+				GameObject prefab = Instantiate (item.GetPrefab (), itemSpawnPoints [itemSpawnPointCounter].transform.position, Quaternion.identity) as GameObject;
+				prefab.transform.localScale *= itemScaling; 
+				itemSpawnPointCounter += 1;
+				ItemScript itemScript = prefab.GetComponent<ItemScript> ();
+				itemScript.SetItem (item);
+			}
 		}
 	}
 }
