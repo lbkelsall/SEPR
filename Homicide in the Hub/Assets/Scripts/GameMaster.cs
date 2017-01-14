@@ -125,13 +125,17 @@ using System.Linq; //Used for take in pick items
 		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
 		VerbalClue vc7 = new VerbalClue ("ID7", "D7");
 
+		//Responce Arrays
+		string[] pirateReponces = new string[9] {""};
+
+
 		//Defining NPC's
-		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref);
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref);
-		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref);
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref);
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref);
-		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref);
+		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref, "A",);
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,"A");
+		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,"A");
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,"A");
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,"A");
+		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,"A");
 
 		//Defining Scenes
 		controlRoom = new Scene("Control Room");

@@ -9,7 +9,8 @@ public class QuestioningScript : MonoBehaviour {
 	public GameObject detectiveGameObject;
 	public GameObject characterGameObject;
 
-	public Text[] detectiveStylesText = new Text[3];
+	public Text[] detectiveStylesText = new Text[3]; //Where Left-most button is 1 and rightmost is 3
+	public Text clueSpeech;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,28 @@ public class QuestioningScript : MonoBehaviour {
 		for (int i = 0; i<3; i++){	
 			detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
 		}
+			
 	}
 
+	public void QuestionCharacter(int reference){
+		string choice; 
+		string weakness;
+		choice = GetQuestioningChoice(reference);
+		weakness = character.GetWeakness ();
+
+		if (weakness == choice) {
+			if (character.getVerbalClue() != null) {
+				string clue = character.getVerbalClue (); //TO Do add to logbook and display on screen
+			}
+		}
+	}
+
+
+
+
+	private string GetQuestioningChoice(int reference){
+		string choice = detective.GetQuestioningStyles () [reference];
+		return choice;
+	}
 
 }
