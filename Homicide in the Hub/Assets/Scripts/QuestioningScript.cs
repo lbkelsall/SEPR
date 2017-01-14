@@ -38,11 +38,15 @@ public class QuestioningScript : MonoBehaviour {
 		choice = GetQuestioningChoice(reference);
 		weakness = character.GetWeakness ();
 
-		if (weakness == choice) {
-			if (character.getVerbalClue() != null) {
-				string clue = character.getVerbalClue (); //TO Do add to logbook and display on screen
-			}
+		string response;
+		if ((weakness == choice) && (character.getVerbalClue() != null)) {
+			VerbalClue clue = character.getVerbalClue ();
+			response = clue.getDescription (); 
+		} else {
+			response = character.GetResponse (choice);
 		}
+
+		//TODO add to logbook and display on screen
 	}
 
 

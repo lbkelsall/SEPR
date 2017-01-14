@@ -126,16 +126,86 @@ using System.Linq; //Used for take in pick items
 		VerbalClue vc7 = new VerbalClue ("ID7", "D7");
 
 		//Responce Arrays
-		string[] pirateReponces = new string[9] {""};
+		string[] pirateResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
+
+		string[] mimeResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
+
+		string[] millionaireResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
+
+		string[] cowgirlResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
+
+		string[] romanResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
+
+		string[] wizardResponses = new string[9] {
+			"Shiver me timbers I know nothing!",
+			"Arrr matey it ain’t that difficult to understand.",
+			"Shiver me timbers, how dare ye threaten me!",
+			"Arrr, no matey I really don’t think I do. I saw nothing!",
+			"Ho ho ho, Arr matey I didn’t see anything!",
+			"Shiver me timbers ye need to plan ye lunch breaks better!",
+			"Arrr matey I saw nothing of import.",
+			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Arrr matey I don’t think ye need my help to solve this conundrum."
+		};
 
 
 		//Defining NPC's
-		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref, "A",);
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,"A");
-		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,"A");
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,"A");
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,"A");
-		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,"A");
+		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref, "A", pirateResponses);
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,"A", mimeResponses );
+		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,"A", millionaireResponses );
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,"A", cowgirlResponses );
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,"A", romanResponses );
+		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,"A", wizardResponses );
 
 		//Defining Scenes
 		controlRoom = new Scene("Control Room");

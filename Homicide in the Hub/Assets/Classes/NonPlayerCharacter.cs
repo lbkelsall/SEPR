@@ -13,7 +13,7 @@ public class NonPlayerCharacter : Character {
 	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, string weakness, string[] questioningResponces) :  base(characterID, sprite, nickname) {
 		this.prefab = prefab;
 		this.weakness = weakness;
-		this.questioningResponces = questioningResponces; 
+		this.questioningResponces = questioningResponces;
 	}
 
 	public bool IsMurderer(){
@@ -40,7 +40,7 @@ public class NonPlayerCharacter : Character {
 		return this.weakness;
 	}
 
-	public string GetResponce(string questioningStyle){
+	public string GetResponse(string questioningStyle){
 
 		switch(questioningStyle){
 		case ("Forceful"):
@@ -61,7 +61,9 @@ public class NonPlayerCharacter : Character {
 			return questioningResponces [7];
 		case ("Inspiring"):
 			return questioningResponces [8];
-			
+		default:
+			return "";
 
 	}
+}
 }
