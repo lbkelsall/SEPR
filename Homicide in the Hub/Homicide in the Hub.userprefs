@@ -1,20 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AccuseScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameMaster.cs" Line="298" Column="45" />
-      <File FileName="Assets\Classes\NonPlayerCharacter.cs" Line="46" Column="21" />
-      <File FileName="Assets\Scripts\QuestioningScript.cs" Line="45" Column="4" />
-      <File FileName="Assets\Classes\VerbalClue.cs" Line="10" Column="15" />
-      <File FileName="Assets\Classes\Scenario.cs" Line="1" Column="1" />
-      <File FileName="Assets\Classes\PlayerCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AccuseScript.cs" Line="77" Column="40" />
-      <File FileName="Assets\Scripts\CharacterSelector.cs" Line="24" Column="22" />
-      <File FileName="Assets\Scripts\NotebookManager.cs" Line="58" Column="50" />
-      <File FileName="Assets\Scripts\InputManager1.cs" Line="50" Column="29" />
-      <File FileName="Assets\Scripts\ItemScript.cs" Line="10" Column="3" />
-      <File FileName="Assets\Classes\Logbook.cs" Line="13" Column="15" />
-      <File FileName="Assets\Classes\Inventory.cs" Line="22" Column="27" />
+      <File FileName="Assets/Classes/Scenario.cs" Line="16" Column="75" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="266" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

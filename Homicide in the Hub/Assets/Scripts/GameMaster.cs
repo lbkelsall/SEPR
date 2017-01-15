@@ -10,6 +10,8 @@ using System.Linq; //Used for take in pick items
 	static public Scene[] scenes;
 	public Item[] itemClues;
 	public NonPlayerCharacter[] characters;
+	public Item[] relevant_items;
+	public VerbalClue[] relevant_verbal_clues;
 	private PlayerCharacter playerCharacter;
 
 	//NPC Sprites
@@ -262,6 +264,8 @@ using System.Linq; //Used for take in pick items
 		itemClues = scenario.getItemCluePool ().ToArray ();
 		characters = scenario.getNPCs ();
 		verbalClues = scenario.getVerbalCluePool ().ToArray ();
+		relevant_items = scenario.getRelevantItems ().ToArray ();
+		relevant_verbal_clues = scenario.getRelevantVerbalClues ().ToArray ();
 
 	}
 
