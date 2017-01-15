@@ -48,6 +48,7 @@ public class InputManager1 : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.I)) {
 				isNotebookvisible = !isNotebookvisible;
 				if (isNotebookvisible) {
+					NotebookManager.instance.UpdateNotebook ();
 					StopGame (notebookMenu);
 				} else {
 					ResumeGame (notebookMenu);
