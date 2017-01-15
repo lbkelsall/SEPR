@@ -1921,11 +1921,12 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 37790e5394944d642abb3f36e81b711d,
+        type: 3}
     - target: {fileID: 114000011812428892, guid: 595173bf2609f154b9e861965686b040,
         type: 2}
       propertyPath: m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011812428892, guid: 595173bf2609f154b9e861965686b040,
         type: 2}
@@ -1937,6 +1938,22 @@ Prefab:
       propertyPath: m_FillCenter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013203620566, guid: 595173bf2609f154b9e861965686b040,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010032556900, guid: 595173bf2609f154b9e861965686b040,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011000110530, guid: 595173bf2609f154b9e861965686b040,
+        type: 2}
+      propertyPath: questionMark
+      value: 
+      objectReference: {fileID: 21300000, guid: 37790e5394944d642abb3f36e81b711d,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 595173bf2609f154b9e861965686b040, type: 2}
   m_IsPrefabParent: 0

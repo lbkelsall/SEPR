@@ -198,14 +198,22 @@ using System.Linq; //Used for take in pick items
 			"Arrr matey I don’t think ye need my help to solve this conundrum."
 		};
 
+		//Weaknesses
+		List<string> pirateWeaknesses = new List<string> {"Forceful","Wisecracking","Kind"};
+		List<string> mimeWeaknesses = new List<string> {"Intimidating","Coaxing","Inspiring"};
+		List<string> millionaireWeaknesses = new List<string> {"Forceful","Rushed","Kind"};
+		List<string> cowgirlWeaknesses = new List<string> {"Condescending","Wisecracking","Inspiring"};
+		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
+		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
+
 
 		//Defining NPC's
-		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref, "A", pirateResponses);
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,"A", mimeResponses );
-		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,"A", millionaireResponses );
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,"A", cowgirlResponses );
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,"A", romanResponses );
-		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,"A", wizardResponses );
+		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref,pirateWeaknesses ,pirateResponses);
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,mimeWeaknesses, mimeResponses );
+		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,millionaireWeaknesses, millionaireResponses );
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,romanWeaknesses, romanResponses );
+		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
 
 		//Defining Scenes
 		controlRoom = new Scene("Control Room");
@@ -287,6 +295,7 @@ using System.Linq; //Used for take in pick items
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
+		NotebookManager.instance.UpdateNotebook();
 		ResetAll(scenes);
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class QuestioningScript : MonoBehaviour {
@@ -34,19 +34,20 @@ public class QuestioningScript : MonoBehaviour {
 
 	public void QuestionCharacter(int reference){
 		string choice; 
-		string weakness;
+		List<string> weaknesses;
 		choice = GetQuestioningChoice(reference);
-		weakness = character.GetWeakness ();
-
+		weaknesses = character.GetWeaknesses ();
 		string response;
-		if ((weakness == choice) && (character.getVerbalClue() != null)) {
+		if ((weaknesses.Contains(choice)) && (character.getVerbalClue() != null)) {
 			VerbalClue clue = character.getVerbalClue ();
-			response = clue.getDescription (); 
+			response = "Clue Added: "+clue.getDescription (); 
+			NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
+			NotebookManager.instance.UpdateNotebook();
 		} else {
 			response = character.GetResponse (choice);
 		}
 
-		//TODO add to logbook and display on screen
+		clueSpeech.text = response; 
 	}
 
 

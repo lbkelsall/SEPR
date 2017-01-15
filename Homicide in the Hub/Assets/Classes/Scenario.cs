@@ -123,7 +123,7 @@ public class Scenario
 				NonPlayerCharacter character = npcs [Random.Range (0, npcs.Count ())];
 				if (character.getVerbalClue() == null) {
 					character.setVerbalClue (verbal_clue_pool [index]);
-					verbal_clue_pool [index].setOwner (character); 
+					verbal_clue_pool [index].SetOwner (character); 
 					index++;
 				}
 			}

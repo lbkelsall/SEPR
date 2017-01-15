@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class NonPlayerCharacter : Character {
 
 	private bool isMurderer = false;
 	private VerbalClue verbalClue = null;
 	private GameObject prefab;
-	private string weakness;
+	private List<string> weaknesses;
 	private string[] questioningResponces;
 	// Use this for initialization
 
-	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, string weakness, string[] questioningResponces) :  base(characterID, sprite, nickname) {
+	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, string[] questioningResponces) :  base(characterID, sprite, nickname) {
 		this.prefab = prefab;
-		this.weakness = weakness;
+		this.weaknesses = weaknesses;
 		this.questioningResponces = questioningResponces;
 	}
 
@@ -36,8 +36,8 @@ public class NonPlayerCharacter : Character {
 		return this.prefab;
 	}
 		
-	public string GetWeakness(){
-		return this.weakness;
+	public List<string> GetWeaknesses(){
+		return this.weaknesses;
 	}
 
 	public string GetResponse(string questioningStyle){
@@ -45,7 +45,7 @@ public class NonPlayerCharacter : Character {
 		switch(questioningStyle){
 		case ("Forceful"):
 			return questioningResponces [0];
-		case ("Condesending"):
+		case ("Condescending"):
 			return questioningResponces [1];
 		case ("Intimidating"):
 			return questioningResponces [2];
@@ -57,7 +57,7 @@ public class NonPlayerCharacter : Character {
 			return questioningResponces [5];
 		case ("Inquisitive"):
 			return questioningResponces [6];
-		case ("Polite"):
+		case ("Kind"):
 			return questioningResponces [7];
 		case ("Inspiring"):
 			return questioningResponces [8];

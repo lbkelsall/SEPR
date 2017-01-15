@@ -14,9 +14,9 @@ public class CharacterSelector : MonoBehaviour {
 	private PlayerCharacter adamFounder;
 
 	//Querstioning Styles for detectives
-	private string[] chaseHunterQuestioningStyles = new string[3] {"Forceful","Intimidating","Condesending"};
+	private string[] chaseHunterQuestioningStyles = new string[3] {"Forceful","Intimidating","Condescending"};
 	private string[] johnnySlickQuestioningStyles = new string[3] {"Wisecracking","Rushed","Coaxing"};
-	private string[] adamFounderQuestioningStyles = new string[3] {"Inquisitive","Polite","Inspiring"};
+	private string[] adamFounderQuestioningStyles = new string[3] {"Inquisitive","Kind","Inspiring"};
 
 	PlayerCharacter[] detectives;
 

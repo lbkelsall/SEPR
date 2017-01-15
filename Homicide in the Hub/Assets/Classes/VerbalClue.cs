@@ -7,11 +7,11 @@ public class VerbalClue : Clue {
 	public VerbalClue(string clueID, string description) : base(clueID, description){
 	}
 
-	public void setOwner (NonPlayerCharacter owner) {
+	public void SetOwner (NonPlayerCharacter owner) {
 		this.owner = owner;
 	}
 
-	public NonPlayerCharacter getOwner () {
+	public NonPlayerCharacter GetOwner () {
 		return this.owner;
 	}
 

@@ -10,7 +10,7 @@ public class Logbook {
 	}
 
 	public void Reset(){
-		logbook.Clear ();
+		this.logbook.Clear ();
 	}
 
 	public void AddVerbalClueToLogbook(VerbalClue clue){

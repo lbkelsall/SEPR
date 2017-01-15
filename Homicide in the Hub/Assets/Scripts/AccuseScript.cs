@@ -15,6 +15,7 @@ public class AccuseScript : MonoBehaviour {
 	public int requiredNumberOfClues = 3;
 	public Text clueTitle;
 	public Button selectButton;
+	public Sprite questionMark;
 
 	private List<Item> inventory; 
 	private List<VerbalClue> logbook; 
@@ -29,16 +30,25 @@ public class AccuseScript : MonoBehaviour {
 	public void UpdateNotebook(){
 		int topOfList = 0;
 		//Update Listing
+		//Display Items
 		for (int i = 0; i < (inventory.Count); i++) {
-			clueTexts [i].text = " - "+inventory[i].getID ();
-			topOfList = i;
+			clueTexts [topOfList].text = " - "+inventory[i].getID ();
 		}
-		for (int j = topOfList; j < (logbook.Count); j++) {
-			clueTexts [j].text = " - "+logbook[j].getID ();
+
+		//Display Verbal Clues
+		topOfList = inventory.Count;
+		for (int j = 0; j < (logbook.Count); j++) {
+			clueTexts [topOfList].text = " - "+logbook[j].getID ();
+			topOfList += 1;
+		}
+
+		//Reset not used items from previous playthrough
+		for (int z = 0; z < (20-(inventory.Count + logbook.Count)); z++) {
+			clueTexts [topOfList].text = "";
+			topOfList += 1;
 		}
 		clueTitle.text = "Clues (" + (inventory.Count + logbook.Count) + "/" + requiredNumberOfClues + ")";
 	}
-
 
 	public void ShowClueInfomation(int index){
 		currentlySelectedClueIndex = index; 
@@ -51,7 +61,7 @@ public class AccuseScript : MonoBehaviour {
 			VerbalClue clue = logbook[index - inventory.Count];
 			clueNameText.text = clue.getID ();  
 			clueDescriptionText.text = clue.getDescription ();
-			clueImage.sprite = null;
+			clueImage.sprite = questionMark;
 		}
 		selectButton.interactable = true;
 	}
