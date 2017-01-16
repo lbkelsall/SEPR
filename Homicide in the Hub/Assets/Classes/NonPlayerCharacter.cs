@@ -62,7 +62,7 @@ public class NonPlayerCharacter : Character {
 		case ("Inspiring"):
 			return questioningResponces [8];
 		default:
-			return "";
+			return "...";
 
 	}
 }
