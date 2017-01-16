@@ -104,8 +104,11 @@ using System.Linq; //Used for take in pick items
 	public GameObject spellbookPrefab;
 	public GameObject tripwirePrefab;
 
-	//Other
+	private NonPlayerCharacter murderer;
 
+	//Other
+	private List<Item> relevant_items;
+	private List<VerbalClue> relevant_verbal_clues;
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -254,7 +257,7 @@ using System.Linq; //Used for take in pick items
 		Scenario scenario = new Scenario (murderWeapons, itemClues, verbalClues, characters);
 
 		string motive = scenario.chooseMotive ();
-		NonPlayerCharacter murderer = scenario.chooseMurderer ();
+		murderer = scenario.chooseMurderer ();
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
 		scenario.BuildCluePools (motive, murderer, weapon);
@@ -263,9 +266,8 @@ using System.Linq; //Used for take in pick items
 		itemClues = scenario.getItemCluePool ().ToArray ();
 		characters = scenario.getNPCs ();
 		verbalClues = scenario.getVerbalCluePool ().ToArray ();
-		List<Item> relevant_items = scenario.getRelevantItems ();
-		List<VerbalClue> relevant_verbal_clues = scenario.getRelevantVerbalClues ();
-		//relevantClues = relevant_items.Concat (relevant_verbal_clues);
+		relevant_items = scenario.getRelevantItems ();
+		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
 
 	}
 
@@ -327,4 +329,15 @@ using System.Linq; //Used for take in pick items
 
 	}
 		
+	public List<Item> GetRelevantItems(){
+		return this.relevant_items;
+	}
+
+	public List<VerbalClue> GetRelevantVerbalClues(){
+		return this.relevant_verbal_clues;
+	}
+
+	public string GetMurderer(){
+		return this.murderer.getCharacterID();
+	}
 }
