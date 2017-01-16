@@ -22,8 +22,7 @@ public class NotebookManager : MonoBehaviour {
 	public Sprite questionMark;
 	public Button submitButton;
 	public Button backButton;
-	private List<Item> selectedCluesItem = new List<Item>();
-	private List<VerbalClue> selectedCluesVerbal = new List<VerbalClue>();
+	private List<Clue> selectedClues = new List<Clue>();
 
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
@@ -37,11 +36,8 @@ public class NotebookManager : MonoBehaviour {
 	public void UpdateNotebook(){
 		if (SceneManager.GetActiveScene ().name == "Interrogation Room") {
 			ShowNeededToggles ();
-			clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
-			submitButton.interactable = false;
 		} else {
 			HideAllToggles ();
-			clueTitle.text = "Clues Obtained (" + (inventory.GetListLength () + logbook.GetListLength ()) + "/" + requiredNumberOfClues + ")";
 		}
 
 		int topOfList = 0;
@@ -64,7 +60,7 @@ public class NotebookManager : MonoBehaviour {
 			clueTexts [topOfList].text = "";
 			topOfList += 1;
 		}
-
+		clueTitle.text = "Clues (" + (inventory.GetListLength () + logbook.GetListLength ()) + "/" + requiredNumberOfClues + ")";
 	}
 		
 	public void ShowClueInfomation(int index){
@@ -85,41 +81,31 @@ public class NotebookManager : MonoBehaviour {
 				clueDescriptionText.text = clue.getDescription ();
 				clueImage.sprite = questionMark;
 			}
-
 		}
 	}
 
 	public void AddToSelectedClues(int reference){
-		List<int> toggleReferences = new List<int>();
-		ActivateAllToggles ();
-		if ((selectedCluesItem.Count + selectedCluesVerbal.Count) <= requiredNumberOfClues) { 
-			if (clueToggles [reference].isOn == true) {
-				if (reference < inventory.GetInventory ().Count) {
-					Item clue = inventory.GetInventory () [reference];
-					selectedCluesItem.Add (clue);
-				} else {
-					VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-					selectedCluesVerbal.Add (clue);
-				}
-				toggleReferences.Add (reference);
-				//If toggled off:
-			} else {
-				if (reference < inventory.GetInventory ().Count) {
-					Item clue = inventory.GetInventory () [reference];
-					selectedCluesItem.Remove (clue);
-				} else {
-					VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-					selectedCluesVerbal.Remove (clue);
+		//If toggled on:
+		if (clueToggles [reference].isOn == true) {
+			if (reference < inventory.GetInventory().Count) {
+				Item clue = inventory.GetInventory () [reference];
+				selectedClues.Add (clue);
 
-				}
-				toggleReferences.Remove (reference);
+			} else {
+				VerbalClue clue = logbook.GetLogbook ()  [reference-inventory.GetInventory().Count];
+				selectedClues.Add (clue);
 			}
-		} else if ((selectedCluesItem.Count + selectedCluesVerbal.Count) == requiredNumberOfClues){
-			submitButton.interactable = true;
+			//If toggled off:
 		} else {
-			DeactivateToggles(toggleReferences);
+			if (reference < inventory.GetInventory().Count) {
+				
+				Item clue = inventory.GetInventory ()[reference];
+				selectedClues.Remove (clue);
+			} else {
+				VerbalClue clue = logbook.GetLogbook () [reference-inventory.GetInventory().Count];
+				selectedClues.Remove (clue);
+			}
 		}
-		clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
 	}
 
 
@@ -140,24 +126,7 @@ public class NotebookManager : MonoBehaviour {
 		submitButton.gameObject.SetActive (false);
 	}
 
-	public List<Item> GetSelectedItemClues(){
-		return this.selectedCluesItem;
-	}
-	public List<VerbalClue> GetSelectedVerbalClues(){
-		return this.selectedCluesVerbal;
-	}
-
-	private void DeactivateToggles(List<int> referenceList){
-		for (int i = 0; i < 20; i++) {
-			if (!referenceList.Contains (i)) {
-				clueToggles [i].interactable = false;
-			}
-		}
-	}
-
-	private void ActivateAllToggles(){
-		for (int i = 0; i < 20; i++) {
-			clueToggles [i].interactable = true;
-		}
+	public List<Clue> GetSelectedClues(){
+		return this.selectedClues;
 	}
 }
