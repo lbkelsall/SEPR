@@ -143,63 +143,63 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] mimeResponses = new string[9] {
-			"Shiver me timbers I know nothing!",
-			"Arrr matey it ain’t that difficult to understand.",
-			"Shiver me timbers, how dare ye threaten me!",
-			"Arrr, no matey I really don’t think I do. I saw nothing!",
-			"Ho ho ho, Arr matey I didn’t see anything!",
-			"Shiver me timbers ye need to plan ye lunch breaks better!",
-			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"The mimes are taken aback, but contribute nothing more.",
+			"The mimes shake their heads.",
+			"The mimes flinch, but tell you nothing.",
+			"The mimes shake their heads.",
+			"The mimes imitate laughter but tell you nothing.",
+			"The mimes look at their wrist watches with a puzzled expression.",
+			"The mines mime out some routine which doesn’t make sense and contribute nothing.",
+			"The mimes look at you with passing curiosity but contribute nothing more.",
+			"The mimes shake their heads. They tell you nothing."
 		};
 
 		string[] millionaireResponses = new string[9] {
-			"Shiver me timbers I know nothing!",
-			"Arrr matey it ain’t that difficult to understand.",
-			"Shiver me timbers, how dare ye threaten me!",
-			"Arrr, no matey I really don’t think I do. I saw nothing!",
-			"Ho ho ho, Arr matey I didn’t see anything!",
-			"Shiver me timbers ye need to plan ye lunch breaks better!",
-			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"Don’t try and force me to tell you anything. I’ve got more money than you.",
+			"Don’t patronise me you cretin. I’ve got more money than you.",
+			"How dare you threaten me you lunatic, I’ve got more money than you.",
+			"No my dear fellow for you see I have more money than you.",
+			"Ha ha ha. Not that funny dear fellow, you’ll need more money to make it funnier.",
+			"My good man, I know that time is money, but you can’t rush magnificence!",
+			"My good man, there isn’t enough money around here to warrant seeing anything.",
+			"I thank you for your kindness, but it would be better with some patronage!",
+			"My good man, you don’t need my help to solve this. Not to mention there’s no money involved."
 		};
 
 		string[] cowgirlResponses = new string[9] {
-			"Shiver me timbers I know nothing!",
-			"Arrr matey it ain’t that difficult to understand.",
-			"Shiver me timbers, how dare ye threaten me!",
-			"Arrr, no matey I really don’t think I do. I saw nothing!",
-			"Ho ho ho, Arr matey I didn’t see anything!",
-			"Shiver me timbers ye need to plan ye lunch breaks better!",
-			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"I appreciate your candour pardner but I didn’t see anything.",
+			"Pardner I do understand, I just didn’t see anything.",
+			"Pardner I don’t appreciate threats so don’t try it.",
+			"Pardner I didn’t see anything, I wasn’t paying attention.",
+			"Ha ha ha, funny pardner but I still didn’t see anything.",
+			"I don’t know nuthin'. If you’ve got to be gone by high noon, I’d go ask someone else.",
+			"I understand pardner but I didn’t see anything",
+			"Thank you pardner, but I didn’t see anything. ",
+			"Pardner, you’ll have to solve this one without my help, I didn’t see anything."
 		};
 
 		string[] romanResponses = new string[9] {
-			"Shiver me timbers I know nothing!",
-			"Arrr matey it ain’t that difficult to understand.",
-			"Shiver me timbers, how dare ye threaten me!",
-			"Arrr, no matey I really don’t think I do. I saw nothing!",
-			"Ho ho ho, Arr matey I didn’t see anything!",
-			"Shiver me timbers ye need to plan ye lunch breaks better!",
-			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"What Ho! I understand you want to solve the problem but I saw nothing!",
+			"What Ho! Yes I understand, but I saw nothing!",
+			"What Ho! Don’t try and threaten me you madman!",
+			"What Ho! I didn’t see anything.",
+			"What Ho ho ho ho! That’s funny but I saw nothing of interest.",
+			"What Ho! I feel you’re trying to rush an answer out of me! Nay I say, Nay!",
+			"What Ho! My good man you are inquisitive but I don’t know anything.",
+			"What Ho! Thanks my good man but I didn’t see anything.",
+			"What Ho!  My good man I’m sorry but I saw nothing."
 		};
 
 		string[] wizardResponses = new string[9] {
-			"Shiver me timbers I know nothing!",
-			"Arrr matey it ain’t that difficult to understand.",
-			"Shiver me timbers, how dare ye threaten me!",
-			"Arrr, no matey I really don’t think I do. I saw nothing!",
-			"Ho ho ho, Arr matey I didn’t see anything!",
-			"Shiver me timbers ye need to plan ye lunch breaks better!",
-			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"Errrm...are you sure I can’t interest you in some merchandise instead?",
+			"Errrm...I do understand what is going on, I just didn’t see anything.",
+			"Errrm...I think you might need to calm down, I’ve got something for that.",
+			"Errrm...I saw nothing but I have seen some of my merchandise, would you like some?",
+			"Hee hee hee...that's funny. Errrm...but I still saw nothing though.",
+			"*Looks around shiftily* Sorry mate, I don’t know anything.",
+			"Errrm...I understand, but wouldn’t you prefer to buy some merchandise instead?",
+			"Errrm...yes there was something…. But I’ve forgotten it now.",
+			"Errrm...are you sure? I’m not that useful really."
 		};
 
 		//Weaknesses
