@@ -40,9 +40,13 @@ public class QuestioningScript : MonoBehaviour {
 		string response;
 		if ((weaknesses.Contains(choice)) && (character.getVerbalClue() != null)) {
 			VerbalClue clue = character.getVerbalClue ();
-			response = "Clue Added: "+clue.getDescription (); 
-			NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
-			NotebookManager.instance.UpdateNotebook();
+			if (!NotebookManager.instance.logbook.GetLogbook ().Contains (character.getVerbalClue ())) {
+				response = "Clue Added: " + clue.getDescription (); 
+				NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
+				NotebookManager.instance.UpdateNotebook ();
+			} else {
+				response = "Clue Already Obtained";
+			}
 		} else {
 			response = character.GetResponse (choice);
 		}

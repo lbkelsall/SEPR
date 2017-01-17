@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/
 Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.4_Data/Mono'
 Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.4_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v0.4_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55198
-Multi-casting "[IP] 192.168.1.2 [Port] 55198 [Flags] 2 [Guid] 1639193692 [EditorId] 2217308733 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.1.2:55198]
+PlayerConnection initialized network socket : 0.0.0.0 55249
+Multi-casting "[IP] 192.168.1.104 [Port] 55249 [Flags] 2 [Guid] 840991880 [EditorId] 11694073 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.104:55249]
 Initialize engine version: 5.4.3f1 (01f4c123905a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -23,179 +23,9 @@ Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SE
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.303 seconds
+- Completed reload, in  0.071 seconds
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.4_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v0.4_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-UnloadTime: 2.555661 ms
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 23.353079 ms
-System memory in use before: 16.8 MB.
-System memory in use after: 16.8 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 830.
-Total: 3.456104 ms (FindLiveObjects: 0.090004 ms CreateObjectMapping: 0.071056 ms MarkObjects: 1.015711 ms  DeleteObjects: 2.277752 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.290068 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1242.
-Total: 1.480341 ms (FindLiveObjects: 0.108163 ms CreateObjectMapping: 0.056055 ms MarkObjects: 1.290068 ms  DeleteObjects: 0.024474 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.027554 ms
-System memory in use before: 16.9 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1167.
-Total: 1.929181 ms (FindLiveObjects: 0.112900 ms CreateObjectMapping: 0.079741 ms MarkObjects: 1.706932 ms  DeleteObjects: 0.026448 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.477578 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1171.
-Total: 2.017212 ms (FindLiveObjects: 0.145665 ms CreateObjectMapping: 0.071451 ms MarkObjects: 1.489815 ms  DeleteObjects: 0.308700 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.928865 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1248.
-Total: 1.510738 ms (FindLiveObjects: 0.110926 ms CreateObjectMapping: 0.056450 ms MarkObjects: 1.318885 ms  DeleteObjects: 0.022501 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at LevelManager.AssignCharactersToSpawnPoints (.Scene scene) [0x0001b] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:32 
-  at LevelManager.Start () [0x00051] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:24 
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/LevelManager.cs Line: 32)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.810280 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1182.
-Total: 1.381257 ms (FindLiveObjects: 0.097505 ms CreateObjectMapping: 0.055660 ms MarkObjects: 1.206774 ms  DeleteObjects: 0.019737 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.449945 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1186.
-Total: 3.545319 ms (FindLiveObjects: 0.235670 ms CreateObjectMapping: 0.163824 ms MarkObjects: 3.064899 ms  DeleteObjects: 0.076583 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.982552 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1263.
-Total: 2.679221 ms (FindLiveObjects: 0.243170 ms CreateObjectMapping: 0.157113 ms MarkObjects: 2.241829 ms  DeleteObjects: 0.033554 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at LevelManager.AssignCharactersToSpawnPoints (.Scene scene) [0x0001b] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:32 
-  at LevelManager.Start () [0x00051] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:24 
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/LevelManager.cs Line: 32)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.273093 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1188.
-Total: 2.012475 ms (FindLiveObjects: 0.113295 ms CreateObjectMapping: 0.065529 ms MarkObjects: 1.804043 ms  DeleteObjects: 0.027633 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.010974 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1192.
-Total: 2.825676 ms (FindLiveObjects: 0.399494 ms CreateObjectMapping: 0.170140 ms MarkObjects: 2.173931 ms  DeleteObjects: 0.076583 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.006237 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1269.
-Total: 2.527634 ms (FindLiveObjects: 0.149218 ms CreateObjectMapping: 0.113295 ms MarkObjects: 2.218143 ms  DeleteObjects: 0.043818 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at LevelManager.AssignCharactersToSpawnPoints (.Scene scene) [0x0001b] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:32 
-  at LevelManager.Start () [0x00051] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:24 
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/LevelManager.cs Line: 32)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.795436 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1194.
-Total: 0.848729 ms (FindLiveObjects: 0.062371 ms CreateObjectMapping: 0.029212 ms MarkObjects: 0.743723 ms  DeleteObjects: 0.012237 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.511922 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1198.
-Total: 1.227696 ms (FindLiveObjects: 0.074609 ms CreateObjectMapping: 0.041054 ms MarkObjects: 1.061898 ms  DeleteObjects: 0.048949 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.117164 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1277.
-Total: 2.250514 ms (FindLiveObjects: 0.323701 ms CreateObjectMapping: 0.234880 ms MarkObjects: 1.661930 ms  DeleteObjects: 0.025264 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at LevelManager.AssignCharactersToSpawnPoints (.Scene scene) [0x0001b] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:32 
-  at LevelManager.Start () [0x00051] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:24 
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/LevelManager.cs Line: 32)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.977025 ms
-System memory in use before: 16.9 MB.
-System memory in use after: 16.9 MB.
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 866.
-Total: 1.337439 ms (FindLiveObjects: 0.076977 ms CreateObjectMapping: 0.055660 ms MarkObjects: 0.840834 ms  DeleteObjects: 0.362782 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.808858 ms
-System memory in use before: 17.0 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1261.
-Total: 1.540344 ms (FindLiveObjects: 0.111321 ms CreateObjectMapping: 0.079741 ms MarkObjects: 1.336649 ms  DeleteObjects: 0.011053 ms)
-
-IndexOutOfRangeException: Array index is out of range.
-  at LevelManager.AssignCharactersToSpawnPoints (.Scene scene) [0x0001b] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:32 
-  at LevelManager.Start () [0x00051] in C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Assets\Scripts\LevelManager.cs:24 
- 
-(Filename: C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Assets/Scripts/LevelManager.cs Line: 32)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.577452 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1200.
-Total: 2.411575 ms (FindLiveObjects: 0.200536 ms CreateObjectMapping: 0.051713 ms MarkObjects: 2.113138 ms  DeleteObjects: 0.041449 ms)
-
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2394 -> priority: 1 

@@ -249,6 +249,7 @@ using System.Linq; //Used for take in pick items
 
 		string motive = scenario.chooseMotive ();
 		murderer = scenario.chooseMurderer ();
+		Debug.Log (murderer.getCharacterID ());
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
 		scenario.CreateVerbalClues (); 
@@ -260,7 +261,14 @@ using System.Linq; //Used for take in pick items
 		verbalClues = scenario.getVerbalCluePool ().ToArray ();
 		relevant_items = scenario.getRelevantItems ();
 		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
+		Debug.Log (murderer.getCharacterID ());
+		foreach (Item item in relevant_items) {
+			Debug.Log (item.getID ());
+		}
 
+		foreach (VerbalClue verbal in relevant_verbal_clues) {
+			Debug.Log (verbal.getID ());
+		}
 	}
 
 	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){

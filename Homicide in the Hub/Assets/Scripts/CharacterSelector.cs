@@ -66,7 +66,7 @@ public class CharacterSelector : MonoBehaviour {
 	//Called when the play button is pressed
 	public void SelectDetective(){
 		GameMaster.instance.CreateNewGame (detectives [detectiveCounter]);
-		SceneManager.LoadScene ("Control Room");
+		SceneManager.LoadScene ("Atrium");
 	}
 
 }
