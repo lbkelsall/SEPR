@@ -12,6 +12,9 @@ public class InputManager1 : MonoBehaviour {
 	private GameObject notebookMenu;
 	public GameObject detective; 
 	private PlayerMovement playerMovement;
+	private bool mapIconPressed = false;
+	private bool notebookIconPressed = false;
+
 	void Start () {
 		playerMovement = detective.GetComponent<PlayerMovement>();
 		Time.timeScale = 1; 
@@ -22,13 +25,14 @@ public class InputManager1 : MonoBehaviour {
 
 	void Update () {
 		if (!isMenuvisible && !isNotebookvisible) {
-			if (Input.GetKeyDown (KeyCode.M)) {
+			if (Input.GetKeyDown (KeyCode.M) || mapIconPressed) {
 				isMapvisible = !isMapvisible;
 				if (isMapvisible) {
 					StopGame (map);
 				} else {
 					ResumeGame (map);
 				}
+				mapIconPressed = false;
 			}
 		}
 
@@ -45,7 +49,7 @@ public class InputManager1 : MonoBehaviour {
 		}
 
 		if (!isMapvisible && !isMenuvisible) {	
-			if (Input.GetKeyDown (KeyCode.I)) {
+			if (Input.GetKeyDown (KeyCode.I) || notebookIconPressed) {
 				isNotebookvisible = !isNotebookvisible;
 				if (isNotebookvisible) {
 					NotebookManager.instance.UpdateNotebook ();
@@ -53,6 +57,7 @@ public class InputManager1 : MonoBehaviour {
 				} else {
 					ResumeGame (notebookMenu);
 				}
+				notebookIconPressed = false;
 			}
 
 		}
@@ -69,5 +74,13 @@ public class InputManager1 : MonoBehaviour {
 		Time.timeScale = 1; 
 		playerMovement.enabled = true;
 		menu.SetActive (false);
+	}
+
+	public void MapIconPressed(){
+		mapIconPressed = true;
+	}
+
+	public void NotebookIconPressed(){
+		notebookIconPressed = true;
 	}
 }
