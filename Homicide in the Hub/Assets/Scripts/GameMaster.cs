@@ -9,6 +9,7 @@ using System.Linq; //Used for take in pick items
 	public static GameMaster instance = null;
 	static public Scene[] scenes;
 	public Item[] itemClues;
+	public VerbalClue[] verbalClues;
 	public NonPlayerCharacter[] characters;
 	public List<Clue> relevantClues;
 	private PlayerCharacter playerCharacter;
@@ -119,15 +120,6 @@ using System.Linq; //Used for take in pick items
 	}
 
 	void Start(){
-
-		//Defining Placeholder Verbal Clues
-		VerbalClue vc1 = new VerbalClue ("ID1", "D1");
-		VerbalClue vc2 = new VerbalClue ("ID2", "D2");
-		VerbalClue vc3 = new VerbalClue ("ID3", "D3");
-		VerbalClue vc4 = new VerbalClue ("ID4", "D4");
-		VerbalClue vc5 = new VerbalClue ("ID5", "D5");
-		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
-		VerbalClue vc7 = new VerbalClue ("ID7", "D7");
 
 		//Responce Arrays
 		string[] pirateResponses = new string[9] {
@@ -252,9 +244,8 @@ using System.Linq; //Used for take in pick items
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
 		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
-		VerbalClue[] verbalClues = new VerbalClue[7] { vc1, vc2, vc3, vc4, vc5, vc6, vc7 };
 
-		Scenario scenario = new Scenario (murderWeapons, itemClues, verbalClues, characters);
+		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
 
 		string motive = scenario.chooseMotive ();
 		murderer = scenario.chooseMurderer ();

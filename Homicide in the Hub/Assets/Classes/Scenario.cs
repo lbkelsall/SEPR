@@ -18,11 +18,11 @@ public class Scenario
 
 	private string[] motives = { "motive1, motive2, motive3, motive4, motive5, motive6, motive7" };
 
-	public Scenario (MurderWeapon[] murder_weapons, Item[] items, VerbalClue[] verbal, NonPlayerCharacter[] characters)
+
+	public Scenario (MurderWeapon[] murder_weapons, Item[] items, NonPlayerCharacter[] characters)
 	{
 		weapons = murder_weapons;
 		item_clues = items;
-		verbal_clues = verbal;
 		npcs = characters;
 	}
 
@@ -47,6 +47,17 @@ public class Scenario
 		return murderer;
 	}
 
+	public void CreateVerbalClues() { // this method will take as parameters all the info needed to generate clues (e.g. murderer)
+		VerbalClue vc1 = new VerbalClue ("ID1", "D1");
+		VerbalClue vc2 = new VerbalClue ("ID2", "D2");
+		VerbalClue vc3 = new VerbalClue ("ID3", "D3");
+		VerbalClue vc4 = new VerbalClue ("ID4", "D4");
+		VerbalClue vc5 = new VerbalClue ("ID5", "D5");
+		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
+		VerbalClue vc7 = new VerbalClue ("clue title (for logbook)", "actual clue (e.g. 'I saw x person carrying y weapon'");
+		VerbalClue[] verbalClues = new VerbalClue[7] { vc1, vc2, vc3, vc4, vc5, vc6, vc7 };
+		verbal_clues = verbalClues;
+	}
 
 	public void BuildCluePools(string motive, NonPlayerCharacter murderer, MurderWeapon weapon) {
 

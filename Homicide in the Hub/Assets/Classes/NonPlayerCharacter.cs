@@ -7,13 +7,13 @@ public class NonPlayerCharacter : Character {
 	private VerbalClue verbalClue = null;
 	private GameObject prefab;
 	private List<string> weaknesses;
-	private string[] questioningResponces;
+	private string[] questioningResponses;
 	// Use this for initialization
 
 	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, string[] questioningResponces) :  base(characterID, sprite, nickname) {
 		this.prefab = prefab;
 		this.weaknesses = weaknesses;
-		this.questioningResponces = questioningResponces;
+		this.questioningResponses = questioningResponces;
 	}
 
 	public bool IsMurderer(){
@@ -44,23 +44,23 @@ public class NonPlayerCharacter : Character {
 
 		switch(questioningStyle){
 		case ("Forceful"):
-			return questioningResponces [0];
+			return questioningResponses [0];
 		case ("Condescending"):
-			return questioningResponces [1];
+			return questioningResponses [1];
 		case ("Intimidating"):
-			return questioningResponces [2];
+			return questioningResponses [2];
 		case ("Coaxing"):
-			return questioningResponces [3];
+			return questioningResponses [3];
 		case ("Wisecracking"):
-			return questioningResponces [4];
+			return questioningResponses [4];
 		case ("Rushed"):
-			return questioningResponces [5];
+			return questioningResponses [5];
 		case ("Inquisitive"):
-			return questioningResponces [6];
+			return questioningResponses [6];
 		case ("Kind"):
-			return questioningResponces [7];
+			return questioningResponses [7];
 		case ("Inspiring"):
-			return questioningResponces [8];
+			return questioningResponses [8];
 		default:
 			return "...";
 
