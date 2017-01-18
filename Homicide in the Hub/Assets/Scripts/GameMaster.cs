@@ -275,13 +275,17 @@ using System.Linq; //Used for take in pick items
 	}
 
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
+
 		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
 
-		string motive = scenario.chooseMotive ();
+		scenario.chooseMotive ();
+		string motive = scenario.getMotive ();
+
 		murderer = scenario.chooseMurderer ();
 
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
+
 		scenario.CreateVerbalClues (); 
 		scenario.BuildCluePools (motive, murderer, weapon);
 		scenario.DistributeVerbalClues ();
@@ -295,6 +299,10 @@ using System.Linq; //Used for take in pick items
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
 		NotebookManager.instance.UpdateNotebook();
+
+		Debug.Log (motive);
+		Debug.Log (weapon.getID());
+
 
 		Debug.Log (murderer.getCharacterID ());
 		foreach (Item item in relevant_items){

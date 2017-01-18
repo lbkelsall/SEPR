@@ -15,9 +15,9 @@ public class Scenario
 	private List<Item> relevant_item_clues = new List<Item> ();
 	private List<VerbalClue> relevant_verbal_clues = new List<VerbalClue> ();
 	private MurderWeapon weapon;
+	private string motive;
 
-	private string[] motives = { "motive1, motive2, motive3, motive4, motive5, motive6, motive7" };
-
+	private string[] motives = { "motive1", "motive2", "motive3", "motive4", "motive5", "motive6", "motive7" };
 
 	public Scenario (MurderWeapon[] murder_weapons, Item[] items, NonPlayerCharacter[] characters)
 	{
@@ -33,10 +33,10 @@ public class Scenario
 	}
 			
 
-	public string chooseMotive() {
+	public void chooseMotive() {
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (motives);
-		return motives [0];
+		motive = motives [0];
 	}
 
 	public NonPlayerCharacter chooseMurderer() {
@@ -62,60 +62,78 @@ public class Scenario
 	public void BuildCluePools(string motive, NonPlayerCharacter murderer, MurderWeapon weapon) {
 
 		item_clue_pool.Add (weapon);
+		relevant_item_clues.Add (weapon);
 
-		switch (motive) {
-		case ("motive1"):
+		if (motive == "motive1") {
 			item_clue_pool.Add (item_clues [0]);
+			relevant_item_clues.Add (item_clues [0]);
 			verbal_clue_pool.Add (verbal_clues [0]);
-			break;
-		case ("motive2"):
+			relevant_verbal_clues.Add (verbal_clues [0]);
+		} else if (motive == "motive2") {
 			item_clue_pool.Add (item_clues [1]);
+			relevant_item_clues.Add (item_clues [1]);
 			verbal_clue_pool.Add (verbal_clues [1]);
-			break;
-		case ("motive3"):
+			relevant_verbal_clues.Add (verbal_clues [1]);
+		} else if (motive == "motive3") {
 			item_clue_pool.Add (item_clues [2]);
+			relevant_item_clues.Add (item_clues [2]);
 			verbal_clue_pool.Add (verbal_clues [2]);
-			break;
-		case ("motive4"):
+			relevant_verbal_clues.Add (verbal_clues [2]);
+		} else if (motive == "motive4") {
 			item_clue_pool.Add (item_clues [3]);
+			relevant_item_clues.Add (item_clues [3]);
 			verbal_clue_pool.Add (verbal_clues [3]);
-			break;
-		case ("motive5"):
+			relevant_verbal_clues.Add (verbal_clues [3]);
+		} else if (motive == "motive5") {
 			item_clue_pool.Add (item_clues [4]);
+			relevant_item_clues.Add (item_clues [4]);
 			verbal_clue_pool.Add (verbal_clues [4]);
-			break;
-		case ("motive6"):
+			relevant_verbal_clues.Add (verbal_clues [4]);
+		} else if (motive == "motive6") {
 			item_clue_pool.Add (item_clues [5]);
+			relevant_item_clues.Add (item_clues [5]);
 			verbal_clue_pool.Add (verbal_clues [5]);
-			break;
-		case ("motive7"):
+			relevant_verbal_clues.Add (verbal_clues [5]);
+		} else if (motive == "motive7") {
 			item_clue_pool.Add (item_clues [6]);
+			relevant_item_clues.Add (item_clues [6]);
 			verbal_clue_pool.Add (verbal_clues [6]);
-			break;
+			relevant_verbal_clues.Add (verbal_clues [6]);
+		} else {
+			Debug.Log ("ERROR: not choosing motive based clues!");
 		}
 
 		if (murderer.getCharacterID() == "Captain Bluebottle") {
 			item_clue_pool.Add (item_clues [0]);
+			relevant_item_clues.Add (item_clues [0]);
 			verbal_clue_pool.Add (verbal_clues [0]);
+			relevant_verbal_clues.Add (verbal_clues [0]);
 		} else if (murderer.getCharacterID() == "The Mime Twins") {
 			item_clue_pool.Add (item_clues [1]);
+			relevant_item_clues.Add (item_clues [1]);
 			verbal_clue_pool.Add (verbal_clues [1]);
+			relevant_verbal_clues.Add (verbal_clues [1]);
 		} else if (murderer.getCharacterID() == "Sir Worchester") {
 			item_clue_pool.Add (item_clues [2]);
+			relevant_item_clues.Add (item_clues [2]);
 			verbal_clue_pool.Add (verbal_clues [2]);
+			relevant_verbal_clues.Add (verbal_clues [2]);
 		} else if (murderer.getCharacterID() == "Jesse Ranger") {
 			item_clue_pool.Add (item_clues [3]);
+			relevant_item_clues.Add (item_clues [3]);
 			verbal_clue_pool.Add (verbal_clues [3]);
+			relevant_verbal_clues.Add (verbal_clues [3]);
 		} else if (murderer.getCharacterID() == "Celcius Maximus") {
 			item_clue_pool.Add (item_clues [4]);
+			relevant_item_clues.Add (item_clues [4]);
 			verbal_clue_pool.Add (verbal_clues [4]);
+			relevant_verbal_clues.Add (verbal_clues [4]);
 		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
 			item_clue_pool.Add (item_clues [5]);
+			relevant_item_clues.Add (item_clues [5]);
 			verbal_clue_pool.Add (verbal_clues [5]);
+			relevant_verbal_clues.Add (verbal_clues [5]);
 		}
-
-		relevant_item_clues = item_clue_pool;
-		relevant_verbal_clues = verbal_clue_pool; 
 
 		while (item_clue_pool.Count() < 6) {
 			int index = Random.Range (0, item_clues.Count());
@@ -155,6 +173,10 @@ public class Scenario
 
 	public MurderWeapon getWeapon () {
 		return weapon;
+	}
+
+	public string getMotive() {
+		return motive;
 	}
 
 	public NonPlayerCharacter[] getNPCs () {
