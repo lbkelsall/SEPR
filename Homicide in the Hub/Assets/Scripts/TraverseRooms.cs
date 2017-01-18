@@ -8,6 +8,5 @@ public class TraverseRooms : MonoBehaviour {
 	// Use this for initialization
 	void OnMouseDown() {
 		SceneManager.LoadScene(level);
-		Debug.Log ("Load Level:" + level);
 	}
 }

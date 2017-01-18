@@ -54,8 +54,8 @@ public class Scenario
 		VerbalClue vc4 = new VerbalClue ("ID4", "D4");
 		VerbalClue vc5 = new VerbalClue ("ID5", "D5");
 		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
-		VerbalClue vc7 = new VerbalClue ("clue title (for logbook)", "actual clue (e.g. 'I saw x person carrying y weapon'");
-		VerbalClue[] verbalClues = new VerbalClue[7] { vc1, vc2, vc3, vc4, vc5, vc6, vc7 };
+		//VerbalClue vc7 = new VerbalClue ("clue title (for logbook)", "actual clue (e.g. 'I saw x person carrying y weapon'");
+		VerbalClue[] verbalClues = new VerbalClue[6] { vc1, vc2, vc3, vc4, vc5, vc6};
 		verbal_clues = verbalClues;
 	}
 
@@ -167,5 +167,17 @@ public class Scenario
 
 	public List<VerbalClue> getRelevantVerbalClues () {
 		return relevant_verbal_clues; 
-	} 
+	}
+
+	public List<Clue> getRelevantClues () {
+		List<Clue> relevant_clues = new List<Clue> ();
+
+		for (int i = 0; (relevant_verbal_clues.Count) > i; i++) {
+			relevant_clues.Add (relevant_verbal_clues [i]);
+		}
+		for (int i = 0; (relevant_item_clues.Count) > i; i++) {
+			relevant_clues.Add (relevant_item_clues [i]);
+		}
+		return relevant_clues;
+	}
 }

@@ -90,34 +90,29 @@ public class NotebookManager : MonoBehaviour {
 	}
 
 	public void AddToSelectedClues(int reference){
-		List<int> toggleReferences = new List<int>();
-		ActivateAllToggles ();
-		if ((selectedCluesItem.Count + selectedCluesVerbal.Count) <= requiredNumberOfClues) { 
-			if (clueToggles [reference].isOn == true) {
-				if (reference < inventory.GetInventory ().Count) {
-					Item clue = inventory.GetInventory () [reference];
-					selectedCluesItem.Add (clue);
-				} else {
-					VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-					selectedCluesVerbal.Add (clue);
-				}
-				toggleReferences.Add (reference);
-				//If toggled off:
-			} else {
-				if (reference < inventory.GetInventory ().Count) {
-					Item clue = inventory.GetInventory () [reference];
-					selectedCluesItem.Remove (clue);
-				} else {
-					VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-					selectedCluesVerbal.Remove (clue);
 
-				}
-				toggleReferences.Remove (reference);
+		if (clueToggles [reference].isOn == true) {
+			if (reference < inventory.GetInventory ().Count) {
+				Item clue = inventory.GetInventory () [reference];
+				selectedCluesItem.Add (clue);
+			} else {
+				VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
+				selectedCluesVerbal.Add (clue);
 			}
-		} else if ((selectedCluesItem.Count + selectedCluesVerbal.Count) == requiredNumberOfClues){
+				//If toggled off:
+		} else {
+			if (reference < inventory.GetInventory ().Count) {
+				Item clue = inventory.GetInventory () [reference];
+				selectedCluesItem.Remove (clue);
+			} else {
+				VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
+				selectedCluesVerbal.Remove (clue);
+			}
+		}
+		if ((selectedCluesItem.Count + selectedCluesVerbal.Count) == requiredNumberOfClues) {
 			submitButton.interactable = true;
 		} else {
-			DeactivateToggles(toggleReferences);
+			submitButton.interactable = false;
 		}
 		clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
 	}

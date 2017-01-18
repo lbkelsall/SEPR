@@ -27,26 +27,29 @@ public class LevelManager : MonoBehaviour {
 
 	private void AssignCharactersToSpawnPoints(Scene scene){
 		int spawnPointCounter = 0;
-
-		foreach (NonPlayerCharacter character in scene.GetCharacters()){
-			GameObject prefab = Instantiate (character.GetPrefab(),characterSpawnPoints [spawnPointCounter].transform.position, Quaternion.identity ) as GameObject;
-			prefab.transform.localScale *= characterScaling; 
-			spawnPointCounter += 1;
-			CharacterInteraction characterInteraction = prefab.GetComponent<CharacterInteraction> ();
-			characterInteraction.SetCharacter (character);
+		if (scene.GetCharacters().Count > 0){
+			foreach (NonPlayerCharacter character in scene.GetCharacters()) {
+				GameObject prefab = Instantiate (character.GetPrefab (), characterSpawnPoints [spawnPointCounter].transform.position, Quaternion.identity) as GameObject;
+				prefab.transform.localScale *= characterScaling; 
+				spawnPointCounter += 1;
+				CharacterInteraction characterInteraction = prefab.GetComponent<CharacterInteraction> ();
+				characterInteraction.SetCharacter (character);
+			}
 		}
 
 	}
 
 	private void AssignItemsToSpawnPoints(Scene scene){
 		int itemSpawnPointCounter = 0;
-		foreach (Item item in scene.GetItems()) {
-			if (!NotebookManager.instance.inventory.GetInventory ().Contains (item)) {
-				GameObject prefab = Instantiate (item.GetPrefab (), itemSpawnPoints [itemSpawnPointCounter].transform.position, Quaternion.identity) as GameObject;
-				prefab.transform.localScale *= itemScaling; 
-				itemSpawnPointCounter += 1;
-				ItemScript itemScript = prefab.GetComponent<ItemScript> ();
-				itemScript.SetItem (item);
+		if (scene.GetItems ().Count > 0) {
+			foreach (Item item in scene.GetItems()) {
+				if (!NotebookManager.instance.inventory.GetInventory ().Contains (item)) {
+					GameObject prefab = Instantiate (item.GetPrefab (), itemSpawnPoints [itemSpawnPointCounter].transform.position, Quaternion.identity) as GameObject;
+					prefab.transform.localScale *= itemScaling; 
+					itemSpawnPointCounter += 1;
+					ItemScript itemScript = prefab.GetComponent<ItemScript> ();
+					itemScript.SetItem (item);
+				}
 			}
 		}
 	}

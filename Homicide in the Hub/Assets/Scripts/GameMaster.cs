@@ -12,6 +12,7 @@ using System.Linq; //Used for take in pick items
 	public VerbalClue[] verbalClues;
 	public NonPlayerCharacter[] characters;
 	public List<Clue> relevantClues;
+	private MurderWeapon[] murderWeapons;
 	private PlayerCharacter playerCharacter;
 
 	//NPC Sprites
@@ -240,35 +241,10 @@ using System.Linq; //Used for take in pick items
 		spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
-		MurderWeapon[] murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
+		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
 		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
-
-		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
-
-		string motive = scenario.chooseMotive ();
-		murderer = scenario.chooseMurderer ();
-		Debug.Log (murderer.getCharacterID ());
-		scenario.chooseWeapon ();
-		MurderWeapon weapon = scenario.getWeapon ();
-		scenario.CreateVerbalClues (); 
-		scenario.BuildCluePools (motive, murderer, weapon);
-		scenario.DistributeVerbalClues ();
-
-		itemClues = scenario.getItemCluePool ().ToArray ();
-		characters = scenario.getNPCs ();
-		verbalClues = scenario.getVerbalCluePool ().ToArray ();
-		relevant_items = scenario.getRelevantItems ();
-		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
-		Debug.Log (murderer.getCharacterID ());
-		foreach (Item item in relevant_items) {
-			Debug.Log (item.getID ());
-		}
-
-		foreach (VerbalClue verbal in relevant_verbal_clues) {
-			Debug.Log (verbal.getID ());
-		}
 	}
 
 	void AssignNPCsToScenes(NonPlayerCharacter[] characters, Scene[] scenes){
@@ -299,9 +275,37 @@ using System.Linq; //Used for take in pick items
 	}
 
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
+		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
+
+		string motive = scenario.chooseMotive ();
+		murderer = scenario.chooseMurderer ();
+
+		scenario.chooseWeapon ();
+		MurderWeapon weapon = scenario.getWeapon ();
+		scenario.CreateVerbalClues (); 
+		scenario.BuildCluePools (motive, murderer, weapon);
+		scenario.DistributeVerbalClues ();
+
+		itemClues = scenario.getItemCluePool ().ToArray ();
+		characters = scenario.getNPCs ();
+		verbalClues = scenario.getVerbalCluePool ().ToArray ();
+		relevant_items = scenario.getRelevantItems ();
+		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
+		relevantClues = scenario.getRelevantClues (); 
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
 		NotebookManager.instance.UpdateNotebook();
+
+		Debug.Log (murderer.getCharacterID ());
+		foreach (Item item in relevant_items){
+			Debug.Log (item.getID ());
+		}
+
+		foreach (VerbalClue clue in relevant_verbal_clues){
+			Debug.Log (clue.getID ());
+		}
+
+
 		ResetAll(scenes);
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes

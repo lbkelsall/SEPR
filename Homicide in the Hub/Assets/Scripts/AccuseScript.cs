@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Linq;
 
 public class AccuseScript : MonoBehaviour {
 
@@ -10,10 +11,10 @@ public class AccuseScript : MonoBehaviour {
 	private Button submitButton;
 	public GameObject optionsMenu;
 
-	private string character; 
+	private NonPlayerCharacter character; 
 
 	public void Start() {
-		character = InterrogationScript.instance.GetInterrogationCharacter ().getCharacterID();
+		character = InterrogationScript.instance.GetInterrogationCharacter();
 		NotebookManager.instance.UpdateNotebook ();
 		notebookMenu = GameObject.Find("Notebook Canvas").transform.GetChild(0).gameObject;
 		notebookMenu.SetActive (true);
@@ -35,46 +36,33 @@ public class AccuseScript : MonoBehaviour {
 	}
 
 	private void CompareEvidence(){
+
+		bool accusation = true;
 		//Get Selected Clues
 		List<Item> selectedItemClues = NotebookManager.instance.GetSelectedItemClues ();
 		List<VerbalClue> selectedVerbalClues = NotebookManager.instance.GetSelectedVerbalClues ();
 
 		//Get required clues
-		List<Item> relevantItemClues = GameMaster.instance.GetRelevantItems();
-		List<VerbalClue> relevantVerbalClues = GameMaster.instance.GetRelevantVerbalClues();
-		if ((CompareItemLists(selectedItemClues,relevantItemClues)) && (CompareVerbalLists(selectedVerbalClues,relevantVerbalClues)) && (character == GameMaster.instance.GetMurderer())){
-			//Accusation succesfull
-			Debug.Log("Accusation successful!");
+		List<Item> relevantItemClues = GameMaster.instance.GetRelevantItems ();
+		List<VerbalClue> relevantVerbalClues = GameMaster.instance.GetRelevantVerbalClues ();
+
+		foreach (Item clue in selectedItemClues) {
+			if (!relevantItemClues.Contains (clue)) {
+				accusation = false;
+			} 
+		}
+		foreach (VerbalClue clue in selectedVerbalClues) {
+			if (!relevantVerbalClues.Contains(clue)) {
+				accusation = false;
+			}
+		}
+
+		if ((accusation == true) && (character.IsMurderer ())) {
+			Debug.Log ("Win!");
 		} else {
-			Debug.Log ("Accusation failed!");
-			//Accusation inccorect or failed
-
+			Debug.Log ("Lose!");
 		}
-			
 	}
 
-	private bool CompareItemLists(List<Item> list1, List<Item> list2){
-		bool match = true;
-
-		for (int i = 0; i < list1.Count; i++) {
-			if (!list2.Contains (list1 [i])) {
-				match = false;
-				return match;
-			}
-		}
-		return match;
-	}
-
-	private bool CompareVerbalLists(List<VerbalClue> list1, List<VerbalClue> list2){
-		bool match = true;
-
-		for (int i = 0; i < list1.Count; i++) {
-			if (!list2.Contains (list1 [i])) {
-				match = false;
-				return match;
-			}
-		}
-		return match;
-	}
 }
 
