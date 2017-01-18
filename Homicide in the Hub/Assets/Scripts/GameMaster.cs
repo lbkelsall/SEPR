@@ -286,7 +286,7 @@ using System.Linq; //Used for take in pick items
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
 
-		scenario.CreateVerbalClues (); 
+		scenario.CreateVerbalClues (motive, weapon, murderer); 
 		scenario.BuildCluePools (motive, murderer, weapon);
 		scenario.DistributeVerbalClues ();
 

@@ -17,7 +17,7 @@ public class Scenario
 	private MurderWeapon weapon;
 	private string motive;
 
-	private string[] motives = { "motive1", "motive2", "motive3", "motive4", "motive5", "motive6", "motive7" };
+	private string[] motives = { "homewrecker", "loanshark", "promotion", "unfriended", "blackmail", "avenge_friend", "avenge_pet" };
 
 	public Scenario (MurderWeapon[] murder_weapons, Item[] items, NonPlayerCharacter[] characters)
 	{
@@ -47,16 +47,88 @@ public class Scenario
 		return murderer;
 	}
 
-	public void CreateVerbalClues() { // this method will take as parameters all the info needed to generate clues (e.g. murderer)
-		VerbalClue vc1 = new VerbalClue ("ID1", "D1");
-		VerbalClue vc2 = new VerbalClue ("ID2", "D2");
-		VerbalClue vc3 = new VerbalClue ("ID3", "D3");
-		VerbalClue vc4 = new VerbalClue ("ID4", "D4");
-		VerbalClue vc5 = new VerbalClue ("ID5", "D5");
-		VerbalClue vc6 = new VerbalClue ("ID6", "D6");
-		//VerbalClue vc7 = new VerbalClue ("clue title (for logbook)", "actual clue (e.g. 'I saw x person carrying y weapon'");
-		VerbalClue[] verbalClues = new VerbalClue[6] { vc1, vc2, vc3, vc4, vc5, vc6};
-		verbal_clues = verbalClues;
+	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) {
+
+		string murderer_name = murderer.getCharacterID ();
+		string weapon_name = weapon.getID ();
+
+		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw"+murderer_name+"trying to dispose of a"+weapon_name+".");
+
+		string old_friends_description = "The victim and"+murderer_name+"used to be good friends, but recently fell out with one another";
+		string motive_clause = ".";
+		if (motive == "homewrecker") {
+			string partner_gender;
+			int binary = Random.Range (0, 1);
+			if (binary == 0) {
+				partner_gender = "wife";
+			} else {
+				partner_gender = "husband";
+			}
+			motive_clause = "because the victim slept with their"+partner_gender+".";  
+		}
+		if (motive == "loanshark") {
+			motive_clause = "because"+murderer_name+"was in debt to the victim."; 
+		}
+		if (motive == "promotion") {
+			motive_clause = "because they were in competition with one another at work.";
+		}
+		if (motive == "unfriended") {
+			motive_clause = "because the victim unfriended"+murderer_name+"on Facebook.";
+		}
+		if (motive == "blackmail") {
+			motive_clause = "because the victim knew"+murderer_name+"'s darkest secret.";
+		}
+		if (motive == "avenge_friend") {
+			motive_clause = "because"+murderer_name+"believed that the victim was responsible for the death of a friend."; 
+		}
+		if (motive == "avenge_pet") {
+			string species;
+			int rand = Random.Range (0, 4);
+			if (rand == 0) {
+				species = "parrot";
+			} else if (rand == 1) {
+				species = "chihuahua";
+			} else if (rand == 2) {
+				species = "iguana";
+			} else if (rand == 3) {
+				species = "goldfish";
+			} else {
+				species = "rattlesnake";
+			}
+			string cause_of_death;
+			rand = Random.Range (0,4);
+			if (rand == 0) {
+				cause_of_death = "starvation";
+			} else if (rand == 1) {
+				cause_of_death = "loneliness";
+			} else if (rand == 2) {
+				cause_of_death = "a broken heart";
+			} else if (rand == 3) {
+				cause_of_death = "boredom";
+			} else {
+				cause_of_death = "electrocution";
+			}
+			motive_clause = "because the victim was looking after"+murderer_name+"'s"+species+"when it died of"+cause_of_death+".";  
+		}
+		old_friends_description += motive_clause;
+		VerbalClue old_friends = new VerbalClue ("Old Friends", old_friends_description);
+
+		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant history with"+murderer_name+".");
+
+		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with"+murderer_name+"just a few minutes before their body was discovered.");
+
+		VerbalClue altercation = new VerbalClue ("An Altercation", "D5");
+		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", "D6");
+		VerbalClue police_evidence = new VerbalClue ("Lack of Evidence", "D6");
+		verbal_clues = new VerbalClue[7] {
+			disposing_of_weapon,
+			old_friends,
+			old_enemies,
+			last_seen_with,
+			altercation,
+			changed_story,
+			police_evidence
+		};
 	}
 
 	public void BuildCluePools(string motive, NonPlayerCharacter murderer, MurderWeapon weapon) {
@@ -64,43 +136,41 @@ public class Scenario
 		item_clue_pool.Add (weapon);
 		relevant_item_clues.Add (weapon);
 
-		if (motive == "motive1") {
+		if (motive == "homewrecker") {
 			item_clue_pool.Add (item_clues [0]);
 			relevant_item_clues.Add (item_clues [0]);
 			verbal_clue_pool.Add (verbal_clues [0]);
 			relevant_verbal_clues.Add (verbal_clues [0]);
-		} else if (motive == "motive2") {
+		} else if (motive == "loanshark") {
 			item_clue_pool.Add (item_clues [1]);
 			relevant_item_clues.Add (item_clues [1]);
 			verbal_clue_pool.Add (verbal_clues [1]);
 			relevant_verbal_clues.Add (verbal_clues [1]);
-		} else if (motive == "motive3") {
+		} else if (motive == "promotion") {
 			item_clue_pool.Add (item_clues [2]);
 			relevant_item_clues.Add (item_clues [2]);
 			verbal_clue_pool.Add (verbal_clues [2]);
 			relevant_verbal_clues.Add (verbal_clues [2]);
-		} else if (motive == "motive4") {
+		} else if (motive == "unfriended") {
 			item_clue_pool.Add (item_clues [3]);
 			relevant_item_clues.Add (item_clues [3]);
 			verbal_clue_pool.Add (verbal_clues [3]);
 			relevant_verbal_clues.Add (verbal_clues [3]);
-		} else if (motive == "motive5") {
+		} else if (motive == "blackmail") {
 			item_clue_pool.Add (item_clues [4]);
 			relevant_item_clues.Add (item_clues [4]);
 			verbal_clue_pool.Add (verbal_clues [4]);
 			relevant_verbal_clues.Add (verbal_clues [4]);
-		} else if (motive == "motive6") {
+		} else if (motive == "avenge_friend") {
 			item_clue_pool.Add (item_clues [5]);
 			relevant_item_clues.Add (item_clues [5]);
 			verbal_clue_pool.Add (verbal_clues [5]);
 			relevant_verbal_clues.Add (verbal_clues [5]);
-		} else if (motive == "motive7") {
+		} else if (motive == "avenge_pet") {
 			item_clue_pool.Add (item_clues [6]);
 			relevant_item_clues.Add (item_clues [6]);
 			verbal_clue_pool.Add (verbal_clues [6]);
 			relevant_verbal_clues.Add (verbal_clues [6]);
-		} else {
-			Debug.Log ("ERROR: not choosing motive based clues!");
 		}
 
 		if (murderer.getCharacterID() == "Captain Bluebottle") {
