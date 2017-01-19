@@ -216,70 +216,57 @@ public class Scenario
 
 		int pick_motive_clue = Random.Range (0, 1); // 'old friends' or 'altercation'
 		if (motive == "homewrecker") {
-			item_clue_pool.Add (item_clues [0]);
 			relevant_item_clues.Add (item_clues [pick_motive_clue]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "loanshark") {
-			item_clue_pool.Add (item_clues [1]);
-			relevant_item_clues.Add (item_clues [1]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "promotion") {
-			item_clue_pool.Add (item_clues [2]);
-			relevant_item_clues.Add (item_clues [2]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "unfriended") {
-			item_clue_pool.Add (item_clues [3]);
-			relevant_item_clues.Add (item_clues [3]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "blackmail") {
-			item_clue_pool.Add (item_clues [4]);
-			relevant_item_clues.Add (item_clues [4]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "avenge_friend") {
-			item_clue_pool.Add (item_clues [5]);
-			relevant_item_clues.Add (item_clues [5]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "avenge_pet") {
-			item_clue_pool.Add (item_clues [6]);
-			relevant_item_clues.Add (item_clues [6]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		}
 
 		int pick_weapon_clue = Random.Range (2, 5);
 		if (murderer.getCharacterID() == "Captain Bluebottle") {
-			item_clue_pool.Add (item_clues [0]);
-			relevant_item_clues.Add (item_clues [0]);
+			item_clue_pool.Add (item_clues [4]); // shattered glass
+			relevant_item_clues.Add (item_clues [4]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "The Mime Twins") {
-			item_clue_pool.Add (item_clues [1]);
-			relevant_item_clues.Add (item_clues [1]);
+			item_clue_pool.Add (item_clues [0]); // beret
+			relevant_item_clues.Add (item_clues [0]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Sir Worchester") {
-			item_clue_pool.Add (item_clues [2]);
+			item_clue_pool.Add (item_clues [2]); // gloves
 			relevant_item_clues.Add (item_clues [2]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Jesse Ranger") {
-			item_clue_pool.Add (item_clues [3]);
-			relevant_item_clues.Add (item_clues [3]);
+			item_clue_pool.Add (item_clues [8]); // tripwire
+			relevant_item_clues.Add (item_clues [8]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Celcius Maximus") {
-			item_clue_pool.Add (item_clues [4]);
-			relevant_item_clues.Add (item_clues [4]);
+			item_clue_pool.Add (item_clues [3]); // wine
+			relevant_item_clues.Add (item_clues [3]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue]);
 		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
-			item_clue_pool.Add (item_clues [5]);
-			relevant_item_clues.Add (item_clues [5]);
+			item_clue_pool.Add (item_clues [7]); // spellbook
+			relevant_item_clues.Add (item_clues [7]);
 			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
 			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		}
