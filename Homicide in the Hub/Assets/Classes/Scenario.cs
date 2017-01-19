@@ -198,18 +198,14 @@ public class Scenario
 		string character_name = npcs [random].getCharacterID ();
 		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+"told me that the last time they saw the" +
 			"victim was before 8pm, but told"+character_name+"they had spoken to the victim after 9pm.");
-		
-		VerbalClue police_evidence = new VerbalClue ("Lack of Evidence", "The police told me hey think the victim was murdered" +
-			"using a"+weapon_name+", but they can't find any evidence of one." );
 
-		verbal_clues = new VerbalClue[7] {
-			disposing_of_weapon,
+		verbal_clues = new VerbalClue[6] {
 			old_friends,
+			altercation,
+			disposing_of_weapon,
 			old_enemies,
 			last_seen_with,
-			altercation,
-			changed_story,
-			police_evidence
+			changed_story
 		};
 	}
 
@@ -218,73 +214,74 @@ public class Scenario
 		item_clue_pool.Add (weapon);
 		relevant_item_clues.Add (weapon);
 
+		int pick_motive_clue = Random.Range (0, 1); // 'old friends' or 'altercation'
 		if (motive == "homewrecker") {
 			item_clue_pool.Add (item_clues [0]);
-			relevant_item_clues.Add (item_clues [0]);
-			verbal_clue_pool.Add (verbal_clues [0]);
-			relevant_verbal_clues.Add (verbal_clues [0]);
+			relevant_item_clues.Add (item_clues [pick_motive_clue]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "loanshark") {
 			item_clue_pool.Add (item_clues [1]);
 			relevant_item_clues.Add (item_clues [1]);
-			verbal_clue_pool.Add (verbal_clues [1]);
-			relevant_verbal_clues.Add (verbal_clues [1]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "promotion") {
 			item_clue_pool.Add (item_clues [2]);
 			relevant_item_clues.Add (item_clues [2]);
-			verbal_clue_pool.Add (verbal_clues [2]);
-			relevant_verbal_clues.Add (verbal_clues [2]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "unfriended") {
 			item_clue_pool.Add (item_clues [3]);
 			relevant_item_clues.Add (item_clues [3]);
-			verbal_clue_pool.Add (verbal_clues [3]);
-			relevant_verbal_clues.Add (verbal_clues [3]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "blackmail") {
 			item_clue_pool.Add (item_clues [4]);
 			relevant_item_clues.Add (item_clues [4]);
-			verbal_clue_pool.Add (verbal_clues [4]);
-			relevant_verbal_clues.Add (verbal_clues [4]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "avenge_friend") {
 			item_clue_pool.Add (item_clues [5]);
 			relevant_item_clues.Add (item_clues [5]);
-			verbal_clue_pool.Add (verbal_clues [5]);
-			relevant_verbal_clues.Add (verbal_clues [5]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		} else if (motive == "avenge_pet") {
 			item_clue_pool.Add (item_clues [6]);
 			relevant_item_clues.Add (item_clues [6]);
-			verbal_clue_pool.Add (verbal_clues [6]);
-			relevant_verbal_clues.Add (verbal_clues [6]);
+			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
 		}
 
+		int pick_weapon_clue = Random.Range (2, 5);
 		if (murderer.getCharacterID() == "Captain Bluebottle") {
 			item_clue_pool.Add (item_clues [0]);
 			relevant_item_clues.Add (item_clues [0]);
-			verbal_clue_pool.Add (verbal_clues [0]);
-			relevant_verbal_clues.Add (verbal_clues [0]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "The Mime Twins") {
 			item_clue_pool.Add (item_clues [1]);
 			relevant_item_clues.Add (item_clues [1]);
-			verbal_clue_pool.Add (verbal_clues [1]);
-			relevant_verbal_clues.Add (verbal_clues [1]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Sir Worchester") {
 			item_clue_pool.Add (item_clues [2]);
 			relevant_item_clues.Add (item_clues [2]);
-			verbal_clue_pool.Add (verbal_clues [2]);
-			relevant_verbal_clues.Add (verbal_clues [2]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Jesse Ranger") {
 			item_clue_pool.Add (item_clues [3]);
 			relevant_item_clues.Add (item_clues [3]);
-			verbal_clue_pool.Add (verbal_clues [3]);
-			relevant_verbal_clues.Add (verbal_clues [3]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Celcius Maximus") {
 			item_clue_pool.Add (item_clues [4]);
 			relevant_item_clues.Add (item_clues [4]);
-			verbal_clue_pool.Add (verbal_clues [4]);
-			relevant_verbal_clues.Add (verbal_clues [4]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue]);
 		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
 			item_clue_pool.Add (item_clues [5]);
 			relevant_item_clues.Add (item_clues [5]);
-			verbal_clue_pool.Add (verbal_clues [5]);
-			relevant_verbal_clues.Add (verbal_clues [5]);
+			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		}
 
 		while (item_clue_pool.Count() < 6) {
@@ -293,14 +290,29 @@ public class Scenario
 				item_clue_pool.Add (item_clues [index]);
 			}
 		}
-
-		while (verbal_clue_pool.Count() < 3) {
-			int index = Random.Range (0, verbal_clues.Count());
-			if (verbal_clue_pool.Contains (verbal_clues [index]) == false) {
-				verbal_clue_pool.Add (verbal_clues [index]);
-			}
+			
+		// add 'red herring' verbal clue
+		int weapon_index = Random.Range(0,weapons.Count());
+		string red_herring_weapon = weapons [weapon_index].getID ();
+		while (red_herring_weapon == weapon.getID() ) {
+			weapon_index = Random.Range(0,weapons.Count());
+			red_herring_weapon = weapons [weapon_index].getID ();
+		}
+		int npc_index = Random.Range(0,npcs.Count());
+		string red_herring_character = npcs [npc_index ].getCharacterID  ();
+		while (red_herring_character == murderer.getCharacterID () ) {
+			npc_index = Random.Range(0,npcs.Count());
+			red_herring_character = npcs [npc_index ].getCharacterID ();
 		}
 
+		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police told me they think the victim was killed " +
+		                            "using a" + red_herring_weapon + ", but they can’t find any evidence of one.");
+
+		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw"+red_herring_character+"acting suspiciously." );
+
+		VerbalClue[] red_herring_verbal_clues = new VerbalClue[2] { police_failure, shifty_looking };
+		int herring_index = Random.Range (0,1);
+		verbal_clue_pool.Add (red_herring_verbal_clues [herring_index]);
 	}
 
 	public void DistributeVerbalClues() {
