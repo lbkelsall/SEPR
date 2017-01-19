@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class AccuseScript : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class AccuseScript : MonoBehaviour {
 	private Button backButton;
 	private Button submitButton;
 	public GameObject optionsMenu;
+	public GameObject verbal;
+	public Text verbalText;
 
 	private NonPlayerCharacter character; 
 
@@ -58,9 +61,13 @@ public class AccuseScript : MonoBehaviour {
 		}
 
 		if ((accusation == true) && (character.IsMurderer ())) {
-			Debug.Log ("Win!");
+			notebookMenu.SetActive (false);
+			SceneManager.LoadScene ("Win Screen");
 		} else {
-			Debug.Log ("Lose!");
+			notebookMenu.SetActive (false);
+			verbal.SetActive (true);
+			verbalText.text = "You don't have enough evidence to accuse me of murder!";
+
 		}
 	}
 

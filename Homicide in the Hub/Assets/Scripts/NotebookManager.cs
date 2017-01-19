@@ -36,6 +36,8 @@ public class NotebookManager : MonoBehaviour {
 
 	public void UpdateNotebook(){
 		if (SceneManager.GetActiveScene ().name == "Interrogation Room") {
+			ResetSelectedClues ();
+			ResetAllToggles ();
 			ShowNeededToggles ();
 			clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
 			submitButton.interactable = false;
@@ -154,5 +156,16 @@ public class NotebookManager : MonoBehaviour {
 		for (int i = 0; i < 20; i++) {
 			clueToggles [i].interactable = true;
 		}
+	}
+
+	private void ResetAllToggles(){
+		for (int i = 0; i < 20; i++) {
+			clueToggles [i].isOn = false;;
+		}
+	}
+
+	public void ResetSelectedClues(){
+		selectedCluesItem.Clear ();
+		selectedCluesVerbal.Clear ();
 	}
 }

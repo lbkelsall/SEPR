@@ -1876,8 +1876,8 @@ MonoBehaviour:
   - {fileID: 1709837841}
   itemSpawnPoints:
   - {fileID: 706350803}
-  characterScaling: 1.1
-  itemScaling: 1.1
+  characterScaling: 0.75
+  itemScaling: 0.75
 --- !u!114 &1339755212
 MonoBehaviour:
   m_ObjectHideFlags: 0

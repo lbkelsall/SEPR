@@ -27,3 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lakehouse.unity
   - enabled: 1
     path: Assets/Scenes/Lecture Theatre.unity
+  - enabled: 1
+    path: Assets/Scenes/Underground Lab.unity
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity

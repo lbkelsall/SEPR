@@ -302,16 +302,20 @@ public class Scenario
 		verbal_clue_pool.Add (red_herring_verbal_clues [herring_index]);
 	}
 
-	public void DistributeVerbalClues() {
+	public void DistributeVerbalClues(NonPlayerCharacter murderer) {
 		int index = 0;
+		List<NonPlayerCharacter> npcs_list = npcs.ToList (); 
+		npcs_list.Remove (murderer);
 		while (index < verbal_clue_pool.Count()) {
-			NonPlayerCharacter character = npcs [Random.Range (0, npcs.Count ())];
+			NonPlayerCharacter character = npcs_list [Random.Range (0, npcs_list.Count ())];
 			if (character.getVerbalClue() == null) {
 				character.setVerbalClue (verbal_clue_pool [index]);
 				verbal_clue_pool [index].SetOwner (character); 
 				index++;
 			}
 		}
+		npcs_list.Add (murderer);
+		npcs = npcs_list.ToArray (); 
 	}
 
 	public List<Item> getItemCluePool () {

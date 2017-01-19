@@ -189,80 +189,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!1 &469472936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 469472937}
-  - 61: {fileID: 469472939}
-  - 114: {fileID: 469472938}
-  m_Layer: 0
-  m_Name: Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &469472937
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 469472936}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.08, y: 0.88, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 941623394}
-  m_RootOrder: 0
---- !u!114 &469472938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 469472936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1339755210}
-          m_MethodName: LoadScene
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Kitchen
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
---- !u!61 &469472939
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 469472936}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: -0.36042297, y: -0.49493346}
-  serializedVersion: 2
-  m_Size: {x: 3.2567024, y: 2.6202261}
 --- !u!1 &542161678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,11 +1443,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941623392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.93091595, y: 0.9338167, z: 0.8824091}
+  m_LocalPosition: {x: 0.02, y: -0, z: 0}
+  m_LocalScale: {x: 0.9233207, y: 0.9232416, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 469472937}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &1014475245
@@ -2049,8 +1974,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422320630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.72, y: -3.43, z: 0}
-  m_LocalScale: {x: 1.0649161, y: 1.0625167, z: 0.83006686}
+  m_LocalPosition: {x: -6.36, y: -3.38, z: 0}
+  m_LocalScale: {x: 0.99544835, y: 0.9932055, z: 0.775919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2071,7 +1996,7 @@ MonoBehaviour:
   - -8.8
   - 8.8
   - -5.03
-  - -3.06
+  - -3.4
   isFacingRight: 0
 --- !u!61 &1422320634
 BoxCollider2D:
@@ -2245,11 +2170,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010139768380, guid: 11a5a4cec74ede240909d81339630455, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.99
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 4000010139768380, guid: 11a5a4cec74ede240909d81339630455, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.53
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4000010139768380, guid: 11a5a4cec74ede240909d81339630455, type: 2}
       propertyPath: m_LocalPosition.z

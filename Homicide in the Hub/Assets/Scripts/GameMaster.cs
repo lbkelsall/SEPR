@@ -217,7 +217,7 @@ using System.Linq; //Used for take in pick items
 		kitchen = new Scene("Kitchen");
 		lectureTheatre = new Scene("Lecture Theatre");
 		lakehouse = new Scene("Lakehouse");
-		islandOfInteraction = new Scene("Island Of Interaction");
+		islandOfInteraction = new Scene("Island of Interaction");
 		roof = new Scene ("Roof");
 		atrium = new Scene("Atrium");
 		undergroundLab = new Scene("Underground Lab");
@@ -251,6 +251,7 @@ using System.Linq; //Used for take in pick items
 		int sceneCounter = 0;
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (characters);
+		shuffler.Shuffle (scenes);
 		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
 			scenes [sceneCounter].AddNPCToArray (character);		//Assign a character to a scene
 			sceneCounter += 1;									//Increment sceneCounter
@@ -265,6 +266,7 @@ using System.Linq; //Used for take in pick items
 		int sceneIndex = 0;
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (items);
+		shuffler.Shuffle (scenes);
 		foreach (Item item in items) {
 			scenes [sceneIndex].AddItemToArray (item);
 			sceneIndex++;
@@ -275,10 +277,11 @@ using System.Linq; //Used for take in pick items
 	}
 
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
-
+		
 		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
-
+		NotebookManager.instance.ResetSelectedClues ();
 		scenario.chooseMotive ();
+		 
 		string motive = scenario.getMotive ();
 
 		murderer = scenario.chooseMurderer ();
@@ -288,7 +291,7 @@ using System.Linq; //Used for take in pick items
 
 		scenario.CreateVerbalClues (motive, weapon, murderer); 
 		scenario.BuildCluePools (motive, murderer, weapon);
-		scenario.DistributeVerbalClues ();
+		scenario.DistributeVerbalClues (murderer);
 
 		itemClues = scenario.getItemCluePool ().ToArray ();
 		characters = scenario.getNPCs ();

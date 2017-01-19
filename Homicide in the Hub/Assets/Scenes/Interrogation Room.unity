@@ -819,6 +819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 1565404697}
+  verbal: {fileID: 1468608385}
+  verbalText: {fileID: 1147230180}
 --- !u!1 &673635016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WEll donenwe
+  m_Text: 
 --- !u!222 &1147230181
 CanvasRenderer:
   m_ObjectHideFlags: 0
