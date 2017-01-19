@@ -52,9 +52,11 @@ public class Scenario
 		string murderer_name = murderer.getCharacterID ();
 		string weapon_name = weapon.getID ();
 
-		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw"+murderer_name+"trying to dispose of a"+weapon_name+".");
+		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw"+murderer_name+"trying to " +
+			"dispose of a"+weapon_name+".");
 
-		string old_friends_description = "The victim and"+murderer_name+"used to be good friends, but recently fell out with one another";
+		string old_friends_description = "The victim and"+murderer_name+"used to be good friends, but recently fell " +
+			"out with one another";
 		string motive_clause = ".";
 		if (motive == "homewrecker") {
 			string partner_gender;
@@ -108,18 +110,98 @@ public class Scenario
 			} else {
 				cause_of_death = "electrocution";
 			}
-			motive_clause = "because the victim was looking after"+murderer_name+"'s"+species+"when it died of"+cause_of_death+".";  
+			motive_clause = "because the victim was looking after"+murderer_name+"'s"+species+"when it " +
+				"died of"+cause_of_death+".";  
 		}
 		old_friends_description += motive_clause;
 		VerbalClue old_friends = new VerbalClue ("Old Friends", old_friends_description);
 
-		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant history with"+murderer_name+".");
+		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant " +
+			"history with"+murderer_name+".");
 
-		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with"+murderer_name+"just a few minutes before their body was discovered.");
+		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with"+murderer_name+"just a few " +
+			"minutes before their body was discovered.");
 
-		VerbalClue altercation = new VerbalClue ("An Altercation", "D5");
-		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", "D6");
-		VerbalClue police_evidence = new VerbalClue ("Lack of Evidence", "D6");
+		motive_clause = ".";
+		if (motive == "homewrecker") {
+			string partner_gender;
+			int binary = Random.Range (0, 1);
+			if (binary == 0) {
+				partner_gender = "wife";
+			} else {
+				partner_gender = "husband";
+			}
+			motive_clause = "the victim having slept with their"+partner_gender+".";  
+		}
+		if (motive == "loanshark") {
+			motive_clause = murderer_name+"being in debt to the victim."; 
+		}
+		if (motive == "promotion") {
+			motive_clause = "them being in competition with one another at work.";
+		}
+		if (motive == "unfriended") {
+			motive_clause = "the victim unfriending"+murderer_name+"on Facebook.";
+		}
+		if (motive == "blackmail") {
+			motive_clause = "the victim having found out"+murderer_name+"'s darkest secret.";
+		}
+		if (motive == "avenge_friend") {
+			motive_clause = murderer_name+"believing that the victim was responsible for the death of a friend."; 
+		}
+		if (motive == "avenge_pet") {
+			string species;
+			int rand = Random.Range (0, 4);
+			if (rand == 0) {
+				species = "parrot";
+			} else if (rand == 1) {
+				species = "chihuahua";
+			} else if (rand == 2) {
+				species = "iguana";
+			} else if (rand == 3) {
+				species = "goldfish";
+			} else {
+				species = "rattlesnake";
+			}
+			string cause_of_death;
+			rand = Random.Range (0,4);
+			if (rand == 0) {
+				cause_of_death = "starvation";
+			} else if (rand == 1) {
+				cause_of_death = "loneliness";
+			} else if (rand == 2) {
+				cause_of_death = "a broken heart";
+			} else if (rand == 3) {
+				cause_of_death = "boredom";
+			} else {
+				cause_of_death = "electrocution";
+			}
+			motive_clause = "the victim being responsible for looking after"+murderer_name+"'s"+species+"when it " +
+				"died of"+cause_of_death+".";  
+		}
+		string altercation_location;
+		int r = Random.Range (0, 4);
+		if (r == 0) {
+			altercation_location = "in the car park";
+		} else if (r == 1) {
+			altercation_location = "at the bar";
+		} else if (r == 2) {
+			altercation_location = "in the underground laboratory";
+		} else if (r == 3) {
+			altercation_location = "on the helipad";
+		} else {
+			altercation_location = "in glasshouse";
+		}
+		VerbalClue altercation = new VerbalClue ("An Altercation", "I heard that"+murderer_name+"and the victim had an altercation" +
+			"in the"+altercation_location+". Apparently it had something to do with"+motive_clause);
+
+		int random = Random.Range (0, npcs.Count ());
+		string character_name = npcs [random].getCharacterID ();
+		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+"told me that the last time they saw the" +
+			"victim was before 8pm, but told"+character_name+"they had spoken to the victim after 9pm.");
+		
+		VerbalClue police_evidence = new VerbalClue ("Lack of Evidence", "The police told me hey think the victim was murdered" +
+			"using a"+weapon_name+", but they can't find any evidence of one." );
+
 		verbal_clues = new VerbalClue[7] {
 			disposing_of_weapon,
 			old_friends,
