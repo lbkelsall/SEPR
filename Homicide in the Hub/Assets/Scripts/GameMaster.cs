@@ -206,10 +206,10 @@ using System.Linq; //Used for take in pick items
 
 		//Defining NPC's
 		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref,pirateWeaknesses ,pirateResponses);
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"Silent but Deadly",mimesPref,mimeWeaknesses, mimeResponses );
+		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"mimes",mimesPref,mimeWeaknesses, mimeResponses );
 		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,millionaireWeaknesses, millionaireResponses );
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"The Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"The Legionnaire", romanPref,romanWeaknesses, romanResponses );
+		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
+		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
 		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
 
 		//Defining Scenes

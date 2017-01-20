@@ -49,14 +49,13 @@ public class Scenario
 
 	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) {
 
-		string murderer_name = murderer.getCharacterID ();
+		string murderer_name = murderer.getNickname ();
 		string weapon_name = weapon.getID ();
 
-		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw"+murderer_name+"trying to " +
-			"dispose of a"+weapon_name+".");
+		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw "+murderer_name+" trying to " +
+			"dispose of a "+weapon_name+".");
 
-		string old_friends_description = "The victim and"+murderer_name+"used to be good friends, but recently fell " +
-			"out with one another";
+		string old_friends_description = "The victim and "+murderer_name+" fell out ";
 		string motive_clause = ".";
 		if (motive == "homewrecker") {
 			string partner_gender;
@@ -66,22 +65,24 @@ public class Scenario
 			} else {
 				partner_gender = "husband";
 			}
-			motive_clause = "because the victim slept with their"+partner_gender+".";  
+			motive_clause = "because the victim slept with their "+partner_gender+".";  
 		}
 		if (motive == "loanshark") {
-			motive_clause = "because"+murderer_name+"was in debt to the victim."; 
+			motive_clause = "because "+murderer_name+" was in debt to the victim."; 
 		}
 		if (motive == "promotion") {
-			motive_clause = "because they were in competition with one another at work.";
+			motive_clause = "because they were in competition professionally.";
 		}
 		if (motive == "unfriended") {
-			motive_clause = "because the victim unfriended"+murderer_name+"on Facebook.";
+			motive_clause = "because the victim unfriended "+murderer_name+" on Facebook.";
 		}
 		if (motive == "blackmail") {
-			motive_clause = "because the victim knew"+murderer_name+"'s darkest secret.";
+			motive_clause = "because the victim knew "+murderer_name+"'s darkest secret.";
 		}
+
 		if (motive == "avenge_friend") {
-			motive_clause = "because"+murderer_name+"believed that the victim was responsible for the death of a friend."; 
+			old_friends_description = "";
+			motive_clause = murderer_name+" holds the victim responsible for a friend's death."; 
 		}
 		if (motive == "avenge_pet") {
 			string species;
@@ -110,18 +111,20 @@ public class Scenario
 			} else {
 				cause_of_death = "electrocution";
 			}
-			motive_clause = "because the victim was looking after"+murderer_name+"'s"+species+"when it " +
-				"died of"+cause_of_death+".";  
+			old_friends_description = "";
+			motive_clause = "The victim was looking after "+murderer_name+"'s "+species+" when it " +
+				"died of "+cause_of_death+".";  
 		}
 		old_friends_description += motive_clause;
 		VerbalClue old_friends = new VerbalClue ("Old Friends", old_friends_description);
 
 		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant " +
-			"history with"+murderer_name+".");
+			"history with "+murderer_name+".");
 
-		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with"+murderer_name+"just a few " +
+		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with "+murderer_name+" just a few " +
 			"minutes before their body was discovered.");
 
+		string altercation_description = murderer_name+"and the victim had an altercation about ";
 		motive_clause = ".";
 		if (motive == "homewrecker") {
 			string partner_gender;
@@ -131,73 +134,34 @@ public class Scenario
 			} else {
 				partner_gender = "husband";
 			}
-			motive_clause = "the victim having slept with their"+partner_gender+".";  
+			motive_clause = "the victim sleeping with their "+partner_gender+".";  
 		}
 		if (motive == "loanshark") {
-			motive_clause = murderer_name+"being in debt to the victim."; 
+			motive_clause = murderer_name+" being in debt to the victim."; 
 		}
 		if (motive == "promotion") {
-			motive_clause = "them being in competition with one another at work.";
+			motive_clause = "them being in competition professionally.";
 		}
 		if (motive == "unfriended") {
-			motive_clause = "the victim unfriending"+murderer_name+"on Facebook.";
+			motive_clause = "the victim unfriending them on Facebook.";
 		}
 		if (motive == "blackmail") {
-			motive_clause = "the victim having found out"+murderer_name+"'s darkest secret.";
+			motive_clause = "the victim having found out their darkest secret.";
 		}
 		if (motive == "avenge_friend") {
-			motive_clause = murderer_name+"believing that the victim was responsible for the death of a friend."; 
+			
+			motive_clause = "the death of a mutual friend."; 
 		}
 		if (motive == "avenge_pet") {
-			string species;
-			int rand = Random.Range (0, 4);
-			if (rand == 0) {
-				species = "parrot";
-			} else if (rand == 1) {
-				species = "chihuahua";
-			} else if (rand == 2) {
-				species = "iguana";
-			} else if (rand == 3) {
-				species = "goldfish";
-			} else {
-				species = "rattlesnake";
-			}
-			string cause_of_death;
-			rand = Random.Range (0,4);
-			if (rand == 0) {
-				cause_of_death = "starvation";
-			} else if (rand == 1) {
-				cause_of_death = "loneliness";
-			} else if (rand == 2) {
-				cause_of_death = "a broken heart";
-			} else if (rand == 3) {
-				cause_of_death = "boredom";
-			} else {
-				cause_of_death = "electrocution";
-			}
-			motive_clause = "the victim being responsible for looking after"+murderer_name+"'s"+species+"when it " +
-				"died of"+cause_of_death+".";  
+			motive_clause = murderer_name + "'s pet having died."; 
 		}
-		string altercation_location;
-		int r = Random.Range (0, 4);
-		if (r == 0) {
-			altercation_location = "in the car park";
-		} else if (r == 1) {
-			altercation_location = "at the bar";
-		} else if (r == 2) {
-			altercation_location = "in the underground laboratory";
-		} else if (r == 3) {
-			altercation_location = "on the helipad";
-		} else {
-			altercation_location = "in glasshouse";
-		}
-		VerbalClue altercation = new VerbalClue ("An Altercation", "I heard that"+murderer_name+"and the victim had an altercation" +
-			"in the"+altercation_location+". Apparently it had something to do with"+motive_clause);
+
+		VerbalClue altercation = new VerbalClue ("An Altercation", altercation_description);
 
 		int random = Random.Range (0, npcs.Count ());
 		string character_name = npcs [random].getCharacterID ();
-		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+"told me that the last time they saw the" +
-			"victim was before 8pm, but told"+character_name+"they had spoken to the victim after 9pm.");
+		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+" told me they last saw the" +
+			"victim before 8pm, but told "+character_name+" they spoke to the victim after 9pm.");
 
 		verbal_clues = new VerbalClue[6] {
 			old_friends,
@@ -292,10 +256,11 @@ public class Scenario
 			red_herring_character = npcs [npc_index ].getCharacterID ();
 		}
 
-		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police told me they think the victim was killed " +
-		                            "using a" + red_herring_weapon + ", but they can’t find any evidence of one.");
+		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police think the victim was killed " +
+		                            "using a" + red_herring_weapon + ", but they can’t find evidence of one.");
 
-		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw"+red_herring_character+"acting suspiciously." );
+		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw"+red_herring_character+"acting " +
+			"suspiciously." );
 
 		VerbalClue[] red_herring_verbal_clues = new VerbalClue[2] { police_failure, shifty_looking };
 		int herring_index = Random.Range (0,1);
