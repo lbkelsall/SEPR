@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class InputManager1 : MonoBehaviour {
+	//Handles the input keys 'I' and 'M' and the map and notebook icons
 
-	public bool isMapvisible = false;
-	public bool isMenuvisible = false;
-	public bool isNotebookvisible = false;
+	//States if the relative menu is open
+	private bool isMapvisible = false;
+	private bool isMenuvisible = false;
+	private bool isNotebookvisible = false;
 
 	public GameObject map;
 	public GameObject pauseMenu; 
@@ -16,46 +18,51 @@ public class InputManager1 : MonoBehaviour {
 	private bool notebookIconPressed = false;
 
 	void Start () {
+		//Ensures the player can move at the start
 		playerMovement = detective.GetComponent<PlayerMovement>();
 		Time.timeScale = 1; 
 		playerMovement.enabled = true;
 		notebookMenu = GameObject.Find("Notebook Canvas").transform.GetChild(0).gameObject;
 	}
 
-
+	//Every frame
 	void Update () {
-		if (!isMenuvisible && !isNotebookvisible) {
-			if (Input.GetKeyDown (KeyCode.M) || mapIconPressed) {
-				isMapvisible = !isMapvisible;
-				if (isMapvisible) {
-					StopGame (map);
+
+		//Map
+		if (!isMenuvisible && !isNotebookvisible) {					//If other menus are not open
+			if (Input.GetKeyDown (KeyCode.M) || mapIconPressed) { 	//If M key pressed or UI icon pressed
+				isMapvisible = !isMapvisible;						//Toggle visibiltiy
+				if (isMapvisible) {	
+					StopGame (map);									//Pause game if map is visble
 				} else {
-					ResumeGame (map);
+					ResumeGame (map);								//Resume game if map is not visible
 				}
-				mapIconPressed = false;
+				mapIconPressed = false;								//Reset icon being pressed
 			}
 		}
 
-		if (!isMapvisible && !isNotebookvisible) {	
-			if (Input.GetKeyDown (KeyCode.Escape)) {
-				isMenuvisible = !isMenuvisible;
+		//Pause Menu
+		if (!isMapvisible && !isNotebookvisible) {					//If other menus are not open
+			if (Input.GetKeyDown (KeyCode.Escape)) {				//If ESC key pressed
+				isMenuvisible = !isMenuvisible;						//Toggle visibiltiy
 				if (isMenuvisible) {
-					StopGame (pauseMenu);
+					StopGame (pauseMenu);							//Pause game if is visble
 				} else {
-					ResumeGame (pauseMenu);
+					ResumeGame (pauseMenu);							//Resume game if map is not visible
 				}
 			}
 
 		}
 
-		if (!isMapvisible && !isMenuvisible) {	
-			if (Input.GetKeyDown (KeyCode.I) || notebookIconPressed) {
-				isNotebookvisible = !isNotebookvisible;
+		//Notebook
+		if (!isMapvisible && !isMenuvisible) {								//If other menus are not open
+			if (Input.GetKeyDown (KeyCode.I) || notebookIconPressed) {		//If ESC key pressed
+				isNotebookvisible = !isNotebookvisible;						//Toggle visibiltiy
 				if (isNotebookvisible) {
-					NotebookManager.instance.UpdateNotebook ();
-					StopGame (notebookMenu);
+					NotebookManager.instance.UpdateNotebook ();				//Update notebook
+					StopGame (notebookMenu);								//Pause game if is visble
 				} else {
-					ResumeGame (notebookMenu);
+					ResumeGame (notebookMenu);								//Resume game if map is not visible
 				}
 				notebookIconPressed = false;
 			}
@@ -65,22 +72,26 @@ public class InputManager1 : MonoBehaviour {
 	}
 
 	void StopGame(GameObject menu){
+		//Stops ingame time and playermovement
 		Time.timeScale = 0; 
 		playerMovement.enabled = false;
 		menu.SetActive (true);
 	}
 		
 	public void ResumeGame(GameObject menu){
+		//Resumes ingame time and playermovement
 		Time.timeScale = 1; 
 		playerMovement.enabled = true;
 		menu.SetActive (false);
 	}
 
 	public void MapIconPressed(){
+		//Called when map icon is pressed
 		mapIconPressed = true;
 	}
 
 	public void NotebookIconPressed(){
+		//Called when Notepad icon is pressed
 		notebookIconPressed = true;
 	}
 }

@@ -5,15 +5,20 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class NotebookManager : MonoBehaviour {
+	//Handles the logging, displaying and updating of the logbook
 
-	public Inventory inventory = new Inventory();
-	public Logbook logbook = new Logbook();
-	public static NotebookManager instance = null;
+	//__Variables__
+	public Inventory inventory = new Inventory();	//Holds the Items
+	public Logbook logbook = new Logbook();			//Holds the VerbalClues
+	public static NotebookManager instance = null;	//Used for Singleton reference
 
+	//Arrays
+	//Public to allow fro drag and drop in inspector
 	public Text[] clueTexts = new Text[20]; 
 	public Button[] clueButtons = new Button[20];
 	public Toggle[] clueToggles = new Toggle[20];
 
+	//Public to allow fro drag and drop in inspector
 	public Text clueNameText;
 	public Text clueDescriptionText;
 	public Image clueImage;
@@ -22,6 +27,8 @@ public class NotebookManager : MonoBehaviour {
 	public Sprite questionMark;
 	public Button submitButton;
 	public Button backButton;
+
+	//lists of item and verbal clues selected by player by toggling toggle buttons
 	private List<Item> selectedCluesItem = new List<Item>();
 	private List<VerbalClue> selectedCluesVerbal = new List<VerbalClue>();
 
@@ -35,19 +42,22 @@ public class NotebookManager : MonoBehaviour {
 	}
 
 	public void UpdateNotebook(){
+		//If the Notebook is used in the Interrogation room, show the toggle buttons used
 		if (SceneManager.GetActiveScene ().name == "Interrogation Room") {
 			ResetSelectedClues ();
-			ResetAllToggles ();
+			ResetAllToggles ();			//Resets toggles when re-entering interrogation room
 			ShowNeededToggles ();
 			clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
 			submitButton.interactable = false;
 		} else {
 			HideAllToggles ();
-			clueTitle.text = "Clues Obtained (" + (inventory.GetListLength () + logbook.GetListLength ()) + "/" + requiredNumberOfClues + ")";
+			clueTitle.text = "Clues Obtained (" + (inventory.GetInventory ().Count + logbook.GetLogbook ().Count) + "/9)";
 		}
 
-		int topOfList = 0;
+
 		//Update Listing
+		int topOfList = 0;
+
 		//Display Items
 		for (int i = 0; i < (inventory.GetInventory ().Count); i++) {
 			clueTexts [topOfList].text = " - "+inventory.GetInventory () [i].getID ();
@@ -55,7 +65,6 @@ public class NotebookManager : MonoBehaviour {
 		}
 
 		//Display Verbal Clues
-
 		for (int j = 0; j < (logbook.GetLogbook().Count); j++) {
 			clueTexts [topOfList].text = " - "+logbook.GetLogbook () [j].getID ();
 			topOfList += 1;
@@ -92,44 +101,49 @@ public class NotebookManager : MonoBehaviour {
 	}
 
 	public void AddToSelectedClues(int reference){
+		//Adds the selected clue passed by reference in the inspector. Called when a toggle button value changes
 
+		//If toggled on
 		if (clueToggles [reference].isOn == true) {
-			if (reference < inventory.GetInventory ().Count) {
+			if (reference < inventory.GetInventory ().Count) {		//If clue reference is an item
 				Item clue = inventory.GetInventory () [reference];
-				selectedCluesItem.Add (clue);
+				selectedCluesItem.Add (clue);						//Add to selected Item clues
 			} else {
 				VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-				selectedCluesVerbal.Add (clue);
+				selectedCluesVerbal.Add (clue);						//Otherwise must be a VerbalClue so add to selected VerbalClues
 			}
-				//If toggled off:
+		//If toggled off:
 		} else {
-			if (reference < inventory.GetInventory ().Count) {
+			if (reference < inventory.GetInventory ().Count) {		//If clue reference is an item
 				Item clue = inventory.GetInventory () [reference];
-				selectedCluesItem.Remove (clue);
+				selectedCluesItem.Remove (clue);					//Remove clue from selected item clues
 			} else {
 				VerbalClue clue = logbook.GetLogbook () [reference - inventory.GetInventory ().Count];
-				selectedCluesVerbal.Remove (clue);
+				selectedCluesVerbal.Remove (clue);					//Otherwise must be a VerbalClue so remove from selected VerbalClues
 			}
 		}
-		if ((selectedCluesItem.Count + selectedCluesVerbal.Count) == requiredNumberOfClues) {
+
+		//
+		if ((selectedCluesItem.Count + selectedCluesVerbal.Count) == requiredNumberOfClues) { //If a total of (3) clues are selected make the submit button interactable
 			submitButton.interactable = true;
 		} else {
-			submitButton.interactable = false;
+			submitButton.interactable = false;												//Otherwise make uninteratable
 		}
-		clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";
+		clueTitle.text = "Select "+requiredNumberOfClues+" Clues (" + (selectedCluesItem.Count + selectedCluesVerbal.Count) + "/" + requiredNumberOfClues + ")";	//Update title text
 	}
 
 
 	//Toggles
 	private void ShowNeededToggles(){
-		for (int i = 0; i < (inventory.GetInventory().Count + logbook.GetLogbook().Count); i++) {
+		for (int i = 0; i < (inventory.GetInventory().Count + logbook.GetLogbook().Count); i++) {	//Show all toggles
 			clueToggles [i].gameObject.SetActive (true);
 		}
-		backButton.gameObject.SetActive (true);
+		backButton.gameObject.SetActive (true);			//Show other buttons too
 		submitButton.gameObject.SetActive (true);
 	}
 
-	private void HideAllToggles(){
+	//Hides all toggles
+	private void HideAllToggles(){							
 		for (int i = 0; i < 20; i++) {
 			clueToggles [i].gameObject.SetActive (false);
 		}
@@ -144,27 +158,15 @@ public class NotebookManager : MonoBehaviour {
 		return this.selectedCluesVerbal;
 	}
 
-	private void DeactivateToggles(List<int> referenceList){
-		for (int i = 0; i < 20; i++) {
-			if (!referenceList.Contains (i)) {
-				clueToggles [i].interactable = false;
-			}
-		}
-	}
-
-	private void ActivateAllToggles(){
-		for (int i = 0; i < 20; i++) {
-			clueToggles [i].interactable = true;
-		}
-	}
-
-	private void ResetAllToggles(){
+	//Sets all toggles to off
+	private void ResetAllToggles(){				
 		for (int i = 0; i < 20; i++) {
 			clueToggles [i].isOn = false;;
 		}
 	}
 
-	public void ResetSelectedClues(){
+	//Resets selected clues for a new playthrough
+	public void ResetSelectedClues(){			
 		selectedCluesItem.Clear ();
 		selectedCluesVerbal.Clear ();
 	}

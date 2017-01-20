@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterSelector : MonoBehaviour {
 	
 	//Detecive variable declaration
+	//Public to allow for drag and drop in inspector
 	public Sprite chaseHunterSprite;
 	public Sprite johnnySlickSprite;
 	public Sprite adamFounderSprite;
@@ -21,6 +22,7 @@ public class CharacterSelector : MonoBehaviour {
 	PlayerCharacter[] detectives;
 
 	//GUI References
+	//Public to allow for drag and drop in inspector
 	public Text GUIName;
 	public Image GUIImage;
 	public Text GUIQuestioningStyle;
@@ -30,6 +32,7 @@ public class CharacterSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Initalise detectives
 		chaseHunter = new PlayerCharacter ("Chase Hunter", chaseHunterSprite, "The Loose Cannon", "Aggressive", chaseHunterQuestioningStyles, "An ill tempered detective who will do whatever it takes to get to the bottom of a crime." );
 		johnnySlick = new PlayerCharacter ("Johnny Slick", johnnySlickSprite, "The Greaseball", "Wisecracking",johnnySlickQuestioningStyles, "A witty detective who finds the comedic value in everything... even death apparently." );
 		adamFounder = new PlayerCharacter ("Adam Founder", adamFounderSprite, "Good Cop", "By the Book", adamFounderQuestioningStyles,"A by the book cop who uses proper detective techniques to solve mysteries" );

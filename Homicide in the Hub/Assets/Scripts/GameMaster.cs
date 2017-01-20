@@ -16,6 +16,7 @@ using System.Linq; //Used for take in pick items
 	private PlayerCharacter playerCharacter;
 
 	//NPC Sprites
+	//Made public to allow for dragging and dropping of Sprites
 	public Sprite pirateSprite;
 	public Sprite mimesSprite;
 	public Sprite millionaireSprite;
@@ -23,14 +24,8 @@ using System.Linq; //Used for take in pick items
 	public Sprite romanSprite;
 	public Sprite wizardSprite;
 
-	//NPC variable declaration
-	private NonPlayerCharacter pirate;
-	private NonPlayerCharacter mimes;
-	private NonPlayerCharacter millionaire;
-	private NonPlayerCharacter cowgirl;
-	private NonPlayerCharacter roman; 
-	private NonPlayerCharacter wizard;
-
+	//NPC Prefabs
+	//Made public to allow for dragging and dropping of prefabs
 	public GameObject piratePref;
 	public GameObject mimesPref;
 	public GameObject millionarePref;
@@ -39,17 +34,8 @@ using System.Linq; //Used for take in pick items
 	public GameObject wizardPref;
 
 
-	//Scene declaration
-	private Scene controlRoom;
-	private Scene kitchen;
-	private Scene lectureTheatre;
-	private Scene lakehouse;
-	private Scene islandOfInteraction;
-	private Scene roof;
-	private Scene atrium;
-	private Scene undergroundLab;
-
-	//Item Sprite declratation
+	//Item Sprite decleratation
+	//Made public to allow for dragging and dropping of sprites
 	public Sprite cutlassSprite;
 	public Sprite poisonSprite;
 	public Sprite garroteSprite;
@@ -68,26 +54,8 @@ using System.Linq; //Used for take in pick items
 	public Sprite spellbookSprite;
 	public Sprite tripwireSprite;
 
-	//Item Declaration
-	private MurderWeapon poison;
-	private MurderWeapon garrote;
-	private MurderWeapon knife;
-	private MurderWeapon laserGun;
-	private MurderWeapon leadPipe;
-	private MurderWeapon westernPistol;
-	private MurderWeapon wizardStaff;
-	private Item beret;
-	private Item footprints;
-	private Item gloves;
-	private Item wine;
-	private Item shatteredGlass;
-	private Item shrapnel;
-	private Item smellyDeath;
-	private Item spellbook;
-	private Item tripwire;
-	private MurderWeapon murderWeapon;
-
-	//Item Prefabs
+	//Item Prefabs 
+	//Made public to allow for dragging and dropping of prefabs
 	public GameObject cutlassPrefab;
 	public GameObject poisonPrefab;
 	public GameObject garrotePrefab;
@@ -108,9 +76,11 @@ using System.Linq; //Used for take in pick items
 
 	private NonPlayerCharacter murderer;
 
-	//Other
+	//Relevant Clues
 	private List<Item> relevant_items;
 	private List<VerbalClue> relevant_verbal_clues;
+
+	//Sets as a Singleton
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
 			instance = this;	//If not set instance to this
@@ -120,8 +90,9 @@ using System.Linq; //Used for take in pick items
 		DontDestroyOnLoad (gameObject); //Set this to not be destroyed when reloading scene
 	}
 
-	void Start(){
 
+	void Start(){
+		//Initialises Variables
 		//Responce Arrays
 		string[] pirateResponses = new string[9] {
 			"Shiver me timbers I know nothing!",
@@ -205,41 +176,41 @@ using System.Linq; //Used for take in pick items
 
 
 		//Defining NPC's
-		pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref,pirateWeaknesses ,pirateResponses);
-		mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"mimes",mimesPref,mimeWeaknesses, mimeResponses );
-		millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,millionaireWeaknesses, millionaireResponses );
-		cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
-		roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
-		wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
+		NonPlayerCharacter pirate = new NonPlayerCharacter("Captain Bluebottle",pirateSprite,"Salty Seadog",piratePref,pirateWeaknesses ,pirateResponses);
+		NonPlayerCharacter mimes = new NonPlayerCharacter("The Mime Twins",mimesSprite,"mimes",mimesPref,mimeWeaknesses, mimeResponses );
+		NonPlayerCharacter millionaire = new NonPlayerCharacter("Sir Worchester",millionaireSprite,"Money Bags",millionarePref,millionaireWeaknesses, millionaireResponses );
+		NonPlayerCharacter cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
+		NonPlayerCharacter roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
+		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
 
 		//Defining Scenes
-		controlRoom = new Scene("Control Room");
-		kitchen = new Scene("Kitchen");
-		lectureTheatre = new Scene("Lecture Theatre");
-		lakehouse = new Scene("Lakehouse");
-		islandOfInteraction = new Scene("Island of Interaction");
-		roof = new Scene ("Roof");
-		atrium = new Scene("Atrium");
-		undergroundLab = new Scene("Underground Lab");
+		Scene controlRoom = new Scene("Control Room");
+		Scene kitchen = new Scene("Kitchen");
+		Scene lectureTheatre = new Scene("Lecture Theatre");
+		Scene lakehouse = new Scene("Lakehouse");
+		Scene islandOfInteraction = new Scene("Island of Interaction");
+		Scene roof = new Scene ("Roof");
+		Scene atrium = new Scene("Atrium");
+		Scene undergroundLab = new Scene("Underground Lab");
 
 		//Defining Items
 		MurderWeapon cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite, "SD");
-		poison = new MurderWeapon(poisonPrefab,"Emtpy Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
-		garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite, "SD");
-		knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite, "SD");
-		laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm which implies it has been recently fired",laserGunSprite, "SD");
-		leadPipe = new MurderWeapon(leadPipePrefab,"Lead Pipe","It's a bit battered with a few dents on the side",leadPipeSprite, "SD");
-		westernPistol = new MurderWeapon(westernPistolPrefab,"Western Pistol","The gunpowder residue implies it has been recently fired",westernPistolSprite, "SD");
-		wizardStaff = new MurderWeapon(wizardStaffPrefab,"Wizard Staff","The gems still seem to be glow as if it has been used recently",wizardStaffSprite, "SD");
-		beret = new Item (beretPrefab,"Beret","A hat most stereotypically worn by the French",beretSprite);
-		footprints = new Item (footprintsPrefab,"Bloody Footprints","Bloody footprints most likely left by the murderer",footprintsSprite);
-		gloves = new Item (glovesPrefab,"Bloddy Gloves","Bloody gloves most likely used by the murderer",glovesSprite);
-		wine = new Item (winePrefab,"Fine Wine","An expensive vintage that's close to 100 years old",wineSprite);
-		shatteredGlass = new Item (shatteredGlassPrefab,"Shattered Glass","Broken glass shards spread quite close together",shatteredGlassSprite);
-		shrapnel = new Item (shrapnelPrefab,"Shrapnel","Shrapnel from an explosion or gun being fired",shrapnelSprite);
-		smellyDeath = new Item (smellyDeathPrefab,"Smelly Death","All that remains of the victim",smellyDeathSprite);
-		spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
-		tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
+		MurderWeapon poison = new MurderWeapon(poisonPrefab,"Emtpy Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
+		MurderWeapon garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite, "SD");
+		MurderWeapon knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite, "SD");
+		MurderWeapon laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm which implies it has been recently fired",laserGunSprite, "SD");
+		MurderWeapon leadPipe = new MurderWeapon(leadPipePrefab,"Lead Pipe","It's a bit battered with a few dents on the side",leadPipeSprite, "SD");
+		MurderWeapon westernPistol = new MurderWeapon(westernPistolPrefab,"Western Pistol","The gunpowder residue implies it has been recently fired",westernPistolSprite, "SD");
+		MurderWeapon wizardStaff = new MurderWeapon(wizardStaffPrefab,"Wizard Staff","The gems still seem to be glow as if it has been used recently",wizardStaffSprite, "SD");
+		Item beret = new Item (beretPrefab,"Beret","A hat most stereotypically worn by the French",beretSprite);
+		Item footprints = new Item (footprintsPrefab,"Bloody Footprints","Bloody footprints most likely left by the murderer",footprintsSprite);
+		Item gloves = new Item (glovesPrefab,"Bloddy Gloves","Bloody gloves most likely used by the murderer",glovesSprite);
+		Item wine = new Item (winePrefab,"Fine Wine","An expensive vintage that's close to 100 years old",wineSprite);
+		Item shatteredGlass = new Item (shatteredGlassPrefab,"Shattered Glass","Broken glass shards spread quite close together",shatteredGlassSprite);
+		Item shrapnel = new Item (shrapnelPrefab,"Shrapnel","Shrapnel from an explosion or gun being fired",shrapnelSprite);
+		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Death","All that remains of the victim",smellyDeathSprite);
+		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
+		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
@@ -277,15 +248,16 @@ using System.Linq; //Used for take in pick items
 	}
 
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
-		
+		//Reset values from a previous playthough
+		ResetNotebook();
+		ResetAll(scenes);
+
+		//Create a Scenario
 		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
-		NotebookManager.instance.ResetSelectedClues ();
+
 		scenario.chooseMotive ();
-		 
 		string motive = scenario.getMotive ();
-
 		murderer = scenario.chooseMurderer ();
-
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
 
@@ -299,25 +271,8 @@ using System.Linq; //Used for take in pick items
 		relevant_items = scenario.getRelevantItems ();
 		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
 		relevantClues = scenario.getRelevantClues (); 
-		NotebookManager.instance.logbook.Reset();	//Reset logbook
-		NotebookManager.instance.inventory.Reset();	//Reset inventory
-		NotebookManager.instance.UpdateNotebook();
 
-		Debug.Log (motive);
-		Debug.Log (weapon.getID());
-
-
-		Debug.Log (murderer.getCharacterID ());
-		foreach (Item item in relevant_items){
-			Debug.Log (item.getID ());
-		}
-
-		foreach (VerbalClue clue in relevant_verbal_clues){
-			Debug.Log (clue.getID ());
-		}
-
-
-		ResetAll(scenes);
+		//Assign To rooms
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;	
@@ -355,4 +310,12 @@ using System.Linq; //Used for take in pick items
 	public string GetMurderer(){
 		return this.murderer.getCharacterID();
 	}
+
+	private void ResetNotebook(){
+		NotebookManager.instance.ResetSelectedClues ();
+		NotebookManager.instance.logbook.Reset();	//Reset logbook
+		NotebookManager.instance.inventory.Reset();	//Reset inventory
+		NotebookManager.instance.UpdateNotebook();
+	}
+		
 }

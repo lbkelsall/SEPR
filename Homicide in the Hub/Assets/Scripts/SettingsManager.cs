@@ -7,6 +7,11 @@ using System.Collections.Generic;
 using UnityEngine.Audio;
 
 public class SettingsManager : MonoBehaviour {
+	//This is a template of how the settings menu would/could work 
+	//It is not fully functional at the moment
+
+	//__Variables__
+	//Public to allow for drag and drop in inspector
     public Toggle fullscreenToggle;
     public Dropdown resolutionDropdown;
     public Dropdown textureQualityDropdown;
@@ -14,7 +19,7 @@ public class SettingsManager : MonoBehaviour {
     public Dropdown vSyncDropdown;
     public AudioMixer masterMixer;
 
-    public Resolution[] resolutions;
+    private Resolution[] resolutions;
 
     void OnEnable()
     {
@@ -25,7 +30,7 @@ public class SettingsManager : MonoBehaviour {
 
     void Start()
     {
-        resolutions = Screen.resolutions;
+        resolutions = Screen.resolutions; //Get possible screen
 
         for (int i = 0; i < resolutions.Length; i++)
         {
