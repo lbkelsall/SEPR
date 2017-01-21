@@ -5,6 +5,8 @@ using System.Linq; //Used for take in pick items
 
  public class GameMaster : MonoBehaviour {
 
+	public Scenario scenario; 
+
 	//Arrays 
 	public static GameMaster instance = null;
 	static public Scene[] scenes;
@@ -253,7 +255,7 @@ using System.Linq; //Used for take in pick items
 		ResetAll(scenes);
 
 		//Create a Scenario
-		Scenario scenario = new Scenario (murderWeapons, itemClues, characters);
+		scenario = new Scenario (murderWeapons, itemClues, characters);
 
 		scenario.chooseMotive ();
 		string motive = scenario.getMotive ();

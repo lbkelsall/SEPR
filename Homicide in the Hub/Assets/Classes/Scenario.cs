@@ -203,56 +203,47 @@ public class Scenario
 		}
 
 		int pick_weapon_clue = Random.Range (2, 5);
+		verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
+		relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
+
 		if (murderer.getCharacterID() == "Captain Bluebottle") {
 			item_clue_pool.Add (item_clues [4]); // shattered glass
 			relevant_item_clues.Add (item_clues [4]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "The Mime Twins") {
 			item_clue_pool.Add (item_clues [0]); // beret
 			relevant_item_clues.Add (item_clues [0]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Sir Worchester") {
 			item_clue_pool.Add (item_clues [2]); // gloves
 			relevant_item_clues.Add (item_clues [2]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Jesse Ranger") {
 			item_clue_pool.Add (item_clues [8]); // tripwire
 			relevant_item_clues.Add (item_clues [8]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		} else if (murderer.getCharacterID() == "Celcius Maximus") {
 			item_clue_pool.Add (item_clues [3]); // wine
 			relevant_item_clues.Add (item_clues [3]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue]);
 		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
 			item_clue_pool.Add (item_clues [7]); // spellbook
 			relevant_item_clues.Add (item_clues [7]);
-			verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-			relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
 		}
 
 		while (item_clue_pool.Count() < 6) {
-			int index = Random.Range (0, item_clues.Count());
+			int index = Random.Range (0, item_clues.Count()-1);
 			if (item_clue_pool.Contains (item_clues [index]) == false) {
 				item_clue_pool.Add (item_clues [index]);
 			}
 		}
 			
 		// add 'red herring' verbal clue
-		int weapon_index = Random.Range(0,weapons.Count());
+		int weapon_index = Random.Range(0,weapons.Count()-1);
 		string red_herring_weapon = weapons [weapon_index].getID ();
 		while (red_herring_weapon == weapon.getID() ) {
-			weapon_index = Random.Range(0,weapons.Count());
+			weapon_index = Random.Range(0,weapons.Count()-1);
 			red_herring_weapon = weapons [weapon_index].getID ();
 		}
-		int npc_index = Random.Range(0,npcs.Count());
+		int npc_index = Random.Range(0,npcs.Count()-1);
 		string red_herring_character = npcs [npc_index ].getCharacterID  ();
 		while (red_herring_character == murderer.getCharacterID () ) {
-			npc_index = Random.Range(0,npcs.Count());
+			npc_index = Random.Range(0,npcs.Count()-1);
 			red_herring_character = npcs [npc_index ].getCharacterID ();
 		}
 
