@@ -301,5 +301,16 @@ public class Scenario
 	public List<VerbalClue> getRelevantVerbalClues () {
 		return relevant_verbal_clues; 
 	}
-		
+
+	public List<Clue> getRelevantClues () {
+		List<Clue> relevant_clues = new List<Clue> ();
+
+		for (int i = 0; (relevant_verbal_clues.Count) > i; i++) {
+			relevant_clues.Add (relevant_verbal_clues [i]);
+		}
+		for (int i = 0; (relevant_item_clues.Count) > i; i++) {
+			relevant_clues.Add (relevant_item_clues [i]);
+		}
+		return relevant_clues;
+	}
 }
