@@ -1,0 +1,37 @@
+Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Managed'
+Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono'
+Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55367
+Multi-casting "[IP] 192.168.1.104 [Port] 55367 [Flags] 2 [Guid] 1310015695 [EditorId] 905304089 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.104:55367]
+Initialize engine version: 5.4.3f1 (01f4c123905a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 840M (ID=0x1341)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.074 seconds
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 4800x1350 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object '_Scripts') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1656)
+
+UnloadTime: 0.822674 ms
