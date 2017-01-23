@@ -2,250 +2,61 @@ Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/
 Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono'
 Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55174
-Multi-casting "[IP] 192.168.1.104 [Port] 55174 [Flags] 2 [Guid] 2085298827 [EditorId] 1279347715 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [192.168.1.104:55174]
+PlayerConnection initialized network socket : 0.0.0.0 55137
+Mono path[0] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Managed'
+Mono path[1] = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono'
+Mono config path = 'C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Chris Whitlam/Documents/Computer Science/2nd Year/SEPR/Repo/HITH-Global/Homicide in the Hub/Builds/Homicide in the Hub v1.0_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55179
+Multi-casting "[IP] 10.240.111.169 [Port] 55137 [Flags] 2 [Guid] 3306487003 [EditorId] 3917221838 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.240.111.169:55137]
+Initialize engine version: 5.4.3f1 (01f4c123905a)
+GfxDevice: creating device client; threaded=1
+Multi-casting "[IP] 10.240.111.169 [Port] 55179 [Flags] 2 [Guid] 1489192300 [EditorId] 3917221838 [Version] 1048832 [Id] WindowsPlayer(GeForce-PC) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.240.111.169:55179]
 Initialize engine version: 5.4.3f1 (01f4c123905a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 840M (ID=0x1341)
-    Vendor:   NVIDIA
-    VRAM:     3072 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.dll into Unity Child Domain
+    Version:  Direct3D 11.D [leverl c1t0]D
+:
+  Rendersion:  IDIA GeForcDirect3D 11.0 [leve
+    Vend
+or:   NVIDIA:
+    VRAM:      840M (ID=0x1341)
+  3 Ve2dor:   NVIDIA
+    
+VRAM:     3072 MB
+Begin MonoManagerBRegiadAssembalay
+r ReloadAssembly
+Plaatfoorm assembly: C::\Users\Chriis Whitlam\Documents\Computer Sciencce\2nn Y ear\SSEPR\Repo\HITH--Global\Homiicide in hthe Hub\ilds\HoHomicide in the Hub v10_Data\Managed\UninityEgnngine.d(this mes messaige is hear)
+less)
+Loading CC:\Users\Cris Whitlam\Documents\Computer Scieinnce\2nnd Yerar\SR\RepRo\HITH-Gloloba\Homicide e n the e b\Buildls\\Hommicidee in the Hub v1._D_tData\aged\UnitUyEngineinde. ll intUnity Child Domain
+o Unity Child Domain
 Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\HomiPile in the seub v1.0_:\UsersManhagedWhitlam\Documents\Computer Scileinto Unity aChild Domain
+ITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll (this meform assembly:m es:\Us
+ers\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITL-Gldibal\C:micide in the Hub\\ChrissWhi\loaim\Documenhts\ComputerDScience\2nataearanaged\Resoembly-CSharp\Homl (this meshe Hub\Builds\Hom
+icide in the Hub v1.0_Data\Managed\Assembly-CSharp-firstpass.dll into Unity CLioadiomaiC:
+\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\HomicidePlatform assembly: Comicidrs\Chthe Hub v1.0_ocuments\Computer Science\2nd Year\SEPR\Repo\hild -Global
+\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\Assembly-CSharp.dll (this message is Parmless)
+assembly: C:\Users\Chris Whitlam\Documents\Computer Science\o2ding C:\Users\Chris WThitlam\Documents\Computer Science\2nd Year\SEin the oHHITH-Gl0_Dal\Homicide in the Hgine.UI.dll (this message is harmless)
+a\Managed\Assembly-CSharp.dll into Unity Child Domain
+Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\RepoPHITH-Globalsemblicy: C:\User s\Chris Whitlmam\Docum the Hub v1.0_Data\Man\2nd Year\SEPR\Repo\HITH-Global\Homicide in the H
+ub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Sacience\2nd Year\SEPR\Repo\HITH-Global\Homicidr Science\2ud YBuilds\Homicide in the Hub v1.0_Data\Managed\U\BuyEngine.Neide rin the l (this message is harmless)
+gine.UI.dll into Unity Child Domain
+Loading C:\Users\Chris Whitlam\Documents\Computer SciencP\2nd Year\SEPmR\Re po\HIsersG\Chri\Homiclam\ Do che Hub\\uCodmpHtomiScidnce\2nd YearbS PR1.0eDpta\ManagedHITH-Global\Homicide in.dll into Uuilds\Homic Dde mn ahi nH
+ub v1.0_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.070 seconds
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Chris Whitlam\Documents\Computer Science\2nd Year\SEPR\Repo\HITH-Global\Homicide in the Hub\Builds\Homicide in the Hub v1.0_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 4800x1350 at 0,0
+- Completed reload, in  0.096 seconds
+- Completed reload, in  0.099 seconds
+Plalatffrm maassemlb:y  C:\Usees\Chris Whitlam\Documentsts\Computer Scince\2nd Year\SEPR\SEpo\H\THe-GlHITH-GHomialide incithe en theb\Buildilds\Hicmici e nn the Huub v1.0_Daata\Managed\SSystem..Core.dll (this message is harmlessl
+ess)
+Platform assembly: C:\Users\Chris Whitlam\DoPumenfors\ aosputer SciCence\2snd Yea WhiStlamR\pDocumentso\CloHomicutdeein S the Hub\BuYealdsrH\SiEPR\Repo\hHITHb vlob1l\0Homtac\Managed\S yutem.dBuil ds\Hotmic message is ha v1.0_D)
+ata\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-The referenced script on this Behaviour (Game Object '_Scripts') is missing!
- 
-(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1656)
-
-UnloadTime: 0.925705 ms
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.059444 ms
-System memory in use before: 16.9 MB.
-System memory in use after: 17.0 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1111.
-Total: 1.065844 ms (FindLiveObjects: 0.055266 ms CreateObjectMapping: 0.033554 ms MarkObjects: 0.791093 ms  DeleteObjects: 0.185141 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.977419 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1527.
-Total: 1.020842 ms (FindLiveObjects: 0.067898 ms CreateObjectMapping: 0.039870 ms MarkObjects: 0.897678 ms  DeleteObjects: 0.014606 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.862149 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 2.778301 ms (FindLiveObjects: 0.113295 ms CreateObjectMapping: 0.071056 ms MarkObjects: 1.920099 ms  DeleteObjects: 0.671087 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.181508 ms
-System memory in use before: 17.4 MB.
-System memory in use after: 17.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1511.
-Total: 1.758249 ms (FindLiveObjects: 0.084872 ms CreateObjectMapping: 0.052897 ms MarkObjects: 1.408099 ms  DeleteObjects: 0.211589 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.973471 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1515.
-Total: 2.148664 ms (FindLiveObjects: 0.240012 ms CreateObjectMapping: 0.117637 ms MarkObjects: 1.768512 ms  DeleteObjects: 0.017764 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.997156 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 1.653638 ms (FindLiveObjects: 0.098294 ms CreateObjectMapping: 0.068687 ms MarkObjects: 1.454285 ms  DeleteObjects: 0.030791 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.694298 ms
-System memory in use before: 17.4 MB.
-System memory in use after: 17.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1515.
-Total: 1.478366 ms (FindLiveObjects: 0.079346 ms CreateObjectMapping: 0.051713 ms MarkObjects: 1.183877 ms  DeleteObjects: 0.162245 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.829385 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 1.858122 ms (FindLiveObjects: 0.108163 ms CreateObjectMapping: 0.068293 ms MarkObjects: 1.633505 ms  DeleteObjects: 0.045791 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.874782 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 0.958470 ms (FindLiveObjects: 0.066713 ms CreateObjectMapping: 0.029212 ms MarkObjects: 0.842017 ms  DeleteObjects: 0.019343 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.005052 ms
-System memory in use before: 17.4 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 2.076423 ms (FindLiveObjects: 0.112111 ms CreateObjectMapping: 0.064345 ms MarkObjects: 1.677718 ms  DeleteObjects: 0.221064 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.675824 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1523.
-Total: 1.138480 ms (FindLiveObjects: 0.071056 ms CreateObjectMapping: 0.043818 ms MarkObjects: 1.009789 ms  DeleteObjects: 0.012237 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.078476 ms
-System memory in use before: 17.1 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 2.679612 ms (FindLiveObjects: 0.299226 ms CreateObjectMapping: 0.376203 ms MarkObjects: 1.982076 ms  DeleteObjects: 0.016579 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.487050 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 0.896888 ms (FindLiveObjects: 0.060003 ms CreateObjectMapping: 0.029606 ms MarkObjects: 0.787935 ms  DeleteObjects: 0.018553 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.653718 ms
-System memory in use before: 17.5 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 1.324410 ms (FindLiveObjects: 0.077767 ms CreateObjectMapping: 0.043818 ms MarkObjects: 1.032290 ms  DeleteObjects: 0.169745 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.836490 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.2 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 1.461786 ms (FindLiveObjects: 0.075793 ms CreateObjectMapping: 0.052107 ms MarkObjects: 1.318489 ms  DeleteObjects: 0.013816 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.930837 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 0.943864 ms (FindLiveObjects: 0.063161 ms CreateObjectMapping: 0.028817 ms MarkObjects: 0.831753 ms  DeleteObjects: 0.019343 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.898467 ms
-System memory in use before: 17.5 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 2.342884 ms (FindLiveObjects: 0.124743 ms CreateObjectMapping: 0.084872 ms MarkObjects: 1.873123 ms  DeleteObjects: 0.258566 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.350464 ms
-System memory in use before: 17.2 MB.
-System memory in use after: 17.3 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1515.
-Total: 2.194850 ms (FindLiveObjects: 0.126717 ms CreateObjectMapping: 0.101847 ms MarkObjects: 1.946153 ms  DeleteObjects: 0.018948 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.925311 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 3.032130 ms (FindLiveObjects: 0.073819 ms CreateObjectMapping: 0.041054 ms MarkObjects: 2.880149 ms  DeleteObjects: 0.035528 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.553449 ms
-System memory in use before: 17.5 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1515.
-Total: 1.652059 ms (FindLiveObjects: 0.133822 ms CreateObjectMapping: 0.097110 ms MarkObjects: 1.263618 ms  DeleteObjects: 0.155929 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.815173 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.4 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1515.
-Total: 1.513104 ms (FindLiveObjects: 0.084478 ms CreateObjectMapping: 0.061582 ms MarkObjects: 1.350464 ms  DeleteObjects: 0.015395 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.067818 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.4 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1511.
-Total: 1.489814 ms (FindLiveObjects: 0.120400 ms CreateObjectMapping: 0.083293 ms MarkObjects: 1.269539 ms  DeleteObjects: 0.015395 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.801752 ms
-System memory in use before: 17.3 MB.
-System memory in use after: 17.4 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1519.
-Total: 1.978523 ms (FindLiveObjects: 0.114084 ms CreateObjectMapping: 0.084083 ms MarkObjects: 1.761012 ms  DeleteObjects: 0.017764 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.962418 ms
-System memory in use before: 17.5 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1151.
-Total: 1.987208 ms (FindLiveObjects: 0.065924 ms CreateObjectMapping: 0.033554 ms MarkObjects: 1.852201 ms  DeleteObjects: 0.034738 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.168481 ms
-System memory in use before: 17.5 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1065.
-Total: 2.127741 ms (FindLiveObjects: 0.073424 ms CreateObjectMapping: 0.055660 ms MarkObjects: 1.667849 ms  DeleteObjects: 0.328832 ms)
-
-The referenced script on this Behaviour (Game Object '_Scripts') is missing!
- 
-(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1656)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.611479 ms
-System memory in use before: 17.4 MB.
-System memory in use after: 17.5 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1443.
-Total: 2.696192 ms (FindLiveObjects: 0.105794 ms CreateObjectMapping: 0.072240 ms MarkObjects: 2.477496 ms  DeleteObjects: 0.039475 ms)
-
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2784 -> priority: 1 
+<RI> Input initialized.
