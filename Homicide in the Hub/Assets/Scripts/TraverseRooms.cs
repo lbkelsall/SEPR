@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class TraverseRooms : MonoBehaviour {
-	//Used on the map to load the appropriate level.  
+	//Used on the map to load the appropriate level.
+	//Placed on the child objects of the map defining the hitboxes (Polygon Collider 2D) 
 
 	public string level;	//Public to allow for changing in inspector.
 

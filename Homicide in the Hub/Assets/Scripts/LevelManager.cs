@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 	//One LevelManager per level
 	//Assigns NPCs and items provided by GameMaster in its list of scene to the spawnpoints in the rooms.
+	//Also sets the detective sprite to the selected detective.
 
 	//__Variables__
 	//Public to drag and drop in inspector

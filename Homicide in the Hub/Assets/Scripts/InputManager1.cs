@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class InputManager1 : MonoBehaviour {
-	//Handles the input keys 'I' and 'M' and the map and notebook icons
+	//Handles the input keys 'I' and 'M' pause menu and the map and notebook icons
 
 	//States if the relative menu is open
 	private bool isMapvisible = false;

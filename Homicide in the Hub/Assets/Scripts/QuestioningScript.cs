@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class QuestioningScript : MonoBehaviour {
-	//Used when the player selects the questioning option but also to set the correct sprites in the scene
+	//Used when the player selects the questioning option but also to set the correct sprites in the scene when entering it
+	//Handles the GUI portion of this part of interrogation.
+	//We have chosen to use 'interogation' when refering to questioning or accusing a character
+
 
 	//__Variables__
 	//public to allow drag and drop in inspector

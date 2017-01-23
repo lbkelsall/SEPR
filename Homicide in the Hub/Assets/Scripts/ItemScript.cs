@@ -3,6 +3,9 @@ using System.Collections;
 
 public class ItemScript : MonoBehaviour {
 	//Placed on the item prefabs
+	//Much like the characterinteraction script:
+	//-Tells the prefab which item it is
+	//-Adds the item to the inventory when clicked on.
 
 	//__Variables__
 	private Item item = null;

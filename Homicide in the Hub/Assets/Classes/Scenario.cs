@@ -5,11 +5,13 @@ using System.Linq;
 public class Scenario
 	{
 
+	// Arrays to store elements passed to Scenario class from GameMaster
 	private MurderWeapon[] weapons;
 	private Item[] item_clues;
 	private VerbalClue[] verbal_clues;
 	private NonPlayerCharacter[] npcs;
 
+	// Intialising variables which will be returned to GameMaster
 	private List<Item> item_clue_pool = new List<Item> ();
 	private List<VerbalClue> verbal_clue_pool = new List<VerbalClue> ();
 	private List<Item> relevant_item_clues = new List<Item> ();
@@ -19,6 +21,7 @@ public class Scenario
 
 	private string[] motives = { "homewrecker", "loanshark", "promotion", "unfriended", "blackmail", "avenge_friend", "avenge_pet" };
 
+	// Constructor for Scenario
 	public Scenario (MurderWeapon[] murder_weapons, Item[] items, NonPlayerCharacter[] characters)
 	{
 		weapons = murder_weapons;
@@ -26,19 +29,21 @@ public class Scenario
 		npcs = characters;
 	}
 
+	// Chooses a random weapon from the MurderWeapon array 'weapons'
 	public void chooseWeapon() {
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (weapons);
 		weapon = weapons [0];
 	}
 			
-
+	// Chooses a random motive from the string[] 'motives' initialised above
 	public void chooseMotive() {
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (motives);
 		motive = motives [0];
 	}
 
+	// Chooses and returns a random murderer from the NonPlayerCharacter[] 'npcs'
 	public NonPlayerCharacter chooseMurderer() {
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (npcs);
@@ -47,6 +52,7 @@ public class Scenario
 		return murderer;
 	}
 
+	// given a murderer, weapon and motive, creates a VerbalClue[] containing 6 relevant verbal clues
 	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) {
 
 		string murderer_name = murderer.getNickname ();
@@ -160,7 +166,7 @@ public class Scenario
 
 		int random = Random.Range (0, npcs.Count ());
 		string character_name = npcs [random].getCharacterID ();
-		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+" told me they last saw the" +
+		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+" told me they last saw the " +
 			"victim before 8pm, but told "+character_name+" they spoke to the victim after 9pm.");
 
 		verbal_clues = new VerbalClue[6] {
@@ -173,8 +179,10 @@ public class Scenario
 		};
 	}
 
+	// Creates two lists of clues, one containing 3 verbal clues (two relevant, one useless) and one containing 6 item clues (2 relevent, 4 useless).
 	public void BuildCluePools(string motive, NonPlayerCharacter murderer, MurderWeapon weapon) {
 
+		// one of the relevant item clues is the murder weapon, there is only ever one MurderWeapon item present in the game.
 		item_clue_pool.Add (weapon);
 		relevant_item_clues.Add (weapon);
 
@@ -226,6 +234,7 @@ public class Scenario
 			relevant_item_clues.Add (item_clues [7]);
 		}
 
+		// add the 4 irrelevant verbal clues
 		while (item_clue_pool.Count() < 6) {
 			int index = Random.Range (0, item_clues.Count()-1);
 			if (item_clue_pool.Contains (item_clues [index]) == false) {
@@ -247,17 +256,19 @@ public class Scenario
 			red_herring_character = npcs [npc_index ].getCharacterID ();
 		}
 
-		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police think the victim was killed " +
-		                            "using a" + red_herring_weapon + ", but they can’t find evidence of one.");
 
-		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw"+red_herring_character+"acting " +
-			"suspiciously." );
+		// create and then choose one of two irrelevant verbal clues
+		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police think the victim was killed " +
+		                            "using a " + red_herring_weapon + ", but they can’t find evidence of one.");
+
+		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw "+red_herring_character+" acting suspiciously.");
 
 		VerbalClue[] red_herring_verbal_clues = new VerbalClue[2] { police_failure, shifty_looking };
 		int herring_index = Random.Range (0,1);
 		verbal_clue_pool.Add (red_herring_verbal_clues [herring_index]);
 	}
 
+	// distribute the 3 verbal clues among the NPC characters in NonPlayerCharacter[] 'npcs'
 	public void DistributeVerbalClues(NonPlayerCharacter murderer) {
 		int index = 0;
 		List<NonPlayerCharacter> npcs_list = npcs.ToList (); 
@@ -274,6 +285,7 @@ public class Scenario
 		npcs = npcs_list.ToArray (); 
 	}
 
+	// Setters and Accessors
 	public List<Item> getItemCluePool () {
 		return item_clue_pool; 
 	}

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class InterrogationScript : MonoBehaviour {
-	//Used to pass variables from the previous room to the interogation room
+	//Used to pass variables from the previous room to the interrogation room
 
 
 	//__Variables__

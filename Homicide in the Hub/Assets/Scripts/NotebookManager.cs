@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class NotebookManager : MonoBehaviour {
 	//Handles the logging, displaying and updating of the logbook
+	//The Toggles, back button and submit button are only visible in the interrogation room
+	//The list on the left hand side of the notebook GUI is a list of all the items collected followed by a list of the verbal clues collected.
+	//Logbook refers to the list of VerbalClues
+	//Inventory refers to the list of Items
+	//We have chosen to call the combination of these two things a notebook
 
 	//__Variables__
 	public Inventory inventory = new Inventory();	//Holds the Items
@@ -13,12 +18,12 @@ public class NotebookManager : MonoBehaviour {
 	public static NotebookManager instance = null;	//Used for Singleton reference
 
 	//Arrays
-	//Public to allow fro drag and drop in inspector
+	//Public to allow for drag and drop in inspector
 	public Text[] clueTexts = new Text[20]; 
 	public Button[] clueButtons = new Button[20];
 	public Toggle[] clueToggles = new Toggle[20];
 
-	//Public to allow fro drag and drop in inspector
+	//Public to allow for drag and drop in inspector
 	public Text clueNameText;
 	public Text clueDescriptionText;
 	public Image clueImage;

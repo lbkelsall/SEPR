@@ -4,7 +4,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelector : MonoBehaviour {
-	
+	/*Handles the character selection screen
+	 * -Instantiates and defines the detectives
+	 * -Passes the chosen detective to the GameMaster
+	 * -Handles GUI of the character selector screen
+	 */
+
+
 	//Detecive variable declaration
 	//Public to allow for drag and drop in inspector
 	public Sprite chaseHunterSprite;

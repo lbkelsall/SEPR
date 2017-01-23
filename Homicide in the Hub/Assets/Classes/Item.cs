@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Item : Clue {
+	//
 
 	private GameObject prefab;
 	private Sprite sprite;

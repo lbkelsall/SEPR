@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 	//Used to move the detective around the scene
+	//Player van only move within the boundaries set in the array boundaries
 
 	//__Variables__
 	//Public to allow for malipulation at each scene

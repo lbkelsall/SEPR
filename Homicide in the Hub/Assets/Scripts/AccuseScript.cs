@@ -6,7 +6,11 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class AccuseScript : MonoBehaviour {
-	//Script used when the player chooses the accuse option in the Interrogation room
+	/*-Script used when the player chooses the accuse option in the Interrogation room
+	 *-Handles the UI of this area and the comparison of the selected clues with the relevant clues 
+	 *whereby relevant clues are clues that are required to win the game
+	 *-In order to win the selected clues must be a subset of the relevant clues
+	 */
 
 	//__Variables__
 	//public to allow for darging

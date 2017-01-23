@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq; //Used for take in pick items
 
+//URL For Build of the game is http://www-users.york.ac.uk/~phj501/Build_1.zip
 
  public class GameMaster : MonoBehaviour {
-
+	/* Initialises all of the objects required generate the mystery and the game world except the detectives and verbal clues. 
+	 * Distibutes the clues and characters throughout the scenes.
+	*/
 	public Scenario scenario; 
 
 	//Arrays 
@@ -197,7 +200,7 @@ using System.Linq; //Used for take in pick items
 
 		//Defining Items
 		MurderWeapon cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite, "SD");
-		MurderWeapon poison = new MurderWeapon(poisonPrefab,"Emtpy Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
+		MurderWeapon poison = new MurderWeapon(poisonPrefab,"Empty Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
 		MurderWeapon garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite, "SD");
 		MurderWeapon knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite, "SD");
 		MurderWeapon laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm which implies it has been recently fired",laserGunSprite, "SD");
@@ -206,7 +209,7 @@ using System.Linq; //Used for take in pick items
 		MurderWeapon wizardStaff = new MurderWeapon(wizardStaffPrefab,"Wizard Staff","The gems still seem to be glow as if it has been used recently",wizardStaffSprite, "SD");
 		Item beret = new Item (beretPrefab,"Beret","A hat most stereotypically worn by the French",beretSprite);
 		Item footprints = new Item (footprintsPrefab,"Bloody Footprints","Bloody footprints most likely left by the murderer",footprintsSprite);
-		Item gloves = new Item (glovesPrefab,"Bloddy Gloves","Bloody gloves most likely used by the murderer",glovesSprite);
+		Item gloves = new Item (glovesPrefab,"Bloody Gloves","Bloody gloves most likely used by the murderer",glovesSprite);
 		Item wine = new Item (winePrefab,"Fine Wine","An expensive vintage that's close to 100 years old",wineSprite);
 		Item shatteredGlass = new Item (shatteredGlassPrefab,"Shattered Glass","Broken glass shards spread quite close together",shatteredGlassSprite);
 		Item shrapnel = new Item (shrapnelPrefab,"Shrapnel","Shrapnel from an explosion or gun being fired",shrapnelSprite);

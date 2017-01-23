@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour {
-	//Functions called on button presses. Functions assigned on a button are assigned in the inspector
+	//Functions used are called on button presses. Functions assigned on a button are assigned in the inspector
 
 
 	public void LoadScene(string scene){
