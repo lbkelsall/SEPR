@@ -11,13 +11,13 @@ HomicideInTheHub/[Ll]ibrary/
 # ============================================= #
 [Ee]xported[Oo]bj/
 .vs/
-/*.userprefs
-/*.csproj
+HomicideInTheHub/*.userprefs
+HomicideInTheHub/*.csproj
 /*.pidb
 /*.suo
-/*.sln*
+HomicideInTheHub/*.sln*
 /*.user
-/*.unityproj
+HomicideInTheHub/*.unityproj
 /*.booproj
 .idea/
 
@@ -43,6 +43,8 @@ ehthumbs.db
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 *.orig
