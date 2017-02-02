@@ -39,6 +39,11 @@ public class CharacterSelector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//Initalise detectives
+		GameObject GlobalScripts = (GameObject)Instantiate(Resources.Load("GlobalScripts")); //ADDITION BY WEDUNNIT - - new scenario
+		GlobalScripts.name = "GlobalScripts"; //ADDITION BY WEDUNNIT - - removes (clone) from name
+		GameObject NoteBookCanvas = (GameObject) Instantiate(Resources.Load("NotebookCanvas")); // ADDITON BY WEDUNNIT
+		NoteBookCanvas.name = "NotebookCanvas"; //ADDITION BY WEDUNNIT - - removes (clone) from name
+
 		chaseHunter = new PlayerCharacter ("Chase Hunter", chaseHunterSprite, "The Loose Cannon", "Aggressive", chaseHunterQuestioningStyles, "An ill tempered detective who will do whatever it takes to get to the bottom of a crime." );
 		johnnySlick = new PlayerCharacter ("Johnny Slick", johnnySlickSprite, "The Greaseball", "Wisecracking",johnnySlickQuestioningStyles, "A witty detective who finds the comedic value in everything... even death apparently." );
 		adamFounder = new PlayerCharacter ("Adam Founder", adamFounderSprite, "Good Cop", "By the Book", adamFounderQuestioningStyles,"A by the book cop who uses proper detective techniques to solve mysteries" );
@@ -75,6 +80,7 @@ public class CharacterSelector : MonoBehaviour {
 	//Called when the play button is pressed
 	public void SelectDetective(){
 		GameMaster.instance.CreateNewGame (detectives [detectiveCounter]);
+		print ("CharacterSelector 78");
 		SceneManager.LoadScene ("Atrium");
 	}
 

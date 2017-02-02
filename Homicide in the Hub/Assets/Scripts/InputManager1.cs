@@ -22,7 +22,7 @@ public class InputManager1 : MonoBehaviour {
 		playerMovement = detective.GetComponent<PlayerMovement>();
 		Time.timeScale = 1; 
 		playerMovement.enabled = true;
-		notebookMenu = GameObject.Find("Notebook Canvas").transform.GetChild(0).gameObject;
+		notebookMenu = GameObject.Find("NotebookCanvas").transform.GetChild(0).gameObject;
 	}
 
 	//Every frame
