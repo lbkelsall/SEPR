@@ -51,3 +51,5 @@ sysinfo.txt
 Homicide in the Hub/Homicide in the Hub.userprefs
 
 Homicide in the Hub/Library/
+*.csproj
+Homicide in the Hub/Temp/
