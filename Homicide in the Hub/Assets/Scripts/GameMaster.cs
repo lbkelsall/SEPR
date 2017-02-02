@@ -252,39 +252,28 @@ using System.Linq; //Used for take in pick items
 
 	public void CreateNewGame(PlayerCharacter detective){ //Called when the player presses play
 		//Reset values from a previous playthough
-		print("GameMaster 255");
 		ResetNotebook();
-		print("GameMaster 257");
 		ResetAll(scenes);
-		print("GameMaster 259");
 		//Create a Scenario
 		scenario = new Scenario (murderWeapons, itemClues, characters);
-		print("GameMaster 262");
 		scenario.chooseMotive ();
-		print("GameMaster 264");
 		string motive = scenario.getMotive ();
-		print("GameMaster 266");
 		murderer = scenario.chooseMurderer ();
-		print("GameMaster 268");
 		scenario.chooseWeapon ();
 		MurderWeapon weapon = scenario.getWeapon ();
-		print("GameMaster 271");
 		scenario.CreateVerbalClues (motive, weapon, murderer); 
 		scenario.BuildCluePools (motive, murderer, weapon);
 		scenario.DistributeVerbalClues (murderer);
-		print("GameMaster 275");
 		itemClues = scenario.getItemCluePool ().ToArray ();
 		characters = scenario.getNPCs ();
 		verbalClues = scenario.getVerbalCluePool ().ToArray ();
 		relevant_items = scenario.getRelevantItems ();
 		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
 		relevantClues = scenario.getRelevantClues (); 
-		print("GameMaster 282");
 		//Assign To rooms
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;
-		print("GameMaster 287");
 	}	
 		
 
