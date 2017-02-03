@@ -105,7 +105,7 @@ using System.Linq; //Used for take in pick items
 			"Ho ho ho, Arr matey I didn’t see anything!",
 			"Shiver me timbers ye need to plan ye lunch breaks better!",
 			"Arrr matey I saw nothing of import.",
-			"Arr, matey I suppose ye do, but I saw nothing.",
+			"Aye cap'n I suppose ye do, but I saw nothing.",
 			"Arrr matey I don’t think ye need my help to solve this conundrum."
 		};
 
@@ -122,7 +122,7 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] millionaireResponses = new string[9] {
-			"Don’t try and force me to tell you anything. I’ve got more money than you.",
+			"Don’t try and force me to tell you anything. I’ve got more money than you will ever have.",
 			"Don’t patronise me you cretin. I’ve got more money than you.",
 			"How dare you threaten me you lunatic, I’ve got more money than you.",
 			"No my dear fellow for you see I have more money than you.",
@@ -134,39 +134,39 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] cowgirlResponses = new string[9] {
-			"I appreciate your candour pardner but I didn’t see anything.",
-			"Pardner I do understand, I just didn’t see anything.",
-			"Pardner I don’t appreciate threats so don’t try it.",
-			"Pardner I didn’t see anything, I wasn’t paying attention.",
-			"Ha ha ha, funny pardner but I still didn’t see anything.",
+			"I appreciate your candour partner but I didn’t see anything.",
+			"Partner, I do understand, I just didn’t see anything.",
+			"I don’t appreciate threats, you yellow-bellied cowpoke, so don’t try it.",
+			"Partner I didn’t see anything, I wasn’t paying attention.",
+			"Ha ha ha, funny partner but I still didn’t see anything.",
 			"I don’t know nuthin'. If you’ve got to be gone by high noon, I’d go ask someone else.",
-			"I understand pardner but I didn’t see anything",
-			"Thank you pardner, but I didn’t see anything. ",
-			"Pardner, you’ll have to solve this one without my help, I didn’t see anything."
+			"I understand partner but I didn’t see anything",
+			"Thank you partner, but I didn’t see anything. ",
+			"Howdy, you’ll have to solve this one without my help, I didn’t see anything."
 		};
 
 		string[] romanResponses = new string[9] {
-			"What Ho! I understand you want to solve the problem but I saw nothing!",
+			"What Ho! I understand you want to solve the problem but I know nothing I havent already told the emperor!",
 			"What Ho! Yes I understand, but I saw nothing!",
-			"What Ho! Don’t try and threaten me you madman!",
+			"What Ho! Don’t try and threaten me you madman! I'm an expert with the blade.",
 			"What Ho! I didn’t see anything.",
 			"What Ho ho ho ho! That’s funny but I saw nothing of interest.",
 			"What Ho! I feel you’re trying to rush an answer out of me! Nay I say, Nay!",
 			"What Ho! My good man you are inquisitive but I don’t know anything.",
 			"What Ho! Thanks my good man but I didn’t see anything.",
-			"What Ho!  My good man I’m sorry but I saw nothing."
+			"What Ho! My good man I’m sorry but I saw nothing."
 		};
 
 		string[] wizardResponses = new string[9] {
-			"Errrm...are you sure I can’t interest you in some merchandise instead?",
-			"Errrm...I do understand what is going on, I just didn’t see anything.",
+			"Errrm...are you sure I can’t interest you in some 'merchandise' instead?",
+			"Errrm...I do understand what is going on, I just didn’t see anything. Would you like to by any Triple Sod?",
 			"Errrm...I think you might need to calm down, I’ve got something for that.",
 			"Errrm...I saw nothing but I have seen some of my merchandise, would you like some?",
-			"Hee hee hee...that's funny. Errrm...but I still saw nothing though.",
+			"Hee hee hee...that's funny. ...but I still saw nothing probably because I'm tripping. See me late if you want anything!",
 			"*Looks around shiftily* Sorry mate, I don’t know anything.",
 			"Errrm...I understand, but wouldn’t you prefer to buy some merchandise instead?",
-			"Errrm...yes there was something…. But I’ve forgotten it now.",
-			"Errrm...are you sure? I’m not that useful really."
+			"Errrm...yes there was something…. But I’ve forgotten it now. Probaby all these Yellow Bentines I've been taking. Can I offer you any?",
+			"Errrm...are you sure? I’m not that useful really. ...Unless you have a craving for some Clarky Cat? I have plenty of that."
 		};
 
 		//Weaknesses
