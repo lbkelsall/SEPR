@@ -80,7 +80,6 @@ public class CharacterSelector : MonoBehaviour {
 	//Called when the play button is pressed
 	public void SelectDetective(){
 		GameMaster.instance.CreateNewGame (detectives [detectiveCounter]);
-		print ("CharacterSelector 78");
 		SceneManager.LoadScene ("Atrium");
 	}
 

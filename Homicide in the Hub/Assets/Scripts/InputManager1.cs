@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class InputManager1 : MonoBehaviour {
 	//Handles the input keys 'I' and 'M' pause menu and the map and notebook icons
@@ -11,11 +12,13 @@ public class InputManager1 : MonoBehaviour {
 
 	public GameObject map;
 	public GameObject pauseMenu; 
+	public GameObject cluePanel; 	//ADDITION BY WEDUNNIT
 	private GameObject notebookMenu;
 	public GameObject detective; 
 	private PlayerMovement playerMovement;
 	private bool mapIconPressed = false;
 	private bool notebookIconPressed = false;
+	private bool pauseIconPressed = false; //ADDITION BY WEDUNNIT
 
 	void Start () {
 		//Ensures the player can move at the start
@@ -43,13 +46,10 @@ public class InputManager1 : MonoBehaviour {
 
 		//Pause Menu
 		if (!isMapvisible && !isNotebookvisible) {					//If other menus are not open
-			if (Input.GetKeyDown (KeyCode.Escape)) {				//If ESC key pressed
-				isMenuvisible = !isMenuvisible;						//Toggle visibiltiy
-				if (isMenuvisible) {
-					StopGame (pauseMenu);							//Pause game if is visble
-				} else {
-					ResumeGame (pauseMenu);							//Resume game if map is not visible
-				}
+			if (Input.GetKeyDown (KeyCode.Escape) || pauseIconPressed) {	// EDITED BY WEDUNNIT
+				isMenuvisible = true;								//Toggle visibiltiy
+				StopGame (pauseMenu);								//Pause game if is visble
+				pauseIconPressed = false;							//ADDITION BY WEDUNNIT
 			}
 
 		}
@@ -71,6 +71,18 @@ public class InputManager1 : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Sets CluePanel active and fills with clue information.
+	/// </summary>
+	/// <param name="item">Item.</param>
+	public void ShowCluePanel(Item item){ //ADDITION BY WEDUNNIT
+		cluePanel.SetActive(true);
+		cluePanel.transform.GetChild(0).transform.GetChild(0).GetComponent<Text> ().text = item.getID (); //gets Title parent object, then its child (Text) 
+		cluePanel.transform.GetChild(1).transform.GetChild(0).GetComponent<Text> ().text = item.getDescription ();
+		cluePanel.transform.GetChild(2).GetComponent<Image> ().sprite = item.GetSprite ();
+
+	}
+
 	void StopGame(GameObject menu){
 		//Stops ingame time and playermovement
 		Time.timeScale = 0; 
@@ -81,9 +93,17 @@ public class InputManager1 : MonoBehaviour {
 	public void ResumeGame(GameObject menu){
 		//Resumes ingame time and playermovement
 		Time.timeScale = 1; 
+		pauseIconPressed = false;		//ADDITION BY WEDUNNIT
+		isMenuvisible = false;			//ADDITION BY WEDUNNIT
 		playerMovement.enabled = true;
 		menu.SetActive (false);
 	}
+
+	public void PauseIconPressed(){			//ADDITION BY WEDUNNIT
+		//Called when pause icon is pressed //ADDITION BY WEDUNNIT
+		pauseIconPressed = true;			//ADDITION BY WEDUNNIT
+	}										//ADDITION BY WEDUNNIT
+
 
 	public void MapIconPressed(){
 		//Called when map icon is pressed
@@ -94,4 +114,6 @@ public class InputManager1 : MonoBehaviour {
 		//Called when Notepad icon is pressed
 		notebookIconPressed = true;
 	}
+
+
 }

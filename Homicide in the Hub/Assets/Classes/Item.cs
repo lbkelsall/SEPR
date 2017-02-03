@@ -11,7 +11,7 @@ public class Item : Clue {
 		this.prefab = prefab;
 		this.sprite = sprite;
 	}
-		
+
 	public Sprite GetSprite(){
 		return this.sprite;
 	}
