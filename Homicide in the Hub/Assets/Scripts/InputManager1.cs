@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class InputManager1 : MonoBehaviour {
 	//Handles the input keys 'I' and 'M' pause menu and the map and notebook icons
@@ -11,6 +12,7 @@ public class InputManager1 : MonoBehaviour {
 
 	public GameObject map;
 	public GameObject pauseMenu; 
+	public GameObject cluePanel; 	//ADDITION BY WEDUNNIT
 	private GameObject notebookMenu;
 	public GameObject detective; 
 	private PlayerMovement playerMovement;
@@ -66,6 +68,18 @@ public class InputManager1 : MonoBehaviour {
 			}
 
 		}
+
+	}
+
+	/// <summary>
+	/// Sets CluePanel active and fills with clue information.
+	/// </summary>
+	/// <param name="item">Item.</param>
+	public void ShowCluePanel(Item item){ //ADDITION BY WEDUNNIT
+		cluePanel.SetActive(true);
+		cluePanel.transform.GetChild(0).transform.GetChild(0).GetComponent<Text> ().text = item.getID (); //gets Title parent object, then its child (Text) 
+		cluePanel.transform.GetChild(1).transform.GetChild(0).GetComponent<Text> ().text = item.getDescription ();
+		cluePanel.transform.GetChild(2).GetComponent<Image> ().sprite = item.GetSprite ();
 
 	}
 
