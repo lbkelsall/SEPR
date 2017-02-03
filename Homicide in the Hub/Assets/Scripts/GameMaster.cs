@@ -198,10 +198,10 @@ using System.Linq; //Used for take in pick items
 
 		//Defining Items
 		MurderWeapon cutlass = new MurderWeapon(cutlassPrefab,"Cutlass","A worn and well used cutlass",cutlassSprite, "SD");
-		MurderWeapon poison = new MurderWeapon(poisonPrefab,"Empty Poison Bottle","An empty poison bottle ",poisonSprite, "SD");
-		MurderWeapon garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling a victim to death",garroteSprite, "SD");
-		MurderWeapon knife = new MurderWeapon(knifePrefab,"Knife","An incredibly sharp tool meant for cutting meat",knifeSprite, "SD");
-		MurderWeapon laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm which implies it has been recently fired",laserGunSprite, "SD");
+		MurderWeapon poison = new MurderWeapon(poisonPrefab,"Empty Poison Bottle","This had poison in once ",poisonSprite, "SD");
+		MurderWeapon garrote = new MurderWeapon(garrotePrefab,"Garrote","Used for strangling someone... to death!",garroteSprite, "SD");
+		MurderWeapon knife = new MurderWeapon(knifePrefab,"Knife","A sharp tool meant for cutting meat",knifeSprite, "SD");
+		MurderWeapon laserGun = new MurderWeapon(laserGunPrefab,"Laser Gun","It's still warm, implying it has been recently fired",laserGunSprite, "SD");
 		MurderWeapon leadPipe = new MurderWeapon(leadPipePrefab,"Lead Pipe","It's a bit battered with a few dents on the side",leadPipeSprite, "SD");
 		MurderWeapon westernPistol = new MurderWeapon(westernPistolPrefab,"Western Pistol","The gunpowder residue implies it has been recently fired",westernPistolSprite, "SD");
 		MurderWeapon wizardStaff = new MurderWeapon(wizardStaffPrefab,"Wizard Staff","The gems still seem to be glow as if it has been used recently",wizardStaffSprite, "SD");
@@ -211,7 +211,7 @@ using System.Linq; //Used for take in pick items
 		Item wine = new Item (winePrefab,"Fine Wine","An expensive vintage that's close to 100 years old",wineSprite);
 		Item shatteredGlass = new Item (shatteredGlassPrefab,"Shattered Glass","Broken glass shards spread quite close together",shatteredGlassSprite);
 		Item shrapnel = new Item (shrapnelPrefab,"Shrapnel","Shrapnel from an explosion or gun being fired",shrapnelSprite);
-		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Death","All that remains of the victim",smellyDeathSprite);
+		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Ashes","All that remains of the victim",smellyDeathSprite);
 		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
 
