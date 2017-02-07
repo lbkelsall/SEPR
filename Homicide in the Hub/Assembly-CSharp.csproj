@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\InputManager1.cs" />
      <Compile Include="Assets\Scripts\InterrogationScript.cs" />
      <Compile Include="Assets\Scripts\ItemScript.cs" />
+     <Compile Include="Assets\Scripts\Leaderboard.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\NotebookManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
