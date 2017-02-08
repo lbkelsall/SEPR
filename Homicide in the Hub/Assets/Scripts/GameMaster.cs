@@ -64,6 +64,17 @@ using System.Linq; //Used for take in pick items
 	public Sprite smellyDeathSprite;
 	public Sprite spellbookSprite;
 	public Sprite tripwireSprite;
+	public Sprite whistleSprite;	//ADDITION BY WEDUNNIT
+	public Sprite toastSprite;		//ADDITION BY WEDUNNIT
+	public Sprite staplerSprite;	//ADDITION BY WEDUNNIT
+	public Sprite seaweedSprite;	//ADDITION BY WEDUNNIT
+	public Sprite sandwitchSprite;	//ADDITION BY WEDUNNIT
+	public Sprite purseSprite;		//ADDITION BY WEDUNNIT
+	public Sprite plungerSprite;	//ADDITION BY WEDUNNIT
+	public Sprite monocleSprite;	//ADDITION BY WEDUNNIT
+	public Sprite featherSprite;	//ADDITION BY WEDUNNIT
+	public Sprite chefHatSprite;	//ADDITION BY WEDUNNIT
+
 
 	//Item Prefabs 
 	//Made public to allow for dragging and dropping of prefabs
@@ -84,6 +95,16 @@ using System.Linq; //Used for take in pick items
 	public GameObject smellyDeathPrefab;
 	public GameObject spellbookPrefab;
 	public GameObject tripwirePrefab;
+	public GameObject whistlePrefab;        //ADDITION BY WEDUNNIT
+	public GameObject toastPrefab;        	//ADDITION BY WEDUNNIT
+	public GameObject staplerPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject seaweedPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject sandwitchPrefab;      //ADDITION BY WEDUNNIT
+	public GameObject pursePrefab;        	//ADDITION BY WEDUNNIT
+	public GameObject plungerPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject monoclePrefab;        //ADDITION BY WEDUNNIT
+	public GameObject featherPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject chefHatPrefab;        //ADDITION BY WEDUNNIT
 
 	private NonPlayerCharacter murderer;
 
@@ -279,6 +300,16 @@ using System.Linq; //Used for take in pick items
 		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Ashes","All that remains of the victim",smellyDeathSprite);
 		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
+		Item chefHat = new Item (chefHatPrefab,"chefHatPrefab","A clean and fresh smelling hat, worn by chefs.",chefHatSprite); //ADDITION BY WEDUNNIT
+		Item whistle = new Item (whistlePrefab,"DESCRIPION_TBC.",whistleSprite); //ADDITION BY WEDUNNIT
+		Item toast = new Item (toastPrefab,"DESCRIPION_TBC.",toastSprite); //ADDITION BY WEDUNNIT
+		Item stapler = new Item (staplerPrefab,"DESCRIPION_TBC.",staplerSprite); //ADDITION BY WEDUNNIT
+		Item seaweed = new Item (seaweedPrefab,"DESCRIPION_TBC.",seaweedSprite); //ADDITION BY WEDUNNIT
+		Item sandwitch = new Item (sandwitchPrefab,"DESCRIPION_TBC.",sandwitchSprite); //ADDITION BY WEDUNNIT
+		Item purse = new Item (pursePrefab,"DESCRIPION_TBC.",purseSprite); //ADDITION BY WEDUNNIT
+		Item plunger = new Item (plungerPrefab,"DESCRIPION_TBC.",plungerSprite); //ADDITION BY WEDUNNIT
+		Item monocle = new Item (monoclePrefab,"DESCRIPION_TBC.",monocleSprite); //ADDITION BY WEDUNNIT
+		Item feather = new Item (featherPrefab,"DESCRIPION_TBC.",featherSprite); //ADDITION BY WEDUNNIT
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};

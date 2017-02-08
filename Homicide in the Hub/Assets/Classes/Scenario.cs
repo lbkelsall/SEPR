@@ -102,10 +102,10 @@ public class Scenario
 			} else if (rand == 3) {
 				species = "goldfish";
 			} else {
-				species = "rattlesnake";
+				species = "fox";
 			}
 			string cause_of_death;
-			rand = Random.Range (0,4);
+			rand = Random.Range (0,7);
 			if (rand == 0) {
 				cause_of_death = "starvation";
 			} else if (rand == 1) {
@@ -114,6 +114,12 @@ public class Scenario
 				cause_of_death = "a broken heart";
 			} else if (rand == 3) {
 				cause_of_death = "boredom";
+			} else if (rand == 4) {
+				cause_of_death = "injuries sustained in the Hub"; //ADDITION BY WEDUNNIT
+			} else if (rand == 5) {
+				cause_of_death = "unspecified injuries";		//ADDITION BY WEDUNNIT
+			} else if (rand == 6) {
+				cause_of_death = "death";						//ADDITION BY WEDUNNIT		
 			} else {
 				cause_of_death = "electrocution";
 			}
