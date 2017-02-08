@@ -64,6 +64,17 @@ using System.Linq; //Used for take in pick items
 	public Sprite smellyDeathSprite;
 	public Sprite spellbookSprite;
 	public Sprite tripwireSprite;
+	public Sprite whistleSprite;	//ADDITION BY WEDUNNIT
+	public Sprite toastSprite;		//ADDITION BY WEDUNNIT
+	public Sprite staplerSprite;	//ADDITION BY WEDUNNIT
+	public Sprite seaweedSprite;	//ADDITION BY WEDUNNIT
+	public Sprite sandwitchSprite;	//ADDITION BY WEDUNNIT
+	public Sprite purseSprite;		//ADDITION BY WEDUNNIT
+	public Sprite plungerSprite;	//ADDITION BY WEDUNNIT
+	public Sprite monocleSprite;	//ADDITION BY WEDUNNIT
+	public Sprite featherSprite;	//ADDITION BY WEDUNNIT
+	public Sprite chefHatSprite;	//ADDITION BY WEDUNNIT
+
 
 	//Item Prefabs 
 	//Made public to allow for dragging and dropping of prefabs
@@ -84,6 +95,16 @@ using System.Linq; //Used for take in pick items
 	public GameObject smellyDeathPrefab;
 	public GameObject spellbookPrefab;
 	public GameObject tripwirePrefab;
+	public GameObject whistlePrefab;        //ADDITION BY WEDUNNIT
+	public GameObject toastPrefab;        	//ADDITION BY WEDUNNIT
+	public GameObject staplerPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject seaweedPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject sandwitchPrefab;      //ADDITION BY WEDUNNIT
+	public GameObject pursePrefab;        	//ADDITION BY WEDUNNIT
+	public GameObject plungerPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject monoclePrefab;        //ADDITION BY WEDUNNIT
+	public GameObject featherPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject chefHatPrefab;        //ADDITION BY WEDUNNIT
 
 	private NonPlayerCharacter murderer;
 
@@ -258,7 +279,7 @@ using System.Linq; //Used for take in pick items
 		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
 		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );						//ADDITION BY WEDUNNIT
-		NonPlayerCharacter samurai = new NonPlayerCharacter("Honda Tadcaster",samuraiSprite,"The last samurai",samuraiPref,samuraiWeaknesses, samuraiResponses );	//ADDITION BY WEDUNNIT
+		NonPlayerCharacter samurai = new NonPlayerCharacter("Honda Tadcaster",samuraiSprite,"The Last Samurai",samuraiPref,samuraiWeaknesses, samuraiResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter reginald = new NonPlayerCharacter("Reginald Montgomery IV",reginaldSprite,"Reginald M IV",reginaldPref,reginaldWeaknesses, reginaldResponses );	//ADDITION BY WEDUNNIT
 
 
@@ -290,9 +311,19 @@ using System.Linq; //Used for take in pick items
 		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Ashes","All that remains of the victim",smellyDeathSprite);
 		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
+		Item chefHat = new Item (chefHatPrefab,"NAME TBC.", "A clean and fresh smelling hat, worn by chefs.",chefHatSprite); //ADDITION BY WEDUNNIT
+		Item whistle = new Item (whistlePrefab,"NAME TBC.", "DESCRIPION_TBC.",whistleSprite); 		//ADDITION BY WEDUNNIT
+		Item toast = new Item (toastPrefab,"NAME TBC.", "DESCRIPION_TBC.",toastSprite); 			//ADDITION BY WEDUNNIT
+		Item stapler = new Item (staplerPrefab,"NAME TBC.", "DESCRIPION_TBC.",staplerSprite); 		//ADDITION BY WEDUNNIT
+		Item seaweed = new Item (seaweedPrefab,"NAME TBC.", "DESCRIPION_TBC.",seaweedSprite); 		//ADDITION BY WEDUNNIT
+		Item sandwitch = new Item (sandwitchPrefab,"NAME TBC.", "DESCRIPION_TBC.",sandwitchSprite); //ADDITION BY WEDUNNIT
+		Item purse = new Item (pursePrefab,"NAME TBC.", "DESCRIPION_TBC.",purseSprite); 			//ADDITION BY WEDUNNIT
+		Item plunger = new Item (plungerPrefab,"NAME TBC.", "DESCRIPION_TBC.",plungerSprite); 		//ADDITION BY WEDUNNIT
+		Item monocle = new Item (monoclePrefab,"NAME TBC.", "DESCRIPION_TBC.",monocleSprite); 		//ADDITION BY WEDUNNIT
+		Item feather = new Item (featherPrefab,"NAME TBC.", "DESCRIPION_TBC.",featherSprite); 		//ADDITION BY WEDUNNIT
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
-		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
+		itemClues = new Item [19] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather};
 		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,samurai, reginald};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 	}

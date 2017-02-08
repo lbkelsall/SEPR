@@ -107,6 +107,16 @@ MonoBehaviour:
   smellyDeathSprite: {fileID: 21300000, guid: 07d10b63eb2d7354eac51581f2e6e0ad, type: 3}
   spellbookSprite: {fileID: 21300000, guid: 0754b189f5d3ef34393c1394cbbe1363, type: 3}
   tripwireSprite: {fileID: 21300000, guid: 10fc48e3fb110b54abd85bf32b937f6a, type: 3}
+  whistleSprite: {fileID: 21300000, guid: 2feed89884ab04e34b7254a270355290, type: 3}
+  toastSprite: {fileID: 21300000, guid: 97f696a45353346abab4a62bfe7ca312, type: 3}
+  staplerSprite: {fileID: 21300000, guid: 88ab1f0b2cd1540cd99f51f39c671641, type: 3}
+  seaweedSprite: {fileID: 21300000, guid: e24d19ddaef0d4241a87cfb0a19ca8f0, type: 3}
+  sandwitchSprite: {fileID: 21300000, guid: 265d23a037b22485d88a45246aa70a47, type: 3}
+  purseSprite: {fileID: 21300000, guid: 7e52be2829e0e4c039efde55b00afcc9, type: 3}
+  plungerSprite: {fileID: 21300000, guid: 7475249f6bb5f45898d4111d9796b52a, type: 3}
+  monocleSprite: {fileID: 21300000, guid: 08701f8429cba49c3aee10d73d34c43d, type: 3}
+  featherSprite: {fileID: 21300000, guid: e7e4445c8149945ba9c214ee1ef2c603, type: 3}
+  chefHatSprite: {fileID: 21300000, guid: 58eb28292341c41f79c1a55959497068, type: 3}
   cutlassPrefab: {fileID: 1000013884477494, guid: a8b021bd236fc104d8651e1cf3a4aa1f,
     type: 2}
   poisonPrefab: {fileID: 1000011360912290, guid: b98c5aa485393b74bb6596635ab0513e,
@@ -139,4 +149,24 @@ MonoBehaviour:
   spellbookPrefab: {fileID: 1000012300291214, guid: 8b884f207599c2544a0248a6cc8a7810,
     type: 2}
   tripwirePrefab: {fileID: 1000010035399056, guid: 74fb0ae9c106c4e4893dbdde3bc23cfd,
+    type: 2}
+  whistlePrefab: {fileID: 1000011106891596, guid: 582b267a2e4ec460f95a0d81bc6808c7,
+    type: 2}
+  toastPrefab: {fileID: 1000011106891596, guid: e27418062e4074b158d214565f00481f,
+    type: 2}
+  staplerPrefab: {fileID: 1000011106891596, guid: feb05898cb763459b909b42dbd9d55f4,
+    type: 2}
+  seaweedPrefab: {fileID: 1000011106891596, guid: f710963c6a0ca4f0381e4e1edda15f16,
+    type: 2}
+  sandwitchPrefab: {fileID: 1000011106891596, guid: 152c87890e9684a648007b90072d25f1,
+    type: 2}
+  pursePrefab: {fileID: 1000011106891596, guid: 8bbfd6323a0ad4945bcc5190d52d2419,
+    type: 2}
+  plungerPrefab: {fileID: 1000011106891596, guid: 66643ed4092044b6d9c29d673a137533,
+    type: 2}
+  monoclePrefab: {fileID: 1000011106891596, guid: 6b5793e2dc55646f480f490592189509,
+    type: 2}
+  featherPrefab: {fileID: 1000011106891596, guid: c04fa4eccb63a4d9e8de2f4e4237a1b1,
+    type: 2}
+  chefHatPrefab: {fileID: 1000011106891596, guid: 65844dd4d065c4ac7a1f87a35a8e3523,
     type: 2}
