@@ -10,15 +10,28 @@ public class CharacterClassForTesting : Character {
 	}
 }
 
-public class CharacterTester {
+public class CharacterTester
+{
+    //changed this testing class to use TestFixtureSetup instead of initialising everything in each test
+    //Added: TestSetup method
+    //Removed: The "Arrange" section from each test
+
+    private string characterName, characterNickname;
+    private Character character;
+    private Sprite characterSprite;
+
+    [TestFixtureSetUp]
+    public void TestSetup()
+    {
+        //Arrange
+        characterName = "My Character";
+        characterNickname = "My Nickname";
+        character = new CharacterClassForTesting (characterName,characterSprite, characterNickname);
+    }
 
 	[Test]
 	public void GetCharacterNameTest()
 	{
-		//Arrange
-		var characterName = "My Character";
-		var character = new CharacterClassForTesting (characterName,null, null);
-
 		//Assert
 		//Can get correct name
 		Assert.AreEqual(characterName, character.getCharacterID ());
@@ -27,10 +40,6 @@ public class CharacterTester {
 	[Test]
 	public void GetCharacterSpriteTest()
 	{
-		//Arrange
-		Sprite characterSprite = new Sprite ();
-		var character = new CharacterClassForTesting(null,characterSprite, null);
-
 		//Assert
 		//Can get correct sprite
 		Assert.AreEqual(character.getSprite (), characterSprite);
@@ -39,10 +48,6 @@ public class CharacterTester {
 	[Test]
 	public void GetCharacterNicknameTest()
 	{
-		//Arrange
-		var characterNickname = "My Nickname";
-		var character = new CharacterClassForTesting(null,null, characterNickname);
-
 		//Assert
 		//Can get correct nickname
 		Assert.AreEqual(characterNickname, character.getNickname ());

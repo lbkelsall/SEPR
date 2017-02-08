@@ -1,11 +1,11 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homicide in the Hub", "Assembly-CSharp-firstpass.csproj", "{E530DF48-0CEF-DE19-34B1-92206AF0E906}"
+# Visual Studio 2008
+
+Project("{146959E4-1EA5-AAAA-286B-EFC1E6994CB4}") = "Homicide in the Hub", "Assembly-CSharp-firstpass.csproj", "{E530DF48-0CEF-DE19-34B1-92206AF0E906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homicide in the Hub", "Assembly-CSharp.csproj", "{916A9213-0FBC-1585-33AE-F12E6B75D245}"
+Project("{146959E4-1EA5-AAAA-286B-EFC1E6994CB4}") = "Homicide in the Hub", "Assembly-CSharp.csproj", "{916A9213-0FBC-1585-33AE-F12E6B75D245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homicide in the Hub", "Assembly-CSharp-Editor.csproj", "{546B9BC2-1D76-A26A-CB8F-CC56746A7251}"
+Project("{146959E4-1EA5-AAAA-286B-EFC1E6994CB4}") = "Homicide in the Hub", "Assembly-CSharp-Editor.csproj", "{546B9BC2-1D76-A26A-CB8F-CC56746A7251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

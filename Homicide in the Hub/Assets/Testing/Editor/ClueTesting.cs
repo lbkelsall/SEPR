@@ -10,15 +10,24 @@ public class ClueClassForTesting : Clue {
 }
 
 
-public class ClueTesting {
+public class ClueTesting
+{
 
-	[Test]
+    private string clueID;
+    private string clueDescription;
+    private Clue clue;
+
+    [TestFixtureSetUp]
+    public void TestSetup()
+    {
+        clueID = "My Clue ID";
+        clueDescription = "My Clue Description";
+        clue = new ClueClassForTesting(clueID,clueDescription);
+    }
+
+    [Test]
 	public void GetClueIDTest()
 	{
-		//Arrange
-		var clueID = "My Clue ID";
-		var clue = new ClueClassForTesting(clueID,null);
-
 		//Assert
 		//Can get correct clue id
 		Assert.AreEqual(clueID, clue.getID ());
@@ -27,10 +36,6 @@ public class ClueTesting {
 	[Test]
 	public void GetClueDescriptionTest()
 	{
-		//Arrange
-		var clueDescription = "My Clue Description";
-		var clue = new ClueClassForTesting(null,clueDescription);
-
 		//Assert
 		//Can get correct description
 		Assert.AreEqual(clueDescription, clue.getDescription ());

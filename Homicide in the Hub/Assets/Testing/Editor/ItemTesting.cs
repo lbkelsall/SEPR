@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using NUnit.Framework;
 
-public class ItemTesting {
+public class ItemTesting
+{
+
+    private Sprite itemSprite;
+    private Item item;
+    private GameObject itemPrefab;
+
+    [TestFixtureSetUp]
+    public void TestSetup()
+    {
+        itemPrefab = new GameObject();
+        itemSprite = new Sprite ();
+        item = new Item(itemPrefab, null, null, itemSprite);
+    }
 
 	[Test]
 	public void GetItemSpriteTest()
 	{
-		var itemSprite = new Sprite ();
-
-		//Arrange
-		var item = new Item(null, null, null, itemSprite);
-
 		//Assert
 		//The object has a new name
 		Assert.AreSame(itemSprite, item.GetSprite ());
@@ -20,11 +27,6 @@ public class ItemTesting {
 	[Test]
 	public void GetItemPrefabTest()
 	{
-		var itemPrefab = new GameObject();
-
-		//Arrange
-		var item = new Item(itemPrefab, null, null, null);
-
 		//Assert
 		//The object has a new name
 		Assert.AreSame(itemPrefab, item.GetPrefab ());
