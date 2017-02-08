@@ -180,25 +180,50 @@ public class Scenario
 		verbal_clue_pool.Add (verbal_clues [verbalClueWithWeapon ]);
 		relevant_verbal_clues.Add (verbal_clues [verbalClueWithWeapon ]);
 
-		if (murderer.getCharacterID() == "Captain Bluebottle") {
+		switch (murdererName) {	//REFACTORED BY WEDUNNIT
+		case "Salty Seadog":
 			item_clue_pool.Add (item_clues [4]); // shattered glass
 			relevant_item_clues.Add (item_clues [4]);
-		} else if (murderer.getCharacterID() == "The Mime Twins") {
+			break;
+		case "mimes":
 			item_clue_pool.Add (item_clues [0]); // beret
 			relevant_item_clues.Add (item_clues [0]);
-		} else if (murderer.getCharacterID() == "Sir Worchester") {
+			break;
+		case "Money Bags":
 			item_clue_pool.Add (item_clues [2]); // gloves
 			relevant_item_clues.Add (item_clues [2]);
-		} else if (murderer.getCharacterID() == "Jesse Ranger") {
+			break;
+		case "Outlaw":
 			item_clue_pool.Add (item_clues [8]); // tripwire
 			relevant_item_clues.Add (item_clues [8]);
-		} else if (murderer.getCharacterID() == "Celcius Maximus") {
+			break;
+		case "Legionnaire":
 			item_clue_pool.Add (item_clues [3]); // wine
 			relevant_item_clues.Add (item_clues [3]);
-		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
+			break;
+		case "Dodgy Dealer":
 			item_clue_pool.Add (item_clues [7]); // spellbook
 			relevant_item_clues.Add (item_clues [7]);
-		} //TODO add relevent clue items for new character set
+			break;
+		case "Superhero":
+			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
+			break;
+		case "The Last Samurai":
+			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			break;
+		case "Telechubbie":
+			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			break;
+		case "Reginald M IV":
+			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			break;
+		default:
+			throw new System.ArgumentException (murdererName + " does not have any clues associated with them.");
+		}
 
 		// add the 4 irrelevant verbal clues
 		while (item_clue_pool.Count() < 6) {
@@ -231,7 +256,6 @@ public class Scenario
 		VerbalClue[] red_herring_verbal_clues = new VerbalClue[2] { police_failure, shifty_looking };
 		int herring_index = Random.Range (0,1);
 		verbal_clue_pool.Add (red_herring_verbal_clues [herring_index]);
-		Debug.Log (verbal_clue_pool [2].getDescription());
 	}
 
 	// distribute the 3 verbal clues among the NPC characters in NonPlayerCharacter[] 'npcs'
