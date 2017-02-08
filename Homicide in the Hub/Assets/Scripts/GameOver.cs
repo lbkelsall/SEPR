@@ -27,7 +27,7 @@ public class GameOver : MonoBehaviour {
 		if (UserInput == "") {
 			UserInput = "Some Unnamed Detective";
 		}
-		using (StreamWriter sw = new StreamWriter ("leaderboard.txt")) {
+		using (StreamWriter sw = new StreamWriter ("leaderboard.txt", true)) {
 			sw.WriteLine (UserInput);
 			sw.WriteLine (endScore.ToString ());
 		}

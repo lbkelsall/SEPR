@@ -15,6 +15,12 @@ public class ItemScript : MonoBehaviour {
 		//Adds the item to the inventory, updates the notebook and destroys the item gameobject.
 		NotebookManager.instance.inventory.AddItemToInventory (item);
 		NotebookManager.instance.UpdateNotebook();
+
+		//WEDUNNIT
+		GameMaster GM = FindObjectOfType<GameMaster>();
+		GM.Penalise (-50);
+		Debug.Log (GM.GetScore ());
+
 		Destroy (gameObject);
 
 	}
