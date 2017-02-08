@@ -51,6 +51,19 @@ public class Scenario
 		murderer.SetAsMurderer ();
 		return murderer;
 	}
+	/// <summary>
+	/// Returns List of all Non murderer NPCs' nicknames
+	/// </summary>
+	private string getRandomNonMurderingNPCName(string murdererName){ //ADDITION BY WEDUNNIT
+		List<string> nonMurderingNPCNames = new List<string> ();
+		foreach (Character NPC in npcs) {
+			if(NPC.getNickname() != murdererName){
+				nonMurderingNPCNames.Add (NPC.getNickname());
+			}
+		}
+
+		return nonMurderingNPCNames [Random.Range (0, nonMurderingNPCNames.Count)];
+	}
 
 	// given a murderer, weapon and motive, creates a VerbalClue[] containing 6 relevant verbal clues
 	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) {
@@ -59,9 +72,9 @@ public class Scenario
 		string weapon_name = weapon.getID ();
 
 		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw "+murderer_name+" trying to " +
-			"dispose of a "+weapon_name+".");
+			"dispose of a "+weapon_name+". Or was it "+ getRandomNonMurderingNPCName (murderer_name)+"? I can't remember."); //UPDATED BY WEDUNNIT
 
-		string old_friends_description = "The victim and "+murderer_name+" fell out ";
+		string old_friends_description = "The victim fell out with with " + getRandomNonMurderingNPCName (murderer_name) + " and "+murderer_name+" a long time ago "; //UPDATED BY WEDUNNIT
 		string motive_clause = ".";
 		if (motive == "homewrecker") {
 			string partner_gender;
@@ -71,19 +84,20 @@ public class Scenario
 			} else {
 				partner_gender = "husband";
 			}
-			motive_clause = "because the victim slept with their "+partner_gender+".";  
+			motive_clause = "because the victim slept with one of their "+partner_gender+"s.";  //UPDATED BY WEDUNNIT
+			Debug.Log (motive_clause);
 		}
 		if (motive == "loanshark") {
-			motive_clause = "because "+murderer_name+" was in debt to the victim."; 
+			motive_clause = "because the victim was a bit of a loanshark..."; 
 		}
 		if (motive == "promotion") {
-			motive_clause = "because they were in competition professionally.";
+			motive_clause = "because they were in competition professionally. The victim got the promotion...";
 		}
 		if (motive == "unfriended") {
-			motive_clause = "because the victim unfriended "+murderer_name+" on Facebook.";
+			motive_clause = "because of scome shenanigans on Facebook.";
 		}
 		if (motive == "blackmail") {
-			motive_clause = "because the victim knew "+murderer_name+"'s darkest secret.";
+			motive_clause = "because the victim was a stalker, and knew their darkest secrets.";
 		}
 
 		if (motive == "avenge_friend") {
@@ -124,19 +138,19 @@ public class Scenario
 				cause_of_death = "electrocution";
 			}
 			old_friends_description = "";
-			motive_clause = "The victim was looking after "+murderer_name+"'s "+species+" when it " +
-				"died of "+cause_of_death+".";  
+			motive_clause = "The victim was looking after either "+getRandomNonMurderingNPCName(murderer_name)+"or "+murderer_name+"'s "+species+" when it " +
+				"died of "+cause_of_death+", I can't remember.";  
 		}
 		old_friends_description += motive_clause;
 		VerbalClue old_friends = new VerbalClue ("Old Friends", old_friends_description);
 
 		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant " +
-			"history with "+murderer_name+".");
+			"past with "+murderer_name+"."); //UPDATED BY WEDUNNIT
 
-		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with "+murderer_name+" just a few " +
+		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim talking with "+getRandomNonMurderingNPCName(murderer_name)+" and " +murderer_name+" just a few " +
 			"minutes before their body was discovered.");
 
-		string altercation_description = murderer_name+"and the victim had an altercation about ";
+		string altercation_description = murderer_name+" and the victim had an altercation about ";
 		motive_clause = ".";
 		if (motive == "homewrecker") {
 			string partner_gender;
@@ -147,6 +161,7 @@ public class Scenario
 				partner_gender = "husband";
 			}
 			motive_clause = "the victim sleeping with their "+partner_gender+".";  
+			Debug.Log (motive_clause);
 		}
 		if (motive == "loanshark") {
 			motive_clause = murderer_name+" being in debt to the victim."; 
@@ -193,6 +208,10 @@ public class Scenario
 		relevant_item_clues.Add (weapon);
 
 		int pick_motive_clue = Random.Range (0, 1); // 'old friends' or 'altercation'
+
+		Debug.Log (motive);
+		Debug.Log (pick_motive_clue);
+
 		if (motive == "homewrecker") {
 			relevant_item_clues.Add (item_clues [pick_motive_clue]);
 			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
