@@ -23,7 +23,7 @@ public class AccuseScript : MonoBehaviour {
 	public void Start() {
 		character = InterrogationScript.instance.GetInterrogationCharacter();
 		NotebookManager.instance.UpdateNotebook ();
-		notebookMenu = GameObject.Find("Notebook Canvas").transform.GetChild(0).gameObject;
+		notebookMenu = GameObject.Find("NotebookCanvas").transform.GetChild(0).gameObject;
 		notebookMenu.SetActive (true);
 		Button backButton = GameObject.FindGameObjectWithTag ("Back").GetComponent<Button>();
 		Button submitButton = GameObject.FindGameObjectWithTag ("Submit").GetComponent<Button>();
@@ -80,6 +80,8 @@ public class AccuseScript : MonoBehaviour {
 		if ((accusation == true) && (character.IsMurderer ())) {
 			//If so go to win screen
 			notebookMenu.SetActive (false);
+			Destroy(GameObject.Find("GlobalScripts")); //ADDITION BY WEDUNNIT
+			Destroy(GameObject.Find("NotebookCanvas")); //ADDITION BY WEDUNNIT
 			SceneManager.LoadScene ("Win Screen");
 		} else {
 			//If not display accusation failed message

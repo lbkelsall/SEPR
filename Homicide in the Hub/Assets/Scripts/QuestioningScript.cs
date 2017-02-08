@@ -14,6 +14,7 @@ public class QuestioningScript : MonoBehaviour {
 	private NonPlayerCharacter character;
 	public GameObject detectiveGameObject;
 	public GameObject characterGameObject;
+	public Text characterName; //ADDITION BY WEDUNNIT
 
 	public Text[] detectiveStylesText = new Text[3]; //Where Left-most button is 1 and rightmost is 3
 	public Text clueSpeech;			//Where the clue text is written to
@@ -34,6 +35,8 @@ public class QuestioningScript : MonoBehaviour {
 		for (int i = 0; i<3; i++){	
 			detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
 		}
+
+		characterName.text = character.getCharacterID (); //ADDITION BY WEDUNNIT
 	}
 
 	public void QuestionCharacter(int reference){
