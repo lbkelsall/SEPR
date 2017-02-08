@@ -26,6 +26,10 @@ using System.Linq; //Used for take in pick items
 	public Sprite cowgirlSprite;
 	public Sprite romanSprite;
 	public Sprite wizardSprite;
+	public Sprite chubbieSprite;	//ADDITION BY WEDUNNIT
+	public Sprite reginaldSprite;	//ADDITION BY WEDUNNIT
+	public Sprite hemanSprite;	//ADDITION BY WEDUNNIT
+	public Sprite samuraiSprite;	//ADDITION BY WEDUNNIT
 
 	//NPC Prefabs
 	//Made public to allow for dragging and dropping of prefabs
@@ -35,6 +39,10 @@ using System.Linq; //Used for take in pick items
 	public GameObject cowgirlPref;
 	public GameObject romanPref;
 	public GameObject wizardPref;
+	public GameObject chubbiePref;	//ADDITION BY WEDUNNIT
+	public GameObject hemanPref;	//ADDITION BY WEDUNNIT
+	public GameObject samuraiPref;	//ADDITION BY WEDUNNIT
+	public GameObject reginaldPref;	//ADDITION BY WEDUNNIT
 
 
 	//Item Sprite decleratation
@@ -83,6 +91,9 @@ using System.Linq; //Used for take in pick items
 	private List<Item> relevant_items;
 	private List<VerbalClue> relevant_verbal_clues;
 
+	//WEDUNNIT
+	private float gameScore;
+
 	//Sets as a Singleton
 	void Awake () {  //Makes this a singleton class on awake
 		if (instance == null) { //Does an instance already exist?
@@ -92,7 +103,15 @@ using System.Linq; //Used for take in pick items
 		}
 		DontDestroyOnLoad (gameObject); //Set this to not be destroyed when reloading scene
 	}
-
+		
+	//WEDUNNIT
+	void Update(){
+		if (gameScore > 0) {
+			gameScore -= Time.deltaTime;
+		} else {
+			gameScore = 0;
+		}
+	}
 
 	void Start(){
 		//Initialises Variables
@@ -169,6 +188,54 @@ using System.Linq; //Used for take in pick items
 			"Errrm...are you sure? I’m not that useful really. ...Unless you have a craving for some Clarky Cat? I have plenty of that."
 		};
 
+		string[] chubbieResponses = new string[9] {	//ADDITION BY WEDUNNIT
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		};
+
+		string[] hemanResponses = new string[9] {	//ADDITION BY WEDUNNIT
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		};
+
+		string[] samuraiResponses = new string[9] {	//ADDITION BY WEDUNNIT
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		};
+
+		string[] reginaldResponses = new string[9] {	//ADDITION BY WEDUNNIT
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		};
+
 		//Weaknesses
 		List<string> pirateWeaknesses = new List<string> {"Forceful","Wisecracking","Kind"};
 		List<string> mimeWeaknesses = new List<string> {"Intimidating","Coaxing","Inspiring"};
@@ -176,6 +243,10 @@ using System.Linq; //Used for take in pick items
 		List<string> cowgirlWeaknesses = new List<string> {"Condescending","Wisecracking","Inspiring"};
 		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
 		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
+		List<string> chubbieWeaknesses = new List<string> {"Kind","Inspiring","Inquisitive"};	//ADDITION BY WEDUNNIT
+		List<string> samuraiWeaknesses = new List<string> {"Forceful","Intimidating","Condescending"};	//ADDITION BY WEDUNNIT
+		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
+		List<string> reginaldWeaknesses = new List<string> {"Wisecracking","Forceful","Inspiring"};	//ADDITION BY WEDUNNIT
 
 
 		//Defining NPC's
@@ -185,6 +256,11 @@ using System.Linq; //Used for take in pick items
 		NonPlayerCharacter cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
 		NonPlayerCharacter roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
 		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
+		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
+		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );						//ADDITION BY WEDUNNIT
+		NonPlayerCharacter samurai = new NonPlayerCharacter("Honda Tadcaster",samuraiSprite,"The last samurai",samuraiPref,samuraiWeaknesses, samuraiResponses );	//ADDITION BY WEDUNNIT
+		NonPlayerCharacter reginald = new NonPlayerCharacter("Reginald Montgomery IV",reginaldSprite,"Reginald M IV",reginaldPref,reginaldWeaknesses, reginaldResponses );	//ADDITION BY WEDUNNIT
+
 
 		//Defining Scenes
 		Scene controlRoom = new Scene("Control Room");
@@ -217,7 +293,7 @@ using System.Linq; //Used for take in pick items
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
-		characters =  new NonPlayerCharacter[6] {pirate,mimes,millionaire,cowgirl,roman,wizard};
+		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,samurai, reginald};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 	}
 
@@ -229,7 +305,7 @@ using System.Linq; //Used for take in pick items
 		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
 			scenes [sceneCounter].AddNPCToArray (character);		//Assign a character to a scene
 			sceneCounter += 1;									//Increment sceneCounter
-			if (sceneCounter > scenes.Length) {					//If the counter is above the number of scenes cycle to the first scene.  
+			if (sceneCounter >= scenes.Length) {					//If the counter is above the number of scenes cycle to the first scene.  
 				sceneCounter = 0;
 			}
 		}
@@ -274,7 +350,21 @@ using System.Linq; //Used for take in pick items
 		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;
-	}	
+
+		//WEDUNNIT
+		gameScore = 1000;
+	}
+
+	//WEDUNNIT
+	public void Penalise (float penalty){
+		gameScore -= penalty;
+	}
+
+	//WEDUNNIT
+	public int GetScore (){
+		int intScore = (int)gameScore;
+		return intScore;
+	}
 		
 
 	public PlayerCharacter GetPlayerCharacter(){

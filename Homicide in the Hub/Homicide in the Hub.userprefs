@@ -1,11 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="211" Column="91" />
-      <File FileName="Assets/Scripts/ItemScript.cs" Line="21" Column="121" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="283" Column="23" />
+      <File FileName="Assets/Scripts/QuestioningScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ItemScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Classes/Item.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NotebookManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NotebookManager.cs" Line="9" Column="21" />
+      <File FileName="Assets/Classes/Character.cs" Line="17" Column="28" />
+      <File FileName="Assets/Classes/Scene.cs" Line="21" Column="3" />
+      <File FileName="Assets/Scripts/InputManager1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="15" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
