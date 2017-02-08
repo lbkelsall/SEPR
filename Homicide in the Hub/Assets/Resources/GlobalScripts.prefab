@@ -70,6 +70,7 @@ MonoBehaviour:
   romanSprite: {fileID: 21300000, guid: 6e67bba55ca91e048b6556e894d4d9c0, type: 3}
   wizardSprite: {fileID: 21300000, guid: 59806aadf8aff5a4a966e2a8a31abc47, type: 3}
   chubbieSprite: {fileID: 21300000, guid: a67918b44cf534cbfb02042f5b1c6ca7, type: 3}
+  reginaldSprite: {fileID: 21300000, guid: 11c14708ab2e24a5db2f11e5b6bdb8c7, type: 3}
   hemanSprite: {fileID: 21300000, guid: 2fa723a57cf684c8ebb36d063f4e1dc8, type: 3}
   samuraiSprite: {fileID: 21300000, guid: 0a961e718f4844a75b1f0ad2cffc447a, type: 3}
   piratePref: {fileID: 1000012052528108, guid: 23c3dbcce8c83f94191f5669a3dcd943, type: 2}
@@ -84,6 +85,8 @@ MonoBehaviour:
     type: 2}
   hemanPref: {fileID: 1000011775265398, guid: 69d64fe6be0ed4b82a10e6c28672b25b, type: 2}
   samuraiPref: {fileID: 1000011775265398, guid: 1d77e139048754f7bb7ee25b14e2cc43,
+    type: 2}
+  reginaldPref: {fileID: 1000011775265398, guid: dabdeb8794c1d488c992e26a8d09b889,
     type: 2}
   cutlassSprite: {fileID: 21300000, guid: 4a022570aa7d763458d11a4fdf8d08ee, type: 3}
   poisonSprite: {fileID: 21300000, guid: 9a4cbcfbf3949db40b5d3a4556f8cb05, type: 3}

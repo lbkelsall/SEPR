@@ -27,6 +27,7 @@ using System.Linq; //Used for take in pick items
 	public Sprite romanSprite;
 	public Sprite wizardSprite;
 	public Sprite chubbieSprite;	//ADDITION BY WEDUNNIT
+	public Sprite reginaldSprite;	//ADDITION BY WEDUNNIT
 	public Sprite hemanSprite;	//ADDITION BY WEDUNNIT
 	public Sprite samuraiSprite;	//ADDITION BY WEDUNNIT
 
@@ -41,6 +42,7 @@ using System.Linq; //Used for take in pick items
 	public GameObject chubbiePref;	//ADDITION BY WEDUNNIT
 	public GameObject hemanPref;	//ADDITION BY WEDUNNIT
 	public GameObject samuraiPref;	//ADDITION BY WEDUNNIT
+	public GameObject reginaldPref;	//ADDITION BY WEDUNNIT
 
 
 	//Item Sprite decleratation
@@ -211,6 +213,18 @@ using System.Linq; //Used for take in pick items
 			""
 		};
 
+		string[] reginaldResponses = new string[9] {	//ADDITION BY WEDUNNIT
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		};
+
 		//Weaknesses
 		List<string> pirateWeaknesses = new List<string> {"Forceful","Wisecracking","Kind"};
 		List<string> mimeWeaknesses = new List<string> {"Intimidating","Coaxing","Inspiring"};
@@ -221,6 +235,7 @@ using System.Linq; //Used for take in pick items
 		List<string> chubbieWeaknesses = new List<string> {"Kind","Inspiring","Inquisitive"};	//ADDITION BY WEDUNNIT
 		List<string> samuraiWeaknesses = new List<string> {"Forceful","Intimidating","Condescending"};	//ADDITION BY WEDUNNIT
 		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
+		List<string> reginaldWeaknesses = new List<string> {"Wisecracking","Forceful","Inspiring"};	//ADDITION BY WEDUNNIT
 
 
 		//Defining NPC's
@@ -230,10 +245,10 @@ using System.Linq; //Used for take in pick items
 		NonPlayerCharacter cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
 		NonPlayerCharacter roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
 		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
-		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Chubbietubbies",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
+		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );						//ADDITION BY WEDUNNIT
 		NonPlayerCharacter samurai = new NonPlayerCharacter("Honda Tadcaster",samuraiSprite,"The last samurai",samuraiPref,samuraiWeaknesses, samuraiResponses );	//ADDITION BY WEDUNNIT
-
+		NonPlayerCharacter reginald = new NonPlayerCharacter("Reginald Montgomery IV",reginaldSprite,"Reginald M IV",reginaldPref,reginaldWeaknesses, reginaldResponses );	//ADDITION BY WEDUNNIT
 
 
 		//Defining Scenes
@@ -267,7 +282,7 @@ using System.Linq; //Used for take in pick items
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [9] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire};
-		characters =  new NonPlayerCharacter[9] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,samurai};
+		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,samurai, reginald};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 	}
 
@@ -277,7 +292,6 @@ using System.Linq; //Used for take in pick items
 		shuffler.Shuffle (characters);
 		shuffler.Shuffle (scenes);
 		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
-			print(sceneCounter);
 			scenes [sceneCounter].AddNPCToArray (character);		//Assign a character to a scene
 			sceneCounter += 1;									//Increment sceneCounter
 			if (sceneCounter >= scenes.Length) {					//If the counter is above the number of scenes cycle to the first scene.  
