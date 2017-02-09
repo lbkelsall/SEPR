@@ -20,6 +20,8 @@ public class GameOver : MonoBehaviour {
 		endScore = (int)gMaster.GetScore ();
 		Text actualText = scoreText.GetComponent<Text> ();
 		actualText.text = "Your score: " + endScore.ToString ();
+		Destroy(GameObject.Find("GlobalScripts")); //ADDITION BY WEDUNNIT
+		Destroy(GameObject.Find("NotebookCanvas")); //ADDITION BY WEDUNNIT
 	}
 	
 	public void CloseScreen(){

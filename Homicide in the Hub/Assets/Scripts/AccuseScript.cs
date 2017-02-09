@@ -80,8 +80,6 @@ public class AccuseScript : MonoBehaviour {
 		if ((accusation == true) && (character.IsMurderer ())) {
 			//If so go to win screen
 			notebookMenu.SetActive (false);
-			Destroy(GameObject.Find("GlobalScripts")); //ADDITION BY WEDUNNIT
-			Destroy(GameObject.Find("NotebookCanvas")); //ADDITION BY WEDUNNIT
 			SceneManager.LoadScene ("Win Screen");
 		} else {
 			//If not display accusation failed message

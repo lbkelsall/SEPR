@@ -210,15 +210,15 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] chubbieResponses = new string[9] {	//ADDITION BY WEDUNNIT
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
+			"The telechubbie covers its eyes. It looks... sad?",
+			"The telechubbie shakes its head. You don't think it knows anything.",
+			"The telechubbie covers its eyes. It looks... scared?",
+			"The telechubbie tilts its head in confusion.",
+			"The telechubbie laughs, but it doesn't seem to know about anything.",
+			"The telechubbie looks around, confused.",
+			"The telechubbie looks interested, but doesn't seem to know anything useful.",
+			"The telechubbie offers you a hug. You refuse.",
+			"The telechubbie looks happy, but doesn't reveal anything."
 		};
 
 		string[] hemanResponses = new string[9] {	//ADDITION BY WEDUNNIT
@@ -234,27 +234,27 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] samuraiResponses = new string[9] {	//ADDITION BY WEDUNNIT
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
+			"Aggressiveness shown, I appreciate it though, I can tell you naught.",
+			"Don't look down on me, I will cut you clean in half, then clean up the blood.",
+			"Do you think I'm scared, I am scared of none at all, I am samurai.",
+			"I'd like to help you, but I am afraid to say, I cannot help you.",
+			"Your jokes are quite bad, I would stop telling them all, lest you look a fool.",
+			"You need to slow down, take time to smell the flowers, but watch out for bees.",
+			"You want to know more, but yet you know nautght at all, go bug someone else.",
+			"Kindness is weakness, I learned this from an old book, go read Art of War.",
+			"You seem valorous, really hate to tell you this, but I know nothing."
 		};
 
 		string[] reginaldResponses = new string[9] {	//ADDITION BY WEDUNNIT
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
+			"Quack! (Good sir, I will inform you that I have no information to provide to you!)",
+			"Quack! (Good sir, I will inform you that I will not be talked to in this manner!)",
+			"Quack! (Good sir, I will inform you that I will not tolerate such brash behaviour!)",
+			"Quack! (Good sir, I will inform you that I cannot help you in this matter!)",
+			"Quack! (Good sir, I will inform you that now is not the time for such tomfoolery!)",
+			"Quack! (Good sir, I will inform you that such haste is excessive and detrimental!)",
+			"Quack! (Good sir, I will inform you that you are wasting your time with this questioning!)",
+			"Quack! (Good sir, I will inform you that I am a married goose and your approaches are unwarranted!)",
+			"Quack! (Good sir, I will inform you that I cannot aide you in your investigation!)"
 		};
 
 		//Weaknesses
@@ -264,10 +264,10 @@ using System.Linq; //Used for take in pick items
 		List<string> cowgirlWeaknesses = new List<string> {"Condescending","Wisecracking","Inspiring"};
 		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
 		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
-		List<string> chubbieWeaknesses = new List<string> {"Kind","Inspiring","Inquisitive"};	//ADDITION BY WEDUNNIT
-		List<string> samuraiWeaknesses = new List<string> {"Forceful","Intimidating","Condescending"};	//ADDITION BY WEDUNNIT
+		List<string> chubbieWeaknesses = new List<string> {"Condescending", "Wizecracking", "Kind"};	//ADDITION BY WEDUNNIT
+		List<string> samuraiWeaknesses = new List<string> {"Forceful", "Coaxing", "Inspiring"};	//ADDITION BY WEDUNNIT
 		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
-		List<string> reginaldWeaknesses = new List<string> {"Wisecracking","Forceful","Inspiring"};	//ADDITION BY WEDUNNIT
+		List<string> reginaldWeaknesses = new List<string> {"Forceful", "Coaxing","Inspiring"};	//ADDITION BY WEDUNNIT
 
 
 		//Defining NPC's
@@ -311,16 +311,16 @@ using System.Linq; //Used for take in pick items
 		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Ashes","All that remains of the victim",smellyDeathSprite);
 		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
-		Item chefHat = new Item (chefHatPrefab,"NAME TBC.", "A clean and fresh smelling hat, worn by chefs.",chefHatSprite); //ADDITION BY WEDUNNIT
-		Item whistle = new Item (whistlePrefab,"NAME TBC.", "DESCRIPION_TBC.",whistleSprite); 		//ADDITION BY WEDUNNIT
-		Item toast = new Item (toastPrefab,"NAME TBC.", "DESCRIPION_TBC.",toastSprite); 			//ADDITION BY WEDUNNIT
-		Item stapler = new Item (staplerPrefab,"NAME TBC.", "DESCRIPION_TBC.",staplerSprite); 		//ADDITION BY WEDUNNIT
-		Item seaweed = new Item (seaweedPrefab,"NAME TBC.", "DESCRIPION_TBC.",seaweedSprite); 		//ADDITION BY WEDUNNIT
-		Item sandwitch = new Item (sandwitchPrefab,"NAME TBC.", "DESCRIPION_TBC.",sandwitchSprite); //ADDITION BY WEDUNNIT
-		Item purse = new Item (pursePrefab,"NAME TBC.", "DESCRIPION_TBC.",purseSprite); 			//ADDITION BY WEDUNNIT
-		Item plunger = new Item (plungerPrefab,"NAME TBC.", "DESCRIPION_TBC.",plungerSprite); 		//ADDITION BY WEDUNNIT
-		Item monocle = new Item (monoclePrefab,"NAME TBC.", "DESCRIPION_TBC.",monocleSprite); 		//ADDITION BY WEDUNNIT
-		Item feather = new Item (featherPrefab,"NAME TBC.", "DESCRIPION_TBC.",featherSprite); 		//ADDITION BY WEDUNNIT
+		Item chefHat = new Item (chefHatPrefab,"Chef's Hat", "A clean and fresh smelling hat, worn by chefs.",chefHatSprite); //ADDITION BY WEDUNNIT
+		Item whistle = new Item (whistlePrefab,"Whistle", "A bright, shiny whistle that's as clean as... well.",whistleSprite); 		//ADDITION BY WEDUNNIT
+		Item toast = new Item (toastPrefab,"Toast", "A slice of well buttered toast. It's slightly warm.",toastSprite); 			//ADDITION BY WEDUNNIT
+		Item stapler = new Item (staplerPrefab,"Stapler", "A bright red stapler, with no staples in it.",staplerSprite); 		//ADDITION BY WEDUNNIT
+		Item seaweed = new Item (seaweedPrefab,"Seaweed", "Oceanman, take me by the hand lead me to the land, that you understand.",seaweedSprite); 		//ADDITION BY WEDUNNIT
+		Item sandwitch = new Item (sandwitchPrefab,"Sandwich", "A ham sandwich with cheese and lettuce on white bread.",sandwitchSprite); //ADDITION BY WEDUNNIT
+		Item purse = new Item (pursePrefab,"Fancy Purse", "A finely made, hand crafted, now-empty purse.",purseSprite); 			//ADDITION BY WEDUNNIT
+		Item plunger = new Item (plungerPrefab,"Plunger", "A toilet plunger. It hasn't been used recently.",plungerSprite); 		//ADDITION BY WEDUNNIT
+		Item monocle = new Item (monoclePrefab,"Monocle", "A finely made monocle, complete with gold chain.",monocleSprite); 		//ADDITION BY WEDUNNIT
+		Item feather = new Item (featherPrefab,"Feather", "A goose feather, apparently freshly plucked.",featherSprite); 		//ADDITION BY WEDUNNIT
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [19] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather};
