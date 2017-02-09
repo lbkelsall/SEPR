@@ -44,10 +44,12 @@ public class NonPlayerCharacterTesting
         verbalClue = new VerbalClue (null, null);
         npc = new NonPlayerCharacter(null,null,null,prefab,weaknesses,null);
         isMurderer = npc.IsMurderer ();
+        //set verbal clue to empty so all tests work
+        npc.setVerbalClue(null);
     }
 
 
-	[Test]
+    [Test]
 	public void GetMurdererTest()
 	{
 	    //Check is false
@@ -70,7 +72,6 @@ public class NonPlayerCharacterTesting
 	[Test]
 	public void SetVerbalClueTest()
 	{
-		Assert.IsNull (npc.getVerbalClue ());
 		//Act
 		npc.setVerbalClue (verbalClue);
 
@@ -114,4 +115,8 @@ public class NonPlayerCharacterTesting
 			Assert.AreSame (npc.GetResponse (questioningStyles [i]), responses [i]);
 		}
 	}
+
+
+
+
 }

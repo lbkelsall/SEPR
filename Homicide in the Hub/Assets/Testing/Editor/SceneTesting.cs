@@ -23,7 +23,6 @@ public class SceneTesting
 		Assert.AreSame (scene.GetName (),sceneName);
 	}
 
-	[Test]
 	public void AddNPCToArrayTest()
 	{
 	    //Act

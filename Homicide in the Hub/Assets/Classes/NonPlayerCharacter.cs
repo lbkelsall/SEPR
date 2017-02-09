@@ -23,12 +23,12 @@ public class NonPlayerCharacter : Character {
 
 	//__Methods__
 	public bool IsMurderer(){
-		return this.isMurderer;
+		return isMurderer;
 	}
 
 	//Setters
 	public void SetAsMurderer(){
-		this.isMurderer = true;
+		isMurderer = true;
 	}
 
 	public void setVerbalClue (VerbalClue clue) {
