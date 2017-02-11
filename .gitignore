@@ -13,6 +13,7 @@ HomicideInTheHub/[Ll]ibrary/
 .vs/
 HomicideInTheHub/*.userprefs
 HomicideInTheHub/*.csproj
+HomicideInTheHub/HomicideInTheHub.userprefs
 /*.pidb
 /*.suo
 HomicideInTheHub/*.sln*
