@@ -1080,7 +1080,7 @@ MonoBehaviour:
   - {fileID: 1985022036}
   itemSpawnPoints:
   - {fileID: 706350803}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1461201484}
   characterScaling: 0.4
   itemScaling: 0.2
 --- !u!1 &1422320630
@@ -1279,13 +1279,53 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1142146125323380, guid: 56e6135bb19c26d4ab4599c0dcf29df6, type: 2}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 223573199483331470, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 542161682}
+    - target: {fileID: 114498241309721136, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_BlockingObjects
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114137927997154376, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114797801205381312, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339755208}
+    - target: {fileID: 114797801205381312, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MapIconPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114033875740592824, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339755208}
+    - target: {fileID: 114033875740592824, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NotebookIconPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867290182480308, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339755208}
+    - target: {fileID: 114867290182480308, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseIconPressed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56e6135bb19c26d4ab4599c0dcf29df6, type: 2}
   m_IsPrefabParent: 0
@@ -1297,6 +1337,11 @@ GameObject:
 --- !u!1 &1461201483 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1500274974269074, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461201481}
+--- !u!1 &1461201484 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1271622633972826, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
     type: 2}
   m_PrefabInternal: {fileID: 1461201481}
 --- !u!1 &1709837841 stripped
