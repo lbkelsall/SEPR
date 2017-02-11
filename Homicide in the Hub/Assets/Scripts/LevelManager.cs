@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
 	//One LevelManager per level
@@ -14,6 +15,7 @@ public class LevelManager : MonoBehaviour {
 	private SpriteRenderer playerSpriteRenderer;
 	public GameObject[] characterSpawnPoints;
 	public GameObject[] itemSpawnPoints;
+	public GameObject scoreText;
 
 	//Used to change the scaling of characters and items per room
 	public float characterScaling = 1;
@@ -31,6 +33,10 @@ public class LevelManager : MonoBehaviour {
 		Scene scene = GameMaster.instance.GetScene(sceneName);
 		AssignCharactersToSpawnPoints (scene);
 		AssignItemsToSpawnPoints (scene);
+	}
+
+	void Update(){		//ADDITION BY WEDUNNIT
+		scoreText.GetComponent<Text>().text = GameMaster.instance.GetScore().ToString();
 	}
 
 	//Spawns characters in character spawnpoints

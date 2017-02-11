@@ -112,8 +112,7 @@ using System.Linq; //Used for take in pick items
 	private List<Item> relevant_items;
 	private List<VerbalClue> relevant_verbal_clues;
 
-	//WEDUNNIT
-	private float gameScore;
+	private float gameScore;	//ADDITION BY WEDUNNIT
 
 	//Sets as a Singleton
 	void Awake () {  //Makes this a singleton class on awake
@@ -125,8 +124,7 @@ using System.Linq; //Used for take in pick items
 		DontDestroyOnLoad (gameObject); //Set this to not be destroyed when reloading scene
 	}
 		
-	//WEDUNNIT
-	void Update(){
+	void Update(){		//ADDITION BY WEDUNNIT
 		if (gameScore > 0) {
 			gameScore -= Time.deltaTime;
 		} else {
@@ -382,17 +380,14 @@ using System.Linq; //Used for take in pick items
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;
 
-		//WEDUNNIT
-		gameScore = 1000;
+		gameScore = 1000;	//ADDITION BY WEDUNNIT
 	}
-
-	//WEDUNNIT
-	public void Penalise (float penalty){
+		
+	public void Penalise (float penalty){	//ADDITION BY WEDUNNIT
 		gameScore -= penalty;
 	}
-
-	//WEDUNNIT
-	public int GetScore (){
+		
+	public int GetScore (){	//ADDITION BY WEDUNNIT
 		int intScore = (int)gameScore;
 		return intScore;
 	}
