@@ -33,35 +33,36 @@ public class QuestioningScript : MonoBehaviour {
 
 		characterName.text = character.getCharacterID (); //ADDITION BY WEDUNNIT
 
-		if (character.CanBeAccused()) {					//ADDITION BY WEDUNNIT
-			for (int i = 0; i < 3; i++) {				//Set Text in Style buttons to Styles of chosen detective
-				detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
-			}
-		} else {
-			print ("FUCK OFF YA CUNT");
+		for (int i = 0; i < 3; i++) {				//Set Text in Style buttons to Styles of chosen detective
+			detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
 		}
 	}
 
 	public void QuestionCharacter(int reference){
 		//reference passes the question style reference i.e leftmost button=0, middle=1, rightmost=2
-		string choice; 
-		List<string> weaknesses;
 		string response;
-		choice = GetQuestioningChoice(reference);
-		weaknesses = character.GetWeaknesses ();
+		string choice; 
+		choice = GetQuestioningChoice (reference);
+		if (character.CanBeAccused ()) {	//ADDITION BY WEDUNNIT
+			List<string> weaknesses;
+			weaknesses = character.GetWeaknesses ();
 
-		if ((weaknesses.Contains(choice)) && (character.getVerbalClue() != null)) { //If chosen style is a weakness to the character
-			VerbalClue clue = character.getVerbalClue ();
-			if (!NotebookManager.instance.logbook.GetLogbook ().Contains (character.getVerbalClue ())) { //If the logbook doesnt contain the clue already
-				response = "Clue Added: " + clue.getDescription (); 					//Change the responce and add to the logbook
-				NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
-				NotebookManager.instance.UpdateNotebook ();
-			} else {
-				response = "Clue Already Obtained";			//Otherwise state the clue is already in the logbook
+			if ((weaknesses.Contains (choice)) && (character.getVerbalClue () != null)) { //If chosen style is a weakness to the character
+				VerbalClue clue = character.getVerbalClue ();
+				if (!NotebookManager.instance.logbook.GetLogbook ().Contains (character.getVerbalClue ())) { //If the logbook doesnt contain the clue already
+					response = "Clue Added: " + clue.getDescription (); 					//Change the responce and add to the logbook
+					NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
+					NotebookManager.instance.UpdateNotebook ();
+				} else {
+					response = "Clue Already Obtained";			//Otherwise state the clue is already in the logbook
+				}
+			} else {	
+				response = character.GetResponse (choice);		//Otherwise just give the responce
 			}
-		} else {
-			response = character.GetResponse (choice);			//Otherwise just give the responce
+		}else{													//If the character blocks questioning //ADDITION BY WEDUNNIT
+			response = character.GetResponse (choice + "ButBlocked");	//Gets relevent reply //ADDITION BY WEDUNNIT
 		}
+
 		clueSpeech.text = response; 	//Update the UI Text with the appropriate repsonce
 	}
 
