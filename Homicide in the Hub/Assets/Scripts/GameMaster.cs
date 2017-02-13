@@ -135,7 +135,7 @@ using System.Linq; //Used for take in pick items
 	void Start(){
 		//Initialises Variables
 		//Responce Arrays
-		string[] pirateResponses = new string[9] {
+		string[] pirateResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"Shiver me timbers I know nothing!",
 			"Arrr matey it ain’t that difficult to understand.",
 			"Shiver me timbers, how dare ye threaten me!",
@@ -144,10 +144,11 @@ using System.Linq; //Used for take in pick items
 			"Shiver me timbers ye need to plan ye lunch breaks better!",
 			"Arrr matey I saw nothing of import.",
 			"Aye cap'n I suppose ye do, but I saw nothing.",
-			"Arrr matey I don’t think ye need my help to solve this conundrum."
+			"Arrr matey I don’t think ye need my help to solve this conundrum.",
+			"Arr me hearty, ye won't get nought from me until you find more clues ye whipper snapper!"//ADDITION BY WEDUNNIT
 		};
 
-		string[] mimeResponses = new string[9] {
+		string[] mimeResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"The mimes are taken aback, but contribute nothing more.",
 			"The mimes shake their heads.",
 			"The mimes flinch, but tell you nothing.",
@@ -156,10 +157,11 @@ using System.Linq; //Used for take in pick items
 			"The mimes look at their wrist watches with a puzzled expression.",
 			"The mines mime out some routine which doesn’t make sense and contribute nothing.",
 			"The mimes look at you with passing curiosity but contribute nothing more.",
-			"The mimes shake their heads. They tell you nothing."
+			"The mimes shake their heads. They tell you nothing.",
+			"The mimes stare at you in a wy that suggest you need more information before you can accuse them again"//ADDITION BY WEDUNNIT
 		};
 
-		string[] millionaireResponses = new string[9] {
+		string[] millionaireResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"Don’t try and force me to tell you anything. I’ve got more money than you will ever have.",
 			"Don’t patronise me you cretin. I’ve got more money than you.",
 			"How dare you threaten me you lunatic, I’ve got more money than you.",
@@ -168,10 +170,11 @@ using System.Linq; //Used for take in pick items
 			"My good man, I know that time is money, but you can’t rush magnificence!",
 			"My good man, there isn’t enough money around here to warrant seeing anything.",
 			"I thank you for your kindness, but it would be better with some patronage!",
-			"My good man, you don’t need my help to solve this. Not to mention there’s no money involved."
+			"My good man, you don’t need my help to solve this. Not to mention there’s no money involved.",
+			"I don't need to talk to you. I have enough means to live my own life. If you find anything new I'd be happy to help, but I refuse to help you any further."//ADDITION BY WEDUNNIT
 		};
 
-		string[] cowgirlResponses = new string[9] {
+		string[] cowgirlResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"I appreciate your candour partner but I didn’t see anything.",
 			"Partner, I do understand, I just didn’t see anything.",
 			"I don’t appreciate threats, you yellow-bellied cowpoke, so don’t try it.",
@@ -180,22 +183,25 @@ using System.Linq; //Used for take in pick items
 			"I don’t know nuthin'. If you’ve got to be gone by high noon, I’d go ask someone else.",
 			"I understand partner but I didn’t see anything",
 			"Thank you partner, but I didn’t see anything. ",
-			"Howdy, you’ll have to solve this one without my help, I didn’t see anything."
+			"Howdy, you’ll have to solve this one without my help, I didn’t see anything.",
+			"If you’re not careful I’ll challange you to a draw. If you dig up any new evidence, ask me about it, otherwise I’m not interested in talking to you."	//ADDITION BY WEDUNNIT
+
 		};
 
-		string[] romanResponses = new string[9] {
+		string[] romanResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"What Ho! I understand you want to solve the problem but I know nothing I havent already told the emperor!",
 			"What Ho! Yes I understand, but I saw nothing!",
 			"What Ho! Don’t try and threaten me you madman! I'm an expert with the blade.",
 			"What Ho! I didn’t see anything.",
-			"What Ho ho ho ho! That’s funny but I saw nothing of interest.",
+			"What Ho ho ho! That’s funny but I saw nothing of interest.",
 			"What Ho! I feel you’re trying to rush an answer out of me! Nay I say, Nay!",
 			"What Ho! My good man you are inquisitive but I don’t know anything.",
 			"What Ho! Thanks my good man but I didn’t see anything.",
-			"What Ho! My good man I’m sorry but I saw nothing."
+			"What Ho! My good man I’m sorry but I saw nothing.",
+			"I have received command to ignore your questioning good sir. Unless you find anything new to ask me about..."//ADDITION BY WEDUNNIT
 		};
 
-		string[] wizardResponses = new string[9] {
+		string[] wizardResponses = new string[10] {		//UPDATED BY WEDUNNIT
 			"Errrm...are you sure I can’t interest you in some 'merchandise' instead?",
 			"Errrm...I do understand what is going on, I just didn’t see anything. Would you like to by any Triple Sod?",
 			"Errrm...I think you might need to calm down, I’ve got something for that.",
@@ -204,10 +210,11 @@ using System.Linq; //Used for take in pick items
 			"*Looks around shiftily* Sorry mate, I don’t know anything.",
 			"Errrm...I understand, but wouldn’t you prefer to buy some merchandise instead?",
 			"Errrm...yes there was something…. But I’ve forgotten it now. Probaby all these Yellow Bentines I've been taking. Can I offer you any?",
-			"Errrm...are you sure? I’m not that useful really. ...Unless you have a craving for some Clarky Cat? I have plenty of that."
+			"Errrm...are you sure? I’m not that useful really. ...Unless you have a craving for some Clarky Cat? I have plenty of that.",
+			"Child, unfortunately I cannot answer any more questions like that when you're accusing me of murder willy-nilly. If you have any new evidence, please let me know and I'll se what I can do."//ADDITION BY WEDUNNIT
 		};
 
-		string[] chubbieResponses = new string[9] {	//ADDITION BY WEDUNNIT
+		string[] chubbieResponses = new string[10] {	//ADDITION BY WEDUNNIT
 			"The telechubbie covers its eyes. It looks... sad?",
 			"The telechubbie shakes its head. You don't think it knows anything.",
 			"The telechubbie covers its eyes. It looks... scared?",
@@ -216,10 +223,11 @@ using System.Linq; //Used for take in pick items
 			"The telechubbie looks around, confused.",
 			"The telechubbie looks interested, but doesn't seem to know anything useful.",
 			"The telechubbie offers you a hug. You refuse.",
-			"The telechubbie looks happy, but doesn't reveal anything."
+			"The telechubbie looks happy, but doesn't reveal anything.",
+			"The telechubbie smiles joyfully, but keeps its mouth closed. Maybe if you found some more information it would be more willing to help."
 		};
 
-		string[] hemanResponses = new string[9] {	//ADDITION BY WEDUNNIT
+		string[] hemanResponses = new string[10] {	//ADDITION BY WEDUNNIT
 			"By the power of Greyskull, I cannot help you.",
 			"By the power of Greyskull, can you... not?",
 			"By the power of Greyskull, I will not be intimidated!",
@@ -228,10 +236,12 @@ using System.Linq; //Used for take in pick items
 			"By the power of Greyskull, I think you need to slow down.",
 			"By the power of Greyskull, I know nothing!",
 			"By the power of Greyskull, I'm afraid that I don't feel the same.",
-			"By the power of Greyskull, I am inspired but I cannot help you."
+			"By the power of Greyskull, I am inspired but I cannot help you.",
+			"Greyskull does not support your actions. Find more clues, and by the power of Greyskull you will find the blasted murderer!"
 		};
 
-		string[] scientistResponses = new string[9] {	//ADDITION BY WEDUNNIT
+		string[] scientistResponses = new string[10] {	//ADDITION BY WEDUNNIT
+			//TODO: REDO ALL
 			"Aggressiveness shown, I appreciate it though, I can tell you naught.",
 			"Don't look down on me, I will cut you clean in half, then clean up the blood.",
 			"Do you think I'm scared, I am scared of none at all, I am scientist.",
@@ -240,19 +250,21 @@ using System.Linq; //Used for take in pick items
 			"You need to slow down, take time to smell the flowers, but watch out for bees.",
 			"You want to know more, but yet you know nautght at all, go bug someone else.",
 			"Kindness is weakness, I learned this from an old book, go read Art of War.",
-			"You seem valorous, really hate to tell you this, but I know nothing."
+			"You seem valorous, really hate to tell you this, but I know nothing.",
+			"GENERIC REFUSAL UNTIL MORE CLUES FOUND"	
 		};
 
-		string[] reginaldResponses = new string[9] {	//ADDITION BY WEDUNNIT
+		string[] reginaldResponses = new string[10] {	//ADDITION BY WEDUNNIT
 			"Quack! (Good sir, I will inform you that I have no information to provide to you!)",
 			"Quack! (Good sir, I will inform you that I will not be talked to in this manner!)",
 			"Quack! (Good sir, I will inform you that I will not tolerate such brash behaviour!)",
 			"Quack! (Good sir, I will inform you that I cannot help you in this matter!)",
 			"Quack! (Good sir, I will inform you that now is not the time for such tomfoolery!)",
 			"Quack! (Good sir, I will inform you that such haste is excessive and detrimental!)",
-			"Quack! (Good sir, I will inform you that you are wasting your time with this questioning!)",
+			"Quack! (Good sir, I will inform you that you are wasting your time with this questioning!)", 	//ADDITION BY WEDUNNIT
 			"Quack! (Good sir, I will inform you that I am a married goose and your approaches are unwarranted!)",
-			"Quack! (Good sir, I will inform you that I cannot aide you in your investigation!)"
+			"Quack! (Good sir, I will inform you that I cannot aide you in your investigation!)",
+			"QUACK! (Dear sir, ask me about anything new you find, but I do not appreciate your reckless accusations."
 		};
 
 		//Weaknesses

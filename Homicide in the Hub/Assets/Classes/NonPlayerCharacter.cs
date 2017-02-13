@@ -58,6 +58,15 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [1];
 		case ("Intimidating"):
 			return questioningResponses [2];
+		case ("ForcefulButBlocked"):
+			return questioningResponses [9];
+		case ("CondescendingButBlocked"):
+			return questioningResponses [9];
+		case ("IntimidatingButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
+
 		//Johnny Chase Questioning Styles
 		case ("Coaxing"):
 			return questioningResponses [3];
@@ -65,6 +74,14 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [4];
 		case ("Rushed"):
 			return questioningResponses [5];
+		case ("CoaxingButBlocked"):
+			return questioningResponses [9];
+		case ("WisecrackingButBlocked"):
+			return questioningResponses [9];
+		case ("RushedButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
 		//Adam Founder Questioning Styles
 		case ("Inquisitive"):
 			return questioningResponses [6];
@@ -72,6 +89,14 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [7];
 		case ("Inspiring"):
 			return questioningResponses [8];
+		case ("InquisitiveButBlocked"):
+			return questioningResponses [9];
+		case ("KindButBlocked"):
+			return questioningResponses [9];
+		case ("InspiringButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
 		default: 
 			return "..."; //Used if null
 

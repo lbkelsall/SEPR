@@ -82,13 +82,12 @@ public class AccuseScript : MonoBehaviour {
 			notebookMenu.SetActive (false);
 			SceneManager.LoadScene ("Win Screen");
 		} else {
-			//If not display accusation failed message
+			//If not display accusation failed message, block character and penalise score
 			notebookMenu.SetActive (false);
 			verbal.SetActive (true);
 			verbalText.text = "You don't have enough evidence to accuse me of murder!";
-			//WEDUNNIT
-			GameMaster GM = FindObjectOfType<GameMaster> ();
-			GM.Penalise (200);
+			GameMaster.instance.Penalise (200); //ADDITION BY WEDUNNIT
+			character.BlockCharacterQuestioning();
 		}
 	}
 

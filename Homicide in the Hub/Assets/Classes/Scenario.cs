@@ -209,7 +209,7 @@ public class Scenario
 			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
 			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
 			break;
-		case "The Last Samurai":
+		case "Mad scientist":
 			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
 			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
 			break;
