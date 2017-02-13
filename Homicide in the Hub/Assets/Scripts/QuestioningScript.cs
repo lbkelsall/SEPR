@@ -31,12 +31,15 @@ public class QuestioningScript : MonoBehaviour {
 		SpriteRenderer characterSR = characterGameObject.GetComponent<SpriteRenderer> ();
 		characterSR.sprite = character.getSprite ();
 
-		//Set Text in Style buttons to Styles of chosen detective
-		for (int i = 0; i<3; i++){	
-			detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
-		}
-
 		characterName.text = character.getCharacterID (); //ADDITION BY WEDUNNIT
+
+		if (character.CanBeAccused()) {					//ADDITION BY WEDUNNIT
+			for (int i = 0; i < 3; i++) {				//Set Text in Style buttons to Styles of chosen detective
+				detectiveStylesText [i].text = detective.GetQuestioningStyles () [i];
+			}
+		} else {
+			print ("FUCK OFF YA CUNT");
+		}
 	}
 
 	public void QuestionCharacter(int reference){

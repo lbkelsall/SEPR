@@ -8,7 +8,7 @@ abstract public class Character {
 	private string characterID; //Holds The characters name (used for reference and comparisons)
 	private Sprite sprite; 		//Holds the image of the character
 	private string nickname;	//Assigns a nickname to the character.
-
+	private bool canBeAccused = true;
 
 	//__Constructor__
 	protected Character(string characterID, Sprite sprite, string nickname) {
@@ -28,5 +28,17 @@ abstract public class Character {
 
 	public string getNickname(){
 		return this.nickname;
+	}
+
+	public bool CanBeAccused(){
+		return this.canBeAccused;
+	}
+
+	public void BlockCharacterQuestioning(){
+		this.canBeAccused = false;
+	}
+
+	public void AllowCharacterQuestioning(){
+		this.canBeAccused = true;
 	}
 }
