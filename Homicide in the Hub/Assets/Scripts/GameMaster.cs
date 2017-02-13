@@ -220,15 +220,15 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] hemanResponses = new string[9] {	//ADDITION BY WEDUNNIT
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
+			"By the power of Greyskull, I cannot help you.",
+			"By the power of Greyskull, can you... not?",
+			"By the power of Greyskull, I will not be intimidated!",
+			"By the power of Greyskull, I will not fall for your deception!",
+			"By the power of Greyskull, that was a good joke!",
+			"By the power of Greyskull, I think you need to slow down.",
+			"By the power of Greyskull, I know nothing!",
+			"By the power of Greyskull, I'm afraid that I don't feel the same.",
+			"By the power of Greyskull, I am inspired but I cannot help you."
 		};
 
 		string[] scientistResponses = new string[9] {	//ADDITION BY WEDUNNIT
@@ -385,6 +385,10 @@ using System.Linq; //Used for take in pick items
 		
 	public void Penalise (float penalty){	//ADDITION BY WEDUNNIT
 		gameScore -= penalty;
+		if (penalty < 0) {
+			LevelManager ActiveManager = FindObjectOfType<LevelManager> ();
+			ActiveManager.OnScoreIncrease ();
+		}
 	}
 		
 	public int GetScore (){	//ADDITION BY WEDUNNIT

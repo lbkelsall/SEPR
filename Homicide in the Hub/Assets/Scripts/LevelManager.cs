@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour {
 	public float characterScaling = 1;
 	public float itemScaling = 1;
 
+	private bool isGreen; //WEDUNNIT
+	private float greenTime; //WEDUNNIT
+
 
 	void Start() {
 		//Assign correct detective
@@ -37,6 +40,19 @@ public class LevelManager : MonoBehaviour {
 
 	void Update(){		//ADDITION BY WEDUNNIT
 		scoreText.GetComponent<Text>().text = GameMaster.instance.GetScore().ToString();
+		if (isGreen) {
+			greenTime -= Time.deltaTime;
+			if (greenTime <= 0) {
+				isGreen = false;
+				scoreText.GetComponent<Text> ().color = new Color (1F, 1F, 1F);
+			}
+		}
+	}
+
+	public void OnScoreIncrease(){	//WEDUNNIT
+		isGreen = true;
+		greenTime = 3;
+		scoreText.GetComponent<Text> ().color = new Color (0F, 1F, 0F);
 	}
 
 	//Spawns characters in character spawnpoints
