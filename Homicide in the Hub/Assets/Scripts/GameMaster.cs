@@ -29,7 +29,7 @@ using System.Linq; //Used for take in pick items
 	public Sprite chubbieSprite;	//ADDITION BY WEDUNNIT
 	public Sprite reginaldSprite;	//ADDITION BY WEDUNNIT
 	public Sprite hemanSprite;	//ADDITION BY WEDUNNIT
-	public Sprite samuraiSprite;	//ADDITION BY WEDUNNIT
+	public Sprite scientistSprite;	//ADDITION BY WEDUNNIT
 
 	//NPC Prefabs
 	//Made public to allow for dragging and dropping of prefabs
@@ -41,7 +41,7 @@ using System.Linq; //Used for take in pick items
 	public GameObject wizardPref;
 	public GameObject chubbiePref;	//ADDITION BY WEDUNNIT
 	public GameObject hemanPref;	//ADDITION BY WEDUNNIT
-	public GameObject samuraiPref;	//ADDITION BY WEDUNNIT
+	public GameObject scientistPref;	//ADDITION BY WEDUNNIT
 	public GameObject reginaldPref;	//ADDITION BY WEDUNNIT
 
 
@@ -231,10 +231,10 @@ using System.Linq; //Used for take in pick items
 			""
 		};
 
-		string[] samuraiResponses = new string[9] {	//ADDITION BY WEDUNNIT
+		string[] scientistResponses = new string[9] {	//ADDITION BY WEDUNNIT
 			"Aggressiveness shown, I appreciate it though, I can tell you naught.",
 			"Don't look down on me, I will cut you clean in half, then clean up the blood.",
-			"Do you think I'm scared, I am scared of none at all, I am samurai.",
+			"Do you think I'm scared, I am scared of none at all, I am scientist.",
 			"I'd like to help you, but I am afraid to say, I cannot help you.",
 			"Your jokes are quite bad, I would stop telling them all, lest you look a fool.",
 			"You need to slow down, take time to smell the flowers, but watch out for bees.",
@@ -263,7 +263,7 @@ using System.Linq; //Used for take in pick items
 		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
 		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
 		List<string> chubbieWeaknesses = new List<string> {"Condescending", "Wizecracking", "Kind"};	//ADDITION BY WEDUNNIT
-		List<string> samuraiWeaknesses = new List<string> {"Forceful", "Coaxing", "Inspiring"};	//ADDITION BY WEDUNNIT
+		List<string> scientistWeaknesses = new List<string> {"Forceful", "Coaxing", "Inspiring"};	//ADDITION BY WEDUNNIT
 		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
 		List<string> reginaldWeaknesses = new List<string> {"Forceful", "Coaxing","Inspiring"};	//ADDITION BY WEDUNNIT
 
@@ -277,7 +277,7 @@ using System.Linq; //Used for take in pick items
 		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
 		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );						//ADDITION BY WEDUNNIT
-		NonPlayerCharacter samurai = new NonPlayerCharacter("Honda Tadcaster",samuraiSprite,"The Last Samurai",samuraiPref,samuraiWeaknesses, samuraiResponses );	//ADDITION BY WEDUNNIT
+		NonPlayerCharacter scientist = new NonPlayerCharacter("Dr Emmanuel Brown",scientistSprite,"Mad scientist",scientistPref,scientistWeaknesses, scientistResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter reginald = new NonPlayerCharacter("Reginald Montgomery IV",reginaldSprite,"Reginald M IV",reginaldPref,reginaldWeaknesses, reginaldResponses );	//ADDITION BY WEDUNNIT
 
 
@@ -322,7 +322,7 @@ using System.Linq; //Used for take in pick items
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [19] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather};
-		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,samurai, reginald};
+		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,scientist, reginald};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 	}
 
