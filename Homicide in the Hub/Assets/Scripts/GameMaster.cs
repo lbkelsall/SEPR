@@ -126,7 +126,7 @@ using System.Linq; //Used for take in pick items
 		
 	void Update(){		//ADDITION BY WEDUNNIT
 		if (gameScore > 0) {
-			gameScore -= Time.deltaTime;
+			Penalise (Time.deltaTime);
 		} else {
 			gameScore = 0;
 		}
@@ -402,7 +402,7 @@ using System.Linq; //Used for take in pick items
 
 	public void GainScore(float bonus){
 		Debug.Assert (bonus > 0, "gainScore called with bonus less than 0");
-		GameScore += bonus;
+		gameScore += bonus;
 		LevelManager ActiveManager = FindObjectOfType<LevelManager> ();
 		ActiveManager.OnScoreIncrease ();
 	}
