@@ -11,15 +11,18 @@ public class Leaderboard : MonoBehaviour {
 	public Text scoreGUI;
 	public Text nameGUI;
 
-    private List<string> nameList;
-    private List<int> scoreList;
+    private List<string> testNameList;
+    private List<int> testScoreList;
+
+	private string scoreText;
+	private string nameText;
 
     // Use this for initialization
 	void Start () {
 		string scoreText = "";
 		string nameText = "";
-		nameList = new List<string>();
-		scoreList = new List<int> ();
+		List<string> nameList = new List<string>();
+		List<int> scoreList = new List<int> ();
 		using (StreamReader sr = new StreamReader("leaderboard.txt"))
 			{
 				while (sr.EndOfStream == false) {
@@ -28,6 +31,8 @@ public class Leaderboard : MonoBehaviour {
 				}
 			}
 		Debug.Log (nameList.Count.ToString ());
+		testNameList = new List<string>(nameList);
+		testScoreList = new List<int>(scoreList);
 		List<int> sortedScores = new List<int>(scoreList);
 		sortedScores.Sort ();
 		sortedScores.Reverse ();
@@ -54,18 +59,18 @@ public class Leaderboard : MonoBehaviour {
 
     public int GetScoreCount()
     {
-        if (scoreList != null)
+		if (testScoreList != null)
         {
-            return scoreList.Count;
+			return testScoreList.Count;
         }
         return 0;
     }
 
     public List<string> GetScoreNames()
     {
-        if (nameList != null)
+		if (testNameList != null)
         {
-            return nameList;
+			return testNameList;
         }
         return new List<string>();
     }
@@ -73,9 +78,9 @@ public class Leaderboard : MonoBehaviour {
 
     public List<int> GetScores()
     {
-        if (scoreList != null)
+		if (testScoreList != null)
         {
-            return scoreList;
+			return testScoreList;
         }
         return new List<int>();
     }
