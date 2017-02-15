@@ -128,7 +128,7 @@ public class Scenario
 			} else {
 				cause_of_death = "electrocution";
 			}
-			motiveClause = "because the victim was looking after either " + getRandomNonMurderingNPCName (murdererName) + " or " + murdererName + "'s " + species + " when it " +
+			motiveClause = " because the victim was looking after either " + getRandomNonMurderingNPCName (murdererName) + " or " + murdererName + "'s " + species + " when it " +
 			"died of " + cause_of_death + ", I can't remember.";  
 			return motiveClause;
 		default:

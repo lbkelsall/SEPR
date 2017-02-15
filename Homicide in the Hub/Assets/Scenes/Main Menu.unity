@@ -366,7 +366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LeaderBoard
+  m_Text: Leaderboard
 --- !u!222 &96658187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,7 +655,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1081085739}
-  - {fileID: 1483537389}
+  - {fileID: 1199419332}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -890,6 +890,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e269ead2ce33ea4280eb664f3b85eed, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1199419332 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1199419331}
 --- !u!1 &1283809534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,11 +1105,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &1483537389 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224000010959713062, guid: 3e269ead2ce33ea4280eb664f3b85eed,
-    type: 2}
-  m_PrefabInternal: {fileID: 1199419331}
 --- !u!1 &1905549312
 GameObject:
   m_ObjectHideFlags: 0

@@ -193,7 +193,7 @@ using System.Linq; //Used for take in pick items
 		};
 
 		string[] romanResponses = new string[10] {		//UPDATED BY WEDUNNIT
-			"What Ho! I understand you want to solve the problem but I know nothing I havent already told the emperor!",
+			"What Ho! I understand you want to solve the crime but I know nothing that I haven't already told the emperor!",
 			"What Ho! Yes I understand, but I saw nothing!",
 			"What Ho! Don’t try and threaten me you madman! I'm an expert with the blade.",
 			"What Ho! I didn’t see anything.",
