@@ -242,16 +242,16 @@ using System.Linq; //Used for take in pick items
 
 		string[] scientistResponses = new string[10] {	//ADDITION BY WEDUNNIT
 			//TODO: REDO ALL
-			"Aggressiveness shown, I appreciate it though, I can tell you naught.",
-			"Don't look down on me, I will cut you clean in half, then clean up the blood.",
-			"Do you think I'm scared, I am scared of none at all, I am scientist.",
-			"I'd like to help you, but I am afraid to say, I cannot help you.",
-			"Your jokes are quite bad, I would stop telling them all, lest you look a fool.",
-			"You need to slow down, take time to smell the flowers, but watch out for bees.",
-			"You want to know more, but yet you know nautght at all, go bug someone else.",
-			"Kindness is weakness, I learned this from an old book, go read Art of War.",
-			"You seem valorous, really hate to tell you this, but I know nothing.",
-			"GENERIC REFUSAL UNTIL MORE CLUES FOUND"	
+			"You fool! I know nothing of the sort!",
+			"Don't look down on me young man, you know nothing!",
+			"Don't try to intimidate me, my knowledge far surpasses yours!",
+			"While I would like to help you, what you seek far surpasses my knowledge.",
+			"Not only can I not help you, but your jokes are unsophisticated and dull!",
+			"Don't rush me, young man! You can't rush science!",
+			"Your thirst for knowledge is appreciated, however I am in no position to aid you.",
+			"You fool! Science has no room for your pathetic 'emotions'!",
+			"...May I inquire as to what the point of that was?",
+			"May I suggest following the scientific method? That is to say, collect more evidence to support your hypothesis."	
 		};
 
 		string[] reginaldResponses = new string[10] {	//ADDITION BY WEDUNNIT
@@ -275,7 +275,7 @@ using System.Linq; //Used for take in pick items
 		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
 		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
 		List<string> chubbieWeaknesses = new List<string> {"Condescending", "Wizecracking", "Kind"};	//ADDITION BY WEDUNNIT
-		List<string> scientistWeaknesses = new List<string> {"Forceful", "Coaxing", "Inspiring"};	//ADDITION BY WEDUNNIT
+		List<string> scientistWeaknesses = new List<string> {"Forceful", "Coaxing", "Inquisitive"};	//ADDITION BY WEDUNNIT
 		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
 		List<string> reginaldWeaknesses = new List<string> {"Forceful", "Coaxing","Inspiring"};	//ADDITION BY WEDUNNIT
 
