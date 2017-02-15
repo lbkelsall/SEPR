@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using UnityEditor;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 public class InventoryTesting
 {
@@ -13,13 +11,11 @@ public class InventoryTesting
         inventory = new Inventory();
         item = new Item(null,null,null,null);
         inventory.AddItemToInventory (item);
-
     }
 
 	[Test]
 	public void AddItemToInventoryTest()
 	{
-
 		//Assert
 		//The inventory contains the the item
 		Assert.IsTrue (inventory.GetInventory ().Contains (item));
@@ -39,7 +35,7 @@ public class InventoryTesting
 	{
 		//Assert
 		//The inventory is has length one
-		Assert.AreEqual (inventory.Size (),1);
+		Assert.AreEqual (inventory.GetSize (),1);
 	}
 
     [TestFixtureTearDown]

@@ -1,14 +1,16 @@
-﻿using JetBrains.Annotations;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 public class LogbookTesting{
 
     private Logbook logbook;
     private VerbalClue verbalClue;
+    private GameMaster gameMaster;
 
     [TestFixtureSetUp]
     public void TestSetup()
     {
+        gameMaster = new GameMaster();
+        gameMaster.CreateNewGame(new PlayerCharacter(null,null,null,null,null,null));
         logbook = new Logbook();
         verbalClue = new VerbalClue(null,null);
         logbook.AddVerbalClueToLogbook (verbalClue);

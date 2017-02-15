@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 using System.IO;
-using System.Runtime.Remoting.Messaging;
+
 
 public class Leaderboard : MonoBehaviour {
 
@@ -21,6 +19,7 @@ public class Leaderboard : MonoBehaviour {
 	void Start () {
 		string scoreText = "";
 		string nameText = "";
+
 		List<string> nameList = new List<string>();
 		List<int> scoreList = new List<int> ();
 		using (StreamReader sr = new StreamReader("leaderboard.txt"))
@@ -28,8 +27,9 @@ public class Leaderboard : MonoBehaviour {
 				while (sr.EndOfStream == false) {
 					nameList.Add (sr.ReadLine());
 					scoreList.Add (int.Parse (sr.ReadLine()));
-				}
-			}
+		    	}
+	    sr.Close();
+
 		Debug.Log (nameList.Count.ToString ());
 		testNameList = new List<string>(nameList);
 		testScoreList = new List<int>(scoreList);
