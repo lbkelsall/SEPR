@@ -28,7 +28,7 @@ using System.Linq; //Used for take in pick items
 	public Sprite wizardSprite;
 	public Sprite chubbieSprite;	//ADDITION BY WEDUNNIT
 	public Sprite reginaldSprite;	//ADDITION BY WEDUNNIT
-	public Sprite hemanSprite;	//ADDITION BY WEDUNNIT
+	public Sprite hemanSprite;		//ADDITION BY WEDUNNIT
 	public Sprite scientistSprite;	//ADDITION BY WEDUNNIT
 
 	//NPC Prefabs
@@ -41,7 +41,7 @@ using System.Linq; //Used for take in pick items
 	public GameObject wizardPref;
 	public GameObject chubbiePref;	//ADDITION BY WEDUNNIT
 	public GameObject hemanPref;	//ADDITION BY WEDUNNIT
-	public GameObject scientistPref;	//ADDITION BY WEDUNNIT
+	public GameObject scientistPref;//ADDITION BY WEDUNNIT
 	public GameObject reginaldPref;	//ADDITION BY WEDUNNIT
 
 
@@ -74,6 +74,8 @@ using System.Linq; //Used for take in pick items
 	public Sprite monocleSprite;	//ADDITION BY WEDUNNIT
 	public Sprite featherSprite;	//ADDITION BY WEDUNNIT
 	public Sprite chefHatSprite;	//ADDITION BY WEDUNNIT
+	public Sprite glassesSprite;	//ADDITION BY WEDUNNIT
+	public Sprite dumbbellSprite;	//ADDITION BY WEDUNNIT
 
 
 	//Item Prefabs 
@@ -105,6 +107,8 @@ using System.Linq; //Used for take in pick items
 	public GameObject monoclePrefab;        //ADDITION BY WEDUNNIT
 	public GameObject featherPrefab;        //ADDITION BY WEDUNNIT
 	public GameObject chefHatPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject glassesPrefab;        //ADDITION BY WEDUNNIT
+	public GameObject dumbbellPrefab;        //ADDITION BY WEDUNNIT
 
 	private NonPlayerCharacter murderer;
 
@@ -331,9 +335,11 @@ using System.Linq; //Used for take in pick items
 		Item plunger = new Item (plungerPrefab,"Plunger", "A toilet plunger. It hasn't been used recently.",plungerSprite); 		//ADDITION BY WEDUNNIT
 		Item monocle = new Item (monoclePrefab,"Monocle", "A finely made monocle, complete with gold chain.",monocleSprite); 		//ADDITION BY WEDUNNIT
 		Item feather = new Item (featherPrefab,"Feather", "A goose feather, apparently freshly plucked.",featherSprite); 			//ADDITION BY WEDUNNIT
+		Item glasses = new Item (glassesPrefab,"Safety Glasses", "Safety glasses good for keeping splinters and acid out of the eyes.",glassesSprite); 			//ADDITION BY WEDUNNIT
+		Item dumbbell = new Item (dumbbellPrefab,"Dumbbbell", "Dumbbells; the source of pure strength.",dumbbellSprite); 			//ADDITION BY WEDUNNIT
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
-		itemClues = new Item [19] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather};
+		itemClues = new Item [21] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather, dumbbell,glasses};
 		characters =  new NonPlayerCharacter[10] {pirate,mimes,millionaire,cowgirl,roman,wizard,heman,chubbie,scientist, reginald};
 		scenes = new Scene[8] {atrium,lectureTheatre,lakehouse,controlRoom,kitchen,islandOfInteraction,roof,undergroundLab};
 	}

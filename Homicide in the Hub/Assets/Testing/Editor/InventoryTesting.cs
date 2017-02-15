@@ -39,7 +39,7 @@ public class InventoryTesting
 	{
 		//Assert
 		//The inventory is has length one
-		Assert.AreEqual (inventory.GetListLength (),1);
+		Assert.AreEqual (inventory.Size (),1);
 	}
 
     [TestFixtureTearDown]

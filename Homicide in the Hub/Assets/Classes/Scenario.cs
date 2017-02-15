@@ -206,20 +206,20 @@ public class Scenario
 			relevant_item_clues.Add (item_clues [7]);
 			break;
 		case "Superhero":
-			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
-			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE 	//ADDITION BY WEDUNNIT
+			item_clue_pool.Add (item_clues [19]); 		//Dumbbells 	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [19]); 	//ADDITION BY WEDUNNIT
 			break;
 		case "Mad scientist":
-			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
-			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			item_clue_pool.Add (item_clues [18]); 		// glasses	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [18]);	//ADDITION BY WEDUNNIT
 			break;
 		case "Telechubbie":
-			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
-			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			item_clue_pool.Add (item_clues [15]); 	//purse			//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [15]);	//ADDITION BY WEDUNNIT
 			break;
 		case "Reginald M IV":
-			item_clue_pool.Add (item_clues [7]); 		// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
-			relevant_item_clues.Add (item_clues [7]);	// TODO:USE RELEVENT CLUE	//ADDITION BY WEDUNNIT
+			item_clue_pool.Add (item_clues [17]); 	//monocle			//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [17]);		//ADDITION BY WEDUNNIT
 			break;
 		default:
 			throw new System.ArgumentException (murdererName + " does not have any clues associated with them.");
