@@ -23,7 +23,7 @@ public class ItemScript : MonoBehaviour {
 		GameObject.Find ("Local Scripts").GetComponent<AudioSource> ().clip = Resources.Load<AudioClip> ("Sounds/mysterious-sfx"); //ADDITION BY WEDUNNIT
 		GameObject.Find ("Local Scripts").GetComponent<AudioSource> ().Play ();					//ADDITION BY WEDUNNIT
 
-		GameMaster.instance.Penalise (-50); //ADDITION BY WEDUNNIT
+		GameMaster.instance.GainScore (50); //ADDITION BY WEDUNNIT
 		Destroy (gameObject);
 
 	}

@@ -86,7 +86,7 @@ public class AccuseScript : MonoBehaviour {
 			notebookMenu.SetActive (false);
 			verbal.SetActive (true);
 			verbalText.text = "You don't have enough evidence to accuse me of murder!";
-			GameMaster.instance.GainScore (50); //ADDITION BY WEDUNNIT
+			GameMaster.instance.Penalise (200); //ADDITION BY WEDUNNIT
 			character.BlockCharacterQuestioning();
 		}
 	}
