@@ -44,8 +44,12 @@ public class Leaderboard : MonoBehaviour {
 		    scoreList.RemoveAt (scorePos);
 		    nameList.RemoveAt (scorePos);
 		}
-		scoreGUI.text = scoreText;
-		nameGUI.text = nameText;
+		if (scoreGUI != null) {
+			scoreGUI.text = scoreText;
+		}
+		if (nameGUI != null) {
+			nameGUI.text = nameText;
+		}
 	}
 
     public int GetScoreCount()
