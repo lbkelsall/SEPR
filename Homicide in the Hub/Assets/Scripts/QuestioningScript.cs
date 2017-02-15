@@ -43,7 +43,7 @@ public class QuestioningScript : MonoBehaviour {
 		string response;
 		string choice; 
 		choice = GetQuestioningChoice (reference);
-		if (character.CanBeAccused ()) {	//ADDITION BY WEDUNNIT
+		if (character.CanBeQuestionned ()) {	//ADDITION BY WEDUNNIT
 			List<string> weaknesses;
 			weaknesses = character.GetWeaknesses ();
 
