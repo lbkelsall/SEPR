@@ -9,7 +9,6 @@ public class ClueClassForTesting : Clue {
 	}
 }
 
-
 public class ClueTesting
 {
 

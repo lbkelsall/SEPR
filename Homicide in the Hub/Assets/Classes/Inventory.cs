@@ -24,7 +24,7 @@ public class Inventory{
 	}
 
 	//Accessors
-	public int Size(){	//UPDATED BY WEDUNNIT
+	public int GetSize(){	//UPDATED BY WEDUNNIT
 		return inventory.Count;
 	}
 
