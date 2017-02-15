@@ -52,7 +52,8 @@ public class QuestioningScript : MonoBehaviour {
 				if (!NotebookManager.instance.logbook.GetLogbook ().Contains (character.getVerbalClue ())) { //If the logbook doesnt contain the clue already
 					response = "Clue Added: " + clue.getDescription (); 					//Change the responce and add to the logbook
 					NotebookManager.instance.logbook.AddVerbalClueToLogbook (clue);
-					NotebookManager.instance.UpdateNotebook ();
+				    GameMaster.instance.UnblockAllCharacters ();	//ADDITION BY WEDUNNIT
+				    NotebookManager.instance.UpdateNotebook ();
 				} else {
 					response = "Clue Already Obtained";			//Otherwise state the clue is already in the logbook
 				}

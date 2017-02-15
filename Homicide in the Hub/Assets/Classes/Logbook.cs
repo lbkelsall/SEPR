@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Logbook {
 	//Stores the Verbal Clues the player collects throughout a playthrough 
@@ -15,17 +13,17 @@ public class Logbook {
 
 	//__Operators__
 	public void Reset(){
-		this.logbook.Clear ();
+		logbook.Clear ();
 	}
 
 	public void AddVerbalClueToLogbook(VerbalClue clue){
 		logbook.Add(clue);
-		GameMaster.instance.UnblockAllCharacters ();	//ADDITION BY WEDUNNIT
+
 	}
 
 	//Accessors
 	public List<VerbalClue> GetLogbook(){
-		return this.logbook;
+		return logbook;
 	}
 
 	public int GetListLength(){

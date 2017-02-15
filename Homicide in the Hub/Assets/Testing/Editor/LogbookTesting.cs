@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
+using UnityEngine;
 
 public class LogbookTesting{
 
@@ -9,11 +11,16 @@ public class LogbookTesting{
     [TestFixtureSetUp]
     public void TestSetup()
     {
-        gameMaster = new GameMaster();
-        gameMaster.CreateNewGame(new PlayerCharacter(null,null,null,null,null,null));
-        logbook = new Logbook();
-        verbalClue = new VerbalClue(null,null);
-        logbook.AddVerbalClueToLogbook (verbalClue);
+        try
+        {
+            logbook = new Logbook();
+            verbalClue = new VerbalClue(null, null);
+            logbook.AddVerbalClueToLogbook(verbalClue);
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
     }
 
 	[Test]

@@ -13,7 +13,6 @@ public class Inventory{
 	//__Operations__
 	//Adds the argument item to the inventory
 	public void AddItemToInventory(Item item){
-		GameMaster.instance.UnblockAllCharacters ();	//ADDITION BY WEDUNNIT
 		inventory.Add (item);
 	}
 

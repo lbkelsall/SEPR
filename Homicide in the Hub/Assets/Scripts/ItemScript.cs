@@ -14,7 +14,8 @@ public class ItemScript : MonoBehaviour {
 	void OnMouseDown(){
 		//Adds the item to the inventory, updates the notebook and destroys the item gameobject.
 		NotebookManager.instance.inventory.AddItemToInventory (item);
-		NotebookManager.instance.UpdateNotebook();
+	    GameMaster.instance.UnblockAllCharacters ();	//ADDITION BY WEDUNNIT
+	    NotebookManager.instance.UpdateNotebook();
 		GameObject.Find ("Local Scripts").GetComponent<InputManager1> ().ShowCluePanel (item); 	//ADDITION BY WEDUNNIT
 
 
