@@ -4,18 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.IO;
+using System.Runtime.Remoting.Messaging;
 
 public class Leaderboard : MonoBehaviour {
 
 	public Text scoreGUI;
 	public Text nameGUI;
 
-	// Use this for initialization
+    private List<string> nameList;
+    private List<int> scoreList;
+
+    // Use this for initialization
 	void Start () {
 		string scoreText = "";
 		string nameText = "";
-		List<string> nameList = new List<string>();
-		List<int> scoreList = new List<int> ();
+		nameList = new List<string>();
+		scoreList = new List<int> ();
 		using (StreamReader sr = new StreamReader("leaderboard.txt"))
 			{
 				while (sr.EndOfStream == false) {
@@ -27,25 +31,48 @@ public class Leaderboard : MonoBehaviour {
 		List<int> sortedScores = new List<int>(scoreList);
 		sortedScores.Sort ();
 		sortedScores.Reverse ();
-		Debug.Log (sortedScores [0]);
-		for(int i=0; i<sortedScores.Count; i++) {
-			int forScore = sortedScores [i];
-			Debug.Log (forScore);
-			int scorePos = scoreList.IndexOf (forScore);
-			Debug.Log (scorePos);
-			scoreText = scoreText + scoreList [scorePos].ToString () + "\r\n";
-			Debug.Log (scoreText);
-			nameText = nameText + nameList [scorePos] + "\r\n";
-			Debug.Log (nameText);
-			scoreList.RemoveAt (scorePos);
-			nameList.RemoveAt (scorePos);
+		//Debug.Log (sortedScores [0]);
+		foreach (int score in sortedScores)
+		{
+		    Debug.Log (score);
+		    int scorePos = scoreList.IndexOf (score);
+		    Debug.Log (scorePos);
+		    scoreText = scoreText + scoreList [scorePos] + "\r\n";
+		    Debug.Log (scoreText);
+		    nameText = nameText + nameList [scorePos] + "\r\n";
+		    Debug.Log (nameText);
+		    scoreList.RemoveAt (scorePos);
+		    nameList.RemoveAt (scorePos);
 		}
 		scoreGUI.text = scoreText;
 		nameGUI.text = nameText;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public int GetScoreCount()
+    {
+        if (scoreList != null)
+        {
+            return scoreList.Count;
+        }
+        return 0;
+    }
+
+    public List<string> GetScoreNames()
+    {
+        if (nameList != null)
+        {
+            return nameList;
+        }
+        return new List<string>();
+    }
+
+
+    public List<int> GetScores()
+    {
+        if (scoreList != null)
+        {
+            return scoreList;
+        }
+        return new List<int>();
+    }
 }
