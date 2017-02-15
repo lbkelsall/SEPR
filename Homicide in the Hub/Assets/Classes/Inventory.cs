@@ -20,11 +20,11 @@ public class Inventory{
 
 	//Mainly used when starting a new game
 	public void Reset(){
-		inventory.Clear ();
+		 inventory.Clear ();
 	}
 
 	//Accessors
-	public int GetListLength(){
+	public int Size(){	//UPDATED BY WEDUNNIT
 		return inventory.Count;
 	}
 
