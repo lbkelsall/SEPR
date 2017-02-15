@@ -8,7 +8,7 @@ abstract public class Character {
 	private string characterID; //Holds The characters name (used for reference and comparisons)
 	private Sprite sprite; 		//Holds the image of the character
 	private string nickname;	//Assigns a nickname to the character.
-	private bool canBeAccused = true;
+	public bool canBeQuestioned = true;
 
 	//__Constructor__
 	protected Character(string characterID, Sprite sprite, string nickname) {
@@ -30,15 +30,16 @@ abstract public class Character {
 		return this.nickname;
 	}
 
-	public bool CanBeAccused(){
-		return this.canBeAccused;
+	public bool CanBeQuestionned(){			//ADDITION BY WEDUNNIT
+		return this.canBeQuestioned;
 	}
 
-	public void BlockCharacterQuestioning(){
-		this.canBeAccused = false;
+	public void BlockCharacterQuestioning(){			//ADDITION BY WEDUNNIT
+		this.canBeQuestioned = false;
 	}
 
-	public void AllowCharacterQuestioning(){
-		this.canBeAccused = true;
+	public void AllowCharacterQuestioning(){			//ADDITION BY WEDUNNIT
+		this.canBeQuestioned = true;
+		Debug.Log (canBeQuestioned);
 	}
 }

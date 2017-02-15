@@ -20,6 +20,7 @@ public class Logbook {
 
 	public void AddVerbalClueToLogbook(VerbalClue clue){
 		logbook.Add(clue);
+		GameMaster.instance.UnblockAllCharacters ();	//ADDITION BY WEDUNNIT
 	}
 
 	//Accessors

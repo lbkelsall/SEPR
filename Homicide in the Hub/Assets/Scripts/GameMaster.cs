@@ -158,7 +158,7 @@ using System.Linq; //Used for take in pick items
 			"The mines mime out some routine which doesn’t make sense and contribute nothing.",
 			"The mimes look at you with passing curiosity but contribute nothing more.",
 			"The mimes shake their heads. They tell you nothing.",
-			"The mimes stare at you in a wy that suggest you need more information before you can accuse them again"//ADDITION BY WEDUNNIT
+			"The mimes stare at you in a way that suggest you need more information before you can accuse them again"//ADDITION BY WEDUNNIT
 		};
 
 		string[] millionaireResponses = new string[10] {		//UPDATED BY WEDUNNIT
@@ -275,9 +275,9 @@ using System.Linq; //Used for take in pick items
 		List<string> romanWeaknesses = new List<string> {"Condescending","Coaxing","Inquisitive"};
 		List<string> wizardWeaknesses = new List<string> {"Intimidating","Rushed","Inquisitive"};
 		List<string> chubbieWeaknesses = new List<string> {"Condescending", "Wizecracking", "Kind"};	//ADDITION BY WEDUNNIT
-		List<string> scientistWeaknesses = new List<string> {"Forceful", "Coaxing", "Inquisitive"};	//ADDITION BY WEDUNNIT
-		List<string> hemanWeaknesses = new List<string> {"Wisecracking","Rushed","Kind"};	//ADDITION BY WEDUNNIT
-		List<string> reginaldWeaknesses = new List<string> {"Forceful", "Coaxing","Inspiring"};	//ADDITION BY WEDUNNIT
+		List<string> scientistWeaknesses = new List<string> {"Forceful", "Coaxing", "Inspiring"};		//ADDITION BY WEDUNNIT
+		List<string> hemanWeaknesses = new List<string> {"Condescending","Rushed","Kind"};				//ADDITION BY WEDUNNIT
+		List<string> reginaldWeaknesses = new List<string> {"Forceful", "Coaxing","Inspiring"};			//ADDITION BY WEDUNNIT
 
 
 		//Defining NPC's
@@ -287,8 +287,8 @@ using System.Linq; //Used for take in pick items
 		NonPlayerCharacter cowgirl = new NonPlayerCharacter("Jesse Ranger",cowgirlSprite,"Outlaw",cowgirlPref,cowgirlWeaknesses, cowgirlResponses );
 		NonPlayerCharacter roman = new NonPlayerCharacter("Celcius Maximus",romanSprite,"Legionnaire", romanPref,romanWeaknesses, romanResponses );
 		NonPlayerCharacter wizard = new NonPlayerCharacter("Randolf the Deep Purple",wizardSprite,"Dodgy Dealer",wizardPref,wizardWeaknesses, wizardResponses );
-		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );	//ADDITION BY WEDUNNIT
-		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );						//ADDITION BY WEDUNNIT
+		NonPlayerCharacter chubbie = new NonPlayerCharacter("Tinky Wobbly",chubbieSprite,"Telechubbie",chubbiePref,chubbieWeaknesses, chubbieResponses );					//ADDITION BY WEDUNNIT
+		NonPlayerCharacter heman = new NonPlayerCharacter("HisMan",hemanSprite,"Superhero",hemanPref,hemanWeaknesses, hemanResponses );										//ADDITION BY WEDUNNIT
 		NonPlayerCharacter scientist = new NonPlayerCharacter("Dr Emmanuel Brown",scientistSprite,"Mad scientist",scientistPref,scientistWeaknesses, scientistResponses );	//ADDITION BY WEDUNNIT
 		NonPlayerCharacter reginald = new NonPlayerCharacter("Reginald Montgomery IV",reginaldSprite,"Reginald M IV",reginaldPref,reginaldWeaknesses, reginaldResponses );	//ADDITION BY WEDUNNIT
 
@@ -321,16 +321,16 @@ using System.Linq; //Used for take in pick items
 		Item smellyDeath = new Item (smellyDeathPrefab,"Smelly Ashes","All that remains of the victim",smellyDeathSprite);
 		Item spellbook = new Item (spellbookPrefab,"Spellbook","A spellbook used by those who practise in the magic arts",spellbookSprite);
 		Item tripwire = new Item (tripwirePrefab,"Tripwire","A used tripwire most likely used to immobilize the victim",tripwireSprite);
-		Item chefHat = new Item (chefHatPrefab,"Chef's Hat", "A clean and fresh smelling hat, worn by chefs.",chefHatSprite); //ADDITION BY WEDUNNIT
-		Item whistle = new Item (whistlePrefab,"Whistle", "A bright, shiny whistle that's as clean as... well.",whistleSprite); 		//ADDITION BY WEDUNNIT
+		Item chefHat = new Item (chefHatPrefab,"Chef's Hat", "A clean and fresh smelling hat, worn by chefs.",chefHatSprite); 		//ADDITION BY WEDUNNIT
+		Item whistle = new Item (whistlePrefab,"Whistle", "A bright, shiny whistle that's as clean as... well.",whistleSprite); 	//ADDITION BY WEDUNNIT
 		Item toast = new Item (toastPrefab,"Toast", "A slice of well buttered toast. It's slightly warm.",toastSprite); 			//ADDITION BY WEDUNNIT
-		Item stapler = new Item (staplerPrefab,"Stapler", "A bright red stapler, with no staples in it.",staplerSprite); 		//ADDITION BY WEDUNNIT
+		Item stapler = new Item (staplerPrefab,"Stapler", "A bright red stapler, with no staples in it.",staplerSprite); 			//ADDITION BY WEDUNNIT
 		Item seaweed = new Item (seaweedPrefab,"Seaweed", "Oceanman, take me by the hand lead me to the land, that you understand.",seaweedSprite); 		//ADDITION BY WEDUNNIT
 		Item sandwitch = new Item (sandwitchPrefab,"Sandwich", "A ham sandwich with cheese and lettuce on white bread.",sandwitchSprite); //ADDITION BY WEDUNNIT
 		Item purse = new Item (pursePrefab,"Fancy Purse", "A finely made, hand crafted, now-empty purse.",purseSprite); 			//ADDITION BY WEDUNNIT
 		Item plunger = new Item (plungerPrefab,"Plunger", "A toilet plunger. It hasn't been used recently.",plungerSprite); 		//ADDITION BY WEDUNNIT
 		Item monocle = new Item (monoclePrefab,"Monocle", "A finely made monocle, complete with gold chain.",monocleSprite); 		//ADDITION BY WEDUNNIT
-		Item feather = new Item (featherPrefab,"Feather", "A goose feather, apparently freshly plucked.",featherSprite); 		//ADDITION BY WEDUNNIT
+		Item feather = new Item (featherPrefab,"Feather", "A goose feather, apparently freshly plucked.",featherSprite); 			//ADDITION BY WEDUNNIT
 
 		murderWeapons = new MurderWeapon[8] {cutlass,poison,garrote,knife,laserGun,leadPipe,westernPistol,wizardStaff};
 		itemClues = new Item [19] {beret,footprints,gloves,wine,shatteredGlass,shrapnel,smellyDeath,spellbook,tripwire, whistle, chefHat,toast,stapler,seaweed,sandwitch,purse,plunger,monocle,feather};
@@ -343,9 +343,9 @@ using System.Linq; //Used for take in pick items
 		Shuffler shuffler = new Shuffler ();
 		shuffler.Shuffle (characters);
 		shuffler.Shuffle (scenes);
-		foreach (NonPlayerCharacter character in characters){ 	//For every character in the randomly shuffled array
+		foreach (NonPlayerCharacter character in characters){ 		//For every character in the randomly shuffled array
 			scenes [sceneCounter].AddNPCToArray (character);		//Assign a character to a scene
-			sceneCounter += 1;									//Increment sceneCounter
+			sceneCounter += 1;										//Increment sceneCounter
 			if (sceneCounter >= scenes.Length) {					//If the counter is above the number of scenes cycle to the first scene.  
 				sceneCounter = 0;
 			}
@@ -388,7 +388,7 @@ using System.Linq; //Used for take in pick items
 		relevant_verbal_clues = scenario.getRelevantVerbalClues ();
 		relevantClues = scenario.getRelevantClues (); 
 		//Assign To rooms
-		AssignNPCsToScenes (characters,scenes);				//Assigns NPCS to scenes
+		AssignNPCsToScenes (characters,scenes);					//Assigns NPCS to scenes
 		AssignItemsToScenes (itemClues,scenes);					//Assigns Items to scenes
 		playerCharacter = detective;
 
@@ -450,6 +450,16 @@ using System.Linq; //Used for take in pick items
 		NotebookManager.instance.logbook.Reset();	//Reset logbook
 		NotebookManager.instance.inventory.Reset();	//Reset inventory
 		NotebookManager.instance.UpdateNotebook();
+	}
+
+	/// <summary>
+	/// Unblocks all characters to allow interrogation if they have been accused.
+	/// Called when any clue is added to the logbook
+	/// </summary>
+	public void UnblockAllCharacters(){
+		foreach (Character character in characters) {
+			character.AllowCharacterQuestioning ();
+		}
 	}
 
 		
