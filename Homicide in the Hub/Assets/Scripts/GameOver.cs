@@ -1,11 +1,8 @@
 ﻿//WEDUNNIT THIS ENTIRE SCRIPT
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 using System.IO;
 
 public class GameOver : MonoBehaviour {
@@ -17,9 +14,9 @@ public class GameOver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameMaster gMaster = FindObjectOfType<GameMaster> ();
-		endScore = (int)gMaster.GetScore ();
+		endScore = gMaster.GetScore ();
 		Text actualText = scoreText.GetComponent<Text> ();
-		actualText.text = "Your score: " + endScore.ToString ();
+		actualText.text = "Your score: " + endScore;
 		Destroy(GameObject.Find("GlobalScripts")); //ADDITION BY WEDUNNIT
 		Destroy(GameObject.Find("NotebookCanvas")); //ADDITION BY WEDUNNIT
 	}
