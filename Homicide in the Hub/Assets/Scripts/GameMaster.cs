@@ -402,11 +402,11 @@ using System.Linq; //Used for take in pick items
 	}
 		
 	public void Penalise (float penalty){	//ADDITION BY WEDUNNIT
-		Debug.Assert(penalty > 0, "Penalise called with penalty less than 0");
+		Debug.Assert(penalty < 0, "Penalise called with penalty less than 0");
 		gameScore -= penalty;
 	}
 
-	public void GainScore(float bonus){
+	public void GainScore(float bonus){		//ADDITION BY WEDUNNIT
 		Debug.Assert (bonus > 0, "gainScore called with bonus less than 0");
 		gameScore += bonus;
 		LevelManager ActiveManager = FindObjectOfType<LevelManager> ();
