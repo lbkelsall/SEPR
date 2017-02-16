@@ -18,7 +18,7 @@ public class Leaderboard : MonoBehaviour
 	/// <summary>
 	/// Gets the scores from file & stores them in scoreList.
 	/// </summary>
-	private void getScores(){
+	private void GetScores(){
 		KeyValuePair<string,int> scorePair = new KeyValuePair<string,int> ();
 		using (StreamReader sr = new StreamReader("leaderboard.txt"))
 		{
@@ -40,7 +40,7 @@ public class Leaderboard : MonoBehaviour
 	/// <summary>
 	/// Shows the scores on leaderboard.
 	/// </summary>
-	private void showScores(){
+	private void ShowScores(){
 		string scoreText = "";	//string to be showin in textbox
 		string nameText = "";
 		for (int i = 0; i < scoreList.Count; i++) {
@@ -58,8 +58,8 @@ public class Leaderboard : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		getScores ();
-		showScores ();
+		GetScores ();
+		ShowScores ();
     }
  }
 
