@@ -21,8 +21,8 @@ public class LevelManager : MonoBehaviour {
 	public float characterScaling = 1;
 	public float itemScaling = 1;
 
-	private bool isGreen; //WEDUNNIT
-	private float greenTime; //WEDUNNIT
+	private bool isGreen; //ADDITION BY WEDUNNIT
+	private float greenTime; //ADDITION BY WEDUNNIT
 
 
 	void Start() {
@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
-	public void OnScoreIncrease(){	//WEDUNNIT
+	public void OnScoreIncrease(){	//ADDITION BY WEDUNNIT
 		isGreen = true;
 		greenTime = 3;
 		scoreText.GetComponent<Text> ().color = new Color (0F, 1F, 0F);

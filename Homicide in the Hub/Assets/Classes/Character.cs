@@ -8,7 +8,7 @@ abstract public class Character {
 	private string characterID; //Holds The characters name (used for reference and comparisons)
 	private Sprite sprite; 		//Holds the image of the character
 	private string nickname;	//Assigns a nickname to the character.
-	public bool canBeQuestioned = true;	//ADDITION BY WEDUNNIT
+	private bool canBeQuestioned = true;	//ADDITION BY WEDUNNIT
 
 	//__Constructor__
 	protected Character(string characterID, Sprite sprite, string nickname) {
