@@ -10,15 +10,15 @@ public class NonPlayerCharacter : Character {
 	private VerbalClue verbalClue = null;
 	private GameObject prefab;
 	private List<string> weaknesses;
-	private string[] questioningResponses;
+	private List<string> questioningResponses;
 	// Use this for initialization
 
 	//__Constructor__
 	//Inherits characterID, sprite and nickname from the Character class. All passed variablkes are stored in this instance
-	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, string[] questioningResponces) :  base(characterID, sprite, nickname) {
+	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, List<string> questioningResponces) :  base(characterID, sprite, nickname) {
 		this.prefab = prefab;
 		this.weaknesses = weaknesses;
-		this.questioningResponses = questioningResponces;
+		questioningResponses = questioningResponces;
 	}
 
 	//__Methods__

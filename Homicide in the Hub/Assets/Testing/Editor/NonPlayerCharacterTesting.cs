@@ -13,7 +13,7 @@ public class NonPlayerCharacterTesting
     private GameObject prefab;
     private List<string> weaknesses = new List<string> {"test1","test2","test3"};
 
-    private string[] responses = new string[9] {
+    private List<string> responses = new List<string>() {
         "Don’t try and force me to tell you anything. I’ve got more money than you.",
         "Don’t patronise me you cretin. I’ve got more money than you.",
         "How dare you threaten me you lunatic, I’ve got more money than you.",

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6a9dfb0e565681141b5c24c8b9367255
-timeCreated: 1487197738
+timeCreated: 1487298890
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -111,7 +111,7 @@ MonoImporter:
       type: 2}
   - seaweedPrefab: {fileID: 1000011106891596, guid: f710963c6a0ca4f0381e4e1edda15f16,
       type: 2}
-  - sandwitchPrefab: {fileID: 1000011106891596, guid: 152c87890e9684a648007b90072d25f1,
+  - sandwichPrefab: {fileID: 1899476968088736, guid: 54666b5eec4d84c4ab4a7abaf4952ebc,
       type: 2}
   - pursePrefab: {fileID: 1000011106891596, guid: 8bbfd6323a0ad4945bcc5190d52d2419,
       type: 2}
