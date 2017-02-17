@@ -14,7 +14,7 @@ namespace Assets.Testing.Editor
             List<string> speechLines = new List<string>();
             JSONObject obj = new JSONObject(File.ReadAllText("testSpeech.JSON"));
             List<string> responses = new List<string>();
-            responses = SpeechHandler.accessData(obj, "TestCharacter").ToList();
+            responses = SpeechHandler.AccessData(obj, "TestCharacter").ToList();
             speechLines.Add("These are test lines");
             speechLines.Add("TEST");
 

@@ -203,45 +203,45 @@ public class GameMaster : MonoBehaviour {
 
 		    if (character == "Pirate")
 		    {
-		        pirateResponses = SpeechHandler.accessData(speechData, character).ToList().ToList();
+		        pirateResponses = SpeechHandler.AccessData(speechData, character).ToList().ToList();
 		        Debug.Log(pirateResponses[0]);
 		    }
 		    else if (character == "Mime")
 		    {
-		        mimeResponses = SpeechHandler.accessData(speechData, character).ToList().ToList();
+		        mimeResponses = SpeechHandler.AccessData(speechData, character).ToList().ToList();
 				Debug.Log("HERE!!!!!!!!!!!!!!!" + mimeResponses[0]);
 		    }
 		    else if (character == "Millionaire")
 		    {
-		        millionaireResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        millionaireResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Cowgirl")
 		    {
-		        cowgirlResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        cowgirlResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Roman")
 		    {
-		        romanResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        romanResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Wizard")
 		    {
-		        wizardResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        wizardResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Chubbie")
 		    {
-		        chubbieResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        chubbieResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "HeMan")
 		    {
-		        hemanResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        hemanResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Reginald")
 		    {
-		        reginaldResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        reginaldResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		    else if (character == "Scientist")
 		    {
-		        scientistResponses = SpeechHandler.accessData(speechData, character).ToList();
+		        scientistResponses = SpeechHandler.AccessData(speechData, character).ToList();
 		    }
 		}
 
