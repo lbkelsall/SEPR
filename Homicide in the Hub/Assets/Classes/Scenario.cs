@@ -18,6 +18,10 @@ public class Scenario
 	private List<VerbalClue> relevant_verbal_clues = new List<VerbalClue> ();
 	private MurderWeapon weapon;
 	private string motive;
+
+	/// <summary>
+	/// A convenience property to store the name of the murderer.
+	/// </summary>
 	private string murdererName; //ADDITION BY WEDUNNIT
 
 	private string[] motives = { "homewrecker", "loanshark", "promotion", "unfriended", "blackmail", "avenge_friend", "avenge_pet" };
