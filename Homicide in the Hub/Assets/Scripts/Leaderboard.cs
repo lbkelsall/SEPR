@@ -9,7 +9,13 @@ using System.Linq;
 public class Leaderboard : MonoBehaviour
 {
 	//CLASS ADDITION BY WEDUNNIT
+	/// <summary>
+	/// The text object that displays the scores of the leaderboard.
+	/// </summary>
     public Text scoreGUI;	//dragged in unity editor
+	/// <summary>
+	/// The text object that displays the names of the players on the leaderboard.
+	/// </summary>
     public Text nameGUI;
 
 	private List<KeyValuePair<string,int>> scoreList = new List<KeyValuePair<string,int>>();	//List of pairs
@@ -28,8 +34,8 @@ public class Leaderboard : MonoBehaviour
 				name = sr.ReadLine();
 				score = int.Parse(sr.ReadLine());
 				scorePair = new KeyValuePair<string,int> (name, score);
-				print (scorePair.Key);
-				print (scorePair.Value);
+				//print (scorePair.Key);
+				//print (scorePair.Value);
 				scoreList.Add (scorePair);
 			}
 			sr.Close();

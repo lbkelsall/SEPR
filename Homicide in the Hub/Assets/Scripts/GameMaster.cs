@@ -417,7 +417,7 @@ public class GameMaster : MonoBehaviour {
 	/// </summary>
 	/// <param name="penalty">Penalty.</param>
 	public void Penalise (float penalty){	//ADDITION BY WEDUNNIT
-		Debug.Assert(penalty > 0, "Penalise called with penalty less than 0");
+		Debug.Assert(penalty >= 0, "Penalise called with penalty less than 0");
 		gameScore -= penalty;
 	}
 
@@ -426,7 +426,7 @@ public class GameMaster : MonoBehaviour {
 	/// </summary>
 	/// <param name="bonus">The amount the score should be incresaed by.</param>
 	public void GainScore(float bonus){		//ADDITION BY WEDUNNIT
-		Debug.Assert (bonus > 0, "gainScore called with bonus less than 0");
+		Debug.Assert (bonus >= 0, "gainScore called with bonus less than 0");
 		gameScore += bonus;
 		LevelManager ActiveManager = FindObjectOfType<LevelManager>();
 		ActiveManager.OnScoreIncrease();

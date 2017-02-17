@@ -1354,7 +1354,7 @@ Prefab:
     - target: {fileID: 224005833937266214, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: 224771950393718162, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
         type: 2}
@@ -1364,7 +1364,17 @@ Prefab:
     - target: {fileID: 224771950393718162, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -956
+      objectReference: {fileID: 0}
+    - target: {fileID: 114032760810784334, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1339755210}
+    - target: {fileID: 114032760810784334, guid: 56e6135bb19c26d4ab4599c0dcf29df6,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56e6135bb19c26d4ab4599c0dcf29df6, type: 2}
