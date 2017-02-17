@@ -8,6 +8,9 @@ abstract public class Character {
 	private string characterID; //Holds The characters name (used for reference and comparisons)
 	private Sprite sprite; 		//Holds the image of the character
 	private string nickname;	//Assigns a nickname to the character.
+	/// <summary>
+	/// A boolean state of whether the character can be questioned or not.
+	/// </summary>
 	private bool canBeQuestioned = true;	//ADDITION BY WEDUNNIT
 
 	//__Constructor__

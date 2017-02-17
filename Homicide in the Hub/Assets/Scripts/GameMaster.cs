@@ -166,8 +166,10 @@ public class GameMaster : MonoBehaviour {
 	private List<Item> relevant_items;
 	private List<VerbalClue> relevant_verbal_clues;
 
-	private float gameScore;
-	//ADDITION BY WEDUNNIT
+	/// <summary>
+	/// The score of the player in the current game.
+	/// </summary>
+	private float gameScore;	//ADDITION BY WEDUNNIT
 
 	//Sets as a Singleton
 	void Awake() {  //Makes this a singleton class on awake
@@ -178,10 +180,13 @@ public class GameMaster : MonoBehaviour {
 		}
 		DontDestroyOnLoad(gameObject); //Set this to not be destroyed when reloading scene
 	}
-
-	void Update() {		//ADDITION BY WEDUNNIT
-		if(gameScore > 0) {
-			Penalise(Time.deltaTime);
+		
+	/// <summary>
+	/// Update is a Unity function that runs every frame; this uses it to decrease score by the time between frames.
+	/// </summary>
+	void Update(){		//ADDITION BY WEDUNNIT
+		if (gameScore > 0) {
+			Penalise (Time.deltaTime);
 		} else {
 			gameScore = 0;
 		}
@@ -405,20 +410,33 @@ public class GameMaster : MonoBehaviour {
 
 		gameScore = 1000;	//ADDITION BY WEDUNNIT
 	}
-
-	public void Penalise(float penalty) {	//ADDITION BY WEDUNNIT
+		
+	/// <summary>
+	/// Decreases the player's score by the given amount.
+	/// Raises error if penalty is less than 0.
+	/// </summary>
+	/// <param name="penalty">Penalty.</param>
+	public void Penalise (float penalty){	//ADDITION BY WEDUNNIT
 		Debug.Assert(penalty > 0, "Penalise called with penalty less than 0");
 		gameScore -= penalty;
 	}
 
-	public void GainScore(float bonus) {		//ADDITION BY WEDUNNIT
-		Debug.Assert(bonus > 0, "gainScore called with bonus less than 0");
+	/// <summary>
+	/// Increases score by bonus, raises error if bonus less than 0, also turns score green.
+	/// </summary>
+	/// <param name="bonus">The amount the score should be incresaed by.</param>
+	public void GainScore(float bonus){		//ADDITION BY WEDUNNIT
+		Debug.Assert (bonus > 0, "gainScore called with bonus less than 0");
 		gameScore += bonus;
 		LevelManager ActiveManager = FindObjectOfType<LevelManager>();
 		ActiveManager.OnScoreIncrease();
 	}
-
-	public int GetScore() {	//ADDITION BY WEDUNNIT
+		
+	/// <summary>
+	/// Returns the score of the player, as an int.
+	/// </summary>
+	/// <returns>The score of the player.</returns>
+	public int GetScore (){	//ADDITION BY WEDUNNIT
 		int intScore = (int)gameScore;
 		return intScore;
 	}
