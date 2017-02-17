@@ -88,17 +88,6 @@
 			"By the power of Greyskull, I am inspired but I cannot help you.",
 			"Greyskull does not support your actions. Find more clues, and by the power of Greyskull you will find the blasted murderer!"
 		]},
-{"Scientist": ["You fool! I know nothing of the sort!",
-			"Don't look down on me young man, you know nothing!",
-			"Don't try to intimidate me, my knowledge far surpasses yours!",
-			"While I would like to help you, what you seek far surpasses my knowledge.",
-			"Not only can I not help you, but your jokes are unsophisticated and dull!",
-			"Don't rush me, young man! You can't rush science!",
-			"Your thirst for knowledge is appreciated, however I am in no position to aid you.",
-			"You fool! Science has no room for your pathetic 'emotions'!",
-			"...May I inquire as to what the point of that was?",
-			"May I suggest following the scientific method? That is to say, collect more evidence to support your hypothesis."	
-		]},
 {"Reginald": ["Quack! (Good sir, I will inform you that I have no information to provide to you!)",
 			"Quack! (Good sir, I will inform you that I will not be talked to in this manner!)",
 			"Quack! (Good sir, I will inform you that I will not tolerate such brash behaviour!)",
@@ -110,6 +99,18 @@
 			"Quack! (Good sir, I will inform you that I cannot aide you in your investigation!)",
 			"QUACK! (Dear sir, ask me about anything new you find, but I do not appreciate your reckless accusations."
 		]
-	}
+	},
+		{"Scientist": ["You fool! I know nothing of the sort!",
+			"Don't look down on me young man, you know nothing!",
+			"Don't try to intimidate me, my knowledge far surpasses yours!",
+			"While I would like to help you, what you seek far surpasses my knowledge.",
+			"Not only can I not help you, but your jokes are unsophisticated and dull!",
+			"Don't rush me, young man! You can't rush science!",
+			"Your thirst for knowledge is appreciated, however I am in no position to aid you.",
+			"You fool! Science has no room for your pathetic 'emotions'!",
+			"...May I inquire as to what the point of that was?",
+			"May I suggest following the scientific method? That is to say, collect more evidence to support your hypothesis."	
+		]}
+
 }
 
