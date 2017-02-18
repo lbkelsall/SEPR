@@ -160,8 +160,7 @@ MonoBehaviour:
     type: 2}
   seaweedPrefab: {fileID: 1000011106891596, guid: f710963c6a0ca4f0381e4e1edda15f16,
     type: 2}
-  sandwitchPrefab: {fileID: 1000011106891596, guid: 152c87890e9684a648007b90072d25f1,
-    type: 2}
+  sandwichPrefab: {fileID: 0}
   pursePrefab: {fileID: 1000011106891596, guid: 8bbfd6323a0ad4945bcc5190d52d2419,
     type: 2}
   plungerPrefab: {fileID: 1000011106891596, guid: 66643ed4092044b6d9c29d673a137533,
@@ -176,3 +175,4 @@ MonoBehaviour:
     type: 2}
   dumbbellPrefab: {fileID: 1000011402005894, guid: 0e1531a66144b4686ac040774fb333ed,
     type: 2}
+  speechFile: {fileID: 4900000, guid: 93cd3471920a5564c97bdb63a07e9cd8, type: 3}

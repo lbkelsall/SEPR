@@ -166,6 +166,9 @@ public class GameMaster : MonoBehaviour {
 	private List<Item> relevant_items;
 	private List<VerbalClue> relevant_verbal_clues;
 
+	public TextAsset speechFile;
+	private JSONObject speechData;
+
 	/// <summary>
 	/// The score of the player in the current game.
 	/// </summary>
@@ -192,11 +195,10 @@ public class GameMaster : MonoBehaviour {
 		}
 	}
 
-	JSONObject speechData = new JSONObject(File.ReadAllText("speech.JSON"));
-
 	void Start() {
 		//Initialises Variables
-		//Responce Arrays
+		//Response Arrays
+		speechData = new JSONObject(speechFile.text);
 		Debug.Log("Accessing JSON: ");
 		foreach(var character in speechData.keys)
 		{

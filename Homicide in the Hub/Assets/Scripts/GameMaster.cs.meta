@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6a9dfb0e565681141b5c24c8b9367255
-timeCreated: 1487298890
+timeCreated: 1487430008
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -127,6 +127,7 @@ MonoImporter:
       type: 2}
   - dumbbellPrefab: {fileID: 1000011402005894, guid: 0e1531a66144b4686ac040774fb333ed,
       type: 2}
+  - speechFile: {fileID: 4900000, guid: 93cd3471920a5564c97bdb63a07e9cd8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
