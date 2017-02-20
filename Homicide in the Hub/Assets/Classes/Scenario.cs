@@ -19,6 +19,11 @@ public class Scenario
 	private MurderWeapon weapon;
 	private string motive;
 
+	/// <summary>
+	/// A convenience property to store the name of the murderer.
+	/// </summary>
+	private string murdererName; //ADDITION BY WEDUNNIT
+
 	private string[] motives = { "homewrecker", "loanshark", "promotion", "unfriended", "blackmail", "avenge_friend", "avenge_pet" };
 
 	// Constructor for Scenario
@@ -51,19 +56,25 @@ public class Scenario
 		murderer.SetAsMurderer ();
 		return murderer;
 	}
+	/// <summary>
+	/// Returns List of all Non murderer NPCs' nicknames
+	/// </summary>
+	private string getRandomNonMurderingNPCName(string murdererName){ //ADDITION BY WEDUNNIT
+		List<string> nonMurderingNPCNames = new List<string> ();
+		foreach (Character NPC in npcs) {
+			if(NPC.getNickname() != murdererName){
+				nonMurderingNPCNames.Add (NPC.getNickname());
+			}
+		}
 
-	// given a murderer, weapon and motive, creates a VerbalClue[] containing 6 relevant verbal clues
-	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) {
+		return nonMurderingNPCNames [Random.Range (0, nonMurderingNPCNames.Count)];
+	}
 
-		string murderer_name = murderer.getNickname ();
-		string weapon_name = weapon.getID ();
 
-		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw "+murderer_name+" trying to " +
-			"dispose of a "+weapon_name+".");
-
-		string old_friends_description = "The victim and "+murderer_name+" fell out ";
-		string motive_clause = ".";
-		if (motive == "homewrecker") {
+	private string getMotiveClause(string motive){ //REFACTORED BY WEDUNNIT
+		string motiveClause = ".";
+		switch (motive) {
+		case "homewrecker":
 			string partner_gender;
 			int binary = Random.Range (0, 1);
 			if (binary == 0) {
@@ -71,26 +82,24 @@ public class Scenario
 			} else {
 				partner_gender = "husband";
 			}
-			motive_clause = "because the victim slept with their "+partner_gender+".";  
-		}
-		if (motive == "loanshark") {
-			motive_clause = "because "+murderer_name+" was in debt to the victim."; 
-		}
-		if (motive == "promotion") {
-			motive_clause = "because they were in competition professionally.";
-		}
-		if (motive == "unfriended") {
-			motive_clause = "because the victim unfriended "+murderer_name+" on Facebook.";
-		}
-		if (motive == "blackmail") {
-			motive_clause = "because the victim knew "+murderer_name+"'s darkest secret.";
-		}
-
-		if (motive == "avenge_friend") {
-			old_friends_description = "";
-			motive_clause = murderer_name+" holds the victim responsible for a friend's death."; 
-		}
-		if (motive == "avenge_pet") {
+			motiveClause = "because the victim slept with one of their " + partner_gender + "s.";  //UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "loanshark":
+			motiveClause = "because the victim was a bit of a loanshark..."; 	//UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "promotion":
+			motiveClause = "because they were in competition professionally. The victim got the promotion...";	//UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "unfriended":
+			motiveClause = "because of scome shenanigans on Facebook.";	//UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "blackmail":
+			motiveClause = "because the victim was a stalker, and knew their darkest secrets.";	//UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "avenge_friend":
+			motiveClause = "because I think there was something to do with a friend's death."; 	//UPDATED BY WEDUNNIT
+			return motiveClause;
+		case "avenge_pet":
 			string species;
 			int rand = Random.Range (0, 4);
 			if (rand == 0) {
@@ -102,10 +111,10 @@ public class Scenario
 			} else if (rand == 3) {
 				species = "goldfish";
 			} else {
-				species = "rattlesnake";
+				species = "fox";
 			}
 			string cause_of_death;
-			rand = Random.Range (0,4);
+			rand = Random.Range (0, 7);
 			if (rand == 0) {
 				cause_of_death = "starvation";
 			} else if (rand == 1) {
@@ -114,60 +123,41 @@ public class Scenario
 				cause_of_death = "a broken heart";
 			} else if (rand == 3) {
 				cause_of_death = "boredom";
+			} else if (rand == 4) {
+				cause_of_death = "injuries sustained in the Hub"; 	//ADDITION BY WEDUNNIT
+			} else if (rand == 5) {
+				cause_of_death = "unspecified injuries";			//ADDITION BY WEDUNNIT
+			} else if (rand == 6) {
+				cause_of_death = "death";							//ADDITION BY WEDUNNIT		
 			} else {
 				cause_of_death = "electrocution";
 			}
-			old_friends_description = "";
-			motive_clause = "The victim was looking after "+murderer_name+"'s "+species+" when it " +
-				"died of "+cause_of_death+".";  
+			motiveClause = " because the victim was looking after either " + getRandomNonMurderingNPCName (murdererName) + " or " + murdererName + "'s " + species + " when it " +
+			"died of " + cause_of_death + ", I can't remember.";  
+			return motiveClause;
+		default:
+			throw new System.ArgumentOutOfRangeException ("No match for motive");
 		}
-		old_friends_description += motive_clause;
-		VerbalClue old_friends = new VerbalClue ("Old Friends", old_friends_description);
+	}
 
-		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant " +
-			"history with "+murderer_name+".");
+	// given a murderer, weapon and motive, creates a VerbalClue[] containing 6 relevant verbal clues
+	public void CreateVerbalClues(string motive, MurderWeapon weapon, NonPlayerCharacter murderer) { //UPDATED BY WEDUNNIT
 
-		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim alone with "+murderer_name+" just a few " +
-			"minutes before their body was discovered.");
+		murdererName = murderer.getNickname (); //UPDATED BY WEDUNNIT
+		string weapon_name = weapon.getID ();
 
-		string altercation_description = murderer_name+"and the victim had an altercation about ";
-		motive_clause = ".";
-		if (motive == "homewrecker") {
-			string partner_gender;
-			int binary = Random.Range (0, 1);
-			if (binary == 0) {
-				partner_gender = "wife";
-			} else {
-				partner_gender = "husband";
-			}
-			motive_clause = "the victim sleeping with their "+partner_gender+".";  
-		}
-		if (motive == "loanshark") {
-			motive_clause = murderer_name+" being in debt to the victim."; 
-		}
-		if (motive == "promotion") {
-			motive_clause = "them being in competition professionally.";
-		}
-		if (motive == "unfriended") {
-			motive_clause = "the victim unfriending them on Facebook.";
-		}
-		if (motive == "blackmail") {
-			motive_clause = "the victim having found out their darkest secret.";
-		}
-		if (motive == "avenge_friend") {
-			
-			motive_clause = "the death of a mutual friend."; 
-		}
-		if (motive == "avenge_pet") {
-			motive_clause = murderer_name + "'s pet having died."; 
-		}
+		VerbalClue disposing_of_weapon = new VerbalClue ("Disposing of a Weapon", "I saw "+murdererName+" trying to " +
+			"dispose of a "+weapon_name+". Or was it "+ getRandomNonMurderingNPCName (murdererName)+"? I can't remember."); //UPDATED BY WEDUNNIT
 
-		VerbalClue altercation = new VerbalClue ("An Altercation", altercation_description);
+		VerbalClue old_friends = new VerbalClue ("Old Friends", "The victim fell out with with " + getRandomNonMurderingNPCName (murdererName) + " and "+murdererName+" a long time ago "+ getMotiveClause(motive)); //UPDATED BY WEDUNNIT
 
-		int random = Random.Range (0, npcs.Count ());
-		string character_name = npcs [random].getCharacterID ();
-		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murderer_name+" told me they last saw the " +
-			"victim before 8pm, but told "+character_name+" they spoke to the victim after 9pm.");
+		VerbalClue old_enemies = new VerbalClue ("Old Enemies", "Rumour is that the victim had an unpleasant past with "+murdererName+"."); //UPDATED BY WEDUNNIT
+
+		VerbalClue last_seen_with = new VerbalClue ("Last Seen With", "I saw the victim talking with "+getRandomNonMurderingNPCName(murdererName)+" and " +murdererName+" just a few minutes before their body was discovered."); //UPDATED BY WEDUNNIT
+
+		VerbalClue altercation = new VerbalClue ("An Altercation", "There once was an altercation between" + getRandomNonMurderingNPCName (murdererName) + " and "+murdererName+", " + getMotiveClause(motive)); //UPDATED BY WEDUNNIT
+
+		VerbalClue changed_story = new VerbalClue ("Stories Have Changed", murdererName+ " told me they last saw the victim before 8pm, but told "+getRandomNonMurderingNPCName(murdererName)+" that they didnt speak to the victim at all..."); //UPDATE BY WEDUNNIT
 
 		verbal_clues = new VerbalClue[6] {
 			old_friends,
@@ -186,52 +176,57 @@ public class Scenario
 		item_clue_pool.Add (weapon);
 		relevant_item_clues.Add (weapon);
 
-		int pick_motive_clue = Random.Range (0, 1); // 'old friends' or 'altercation'
-		if (motive == "homewrecker") {
-			relevant_item_clues.Add (item_clues [pick_motive_clue]);
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "loanshark") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "promotion") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "unfriended") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "blackmail") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "avenge_friend") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		} else if (motive == "avenge_pet") {
-			verbal_clue_pool.Add (verbal_clues [pick_motive_clue]);
-			relevant_verbal_clues.Add (verbal_clues [pick_motive_clue]);
-		}
+		int verbalClueWithMotive = Random.Range (0, 2); // UPDATED BY WEDUNNIT either 'old friends' or 'altercation' for the first verbal clue
+		verbal_clue_pool.Add (verbal_clues [verbalClueWithMotive]);			//ADDITION BY WEDUNNIT
+		relevant_verbal_clues.Add (verbal_clues [verbalClueWithMotive]);	//ADDITION BY WEDUNNIT
 
-		int pick_weapon_clue = Random.Range (2, 5);
-		verbal_clue_pool.Add (verbal_clues [pick_weapon_clue ]);
-		relevant_verbal_clues.Add (verbal_clues [pick_weapon_clue ]);
+		int verbalClueWithWeapon = Random.Range (2, 6); // UPDATED BY WEDUNNIT any of the remaining verbal clues for the second verbal clue
+		verbal_clue_pool.Add (verbal_clues [verbalClueWithWeapon ]);
+		relevant_verbal_clues.Add (verbal_clues [verbalClueWithWeapon ]);
 
-		if (murderer.getCharacterID() == "Captain Bluebottle") {
+		switch (murdererName) {	//REFACTORED BY WEDUNNIT
+		case "Salty Seadog":
 			item_clue_pool.Add (item_clues [4]); // shattered glass
 			relevant_item_clues.Add (item_clues [4]);
-		} else if (murderer.getCharacterID() == "The Mime Twins") {
+			break;
+		case "mimes":
 			item_clue_pool.Add (item_clues [0]); // beret
 			relevant_item_clues.Add (item_clues [0]);
-		} else if (murderer.getCharacterID() == "Sir Worchester") {
+			break;
+		case "Money Bags":
 			item_clue_pool.Add (item_clues [2]); // gloves
 			relevant_item_clues.Add (item_clues [2]);
-		} else if (murderer.getCharacterID() == "Jesse Ranger") {
+			break;
+		case "Outlaw":
 			item_clue_pool.Add (item_clues [8]); // tripwire
 			relevant_item_clues.Add (item_clues [8]);
-		} else if (murderer.getCharacterID() == "Celcius Maximus") {
+			break;
+		case "Legionnaire":
 			item_clue_pool.Add (item_clues [3]); // wine
 			relevant_item_clues.Add (item_clues [3]);
-		} else if (murderer.getCharacterID() == "Randolf the Deep Purple") {
+			break;
+		case "Dodgy Dealer":
 			item_clue_pool.Add (item_clues [7]); // spellbook
 			relevant_item_clues.Add (item_clues [7]);
+			break;
+		case "Superhero":
+			item_clue_pool.Add (item_clues [19]); 		//Dumbbells 	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [19]); 	//ADDITION BY WEDUNNIT
+			break;
+		case "Mad scientist":
+			item_clue_pool.Add (item_clues [18]); 		// glasses	//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [18]);	//ADDITION BY WEDUNNIT
+			break;
+		case "Telechubbie":
+			item_clue_pool.Add (item_clues [15]); 	//purse			//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [15]);	//ADDITION BY WEDUNNIT
+			break;
+		case "Reginald M IV":
+			item_clue_pool.Add (item_clues [17]); 	//monocle			//ADDITION BY WEDUNNIT
+			relevant_item_clues.Add (item_clues [17]);		//ADDITION BY WEDUNNIT
+			break;
+		default:
+			throw new System.ArgumentException (murdererName + " does not have any clues associated with them.");
 		}
 
 		// add the 4 irrelevant verbal clues
@@ -258,8 +253,7 @@ public class Scenario
 
 
 		// create and then choose one of two irrelevant verbal clues
-		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police think the victim was killed " +
-		                            "using a " + red_herring_weapon + ", but they can’t find evidence of one.");
+		VerbalClue police_failure = new VerbalClue ("Lack of Evidence", "The police think the victim was killed using a " + red_herring_weapon + ", but they can’t find evidence of one.");
 
 		VerbalClue shifty_looking = new VerbalClue ("Looking Shifty", "I think I saw "+red_herring_character+" acting suspiciously.");
 

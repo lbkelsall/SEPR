@@ -10,11 +10,6 @@ public class Inventory{
 	//Define the inventory as a list items
 	private List<Item> inventory = new List<Item> ();
 
-	//__Constructor__
-	public Inventory (){
-	}
-
-
 	//__Operations__
 	//Adds the argument item to the inventory
 	public void AddItemToInventory(Item item){
@@ -24,16 +19,16 @@ public class Inventory{
 
 	//Mainly used when starting a new game
 	public void Reset(){
-		this.inventory.Clear ();
+		 inventory.Clear ();
 	}
 
 	//Accessors
-	public int GetListLength(){
-		return this.inventory.Count;
+	public int GetSize(){	//UPDATED BY WEDUNNIT
+		return inventory.Count;
 	}
 
 	public List<Item> GetInventory(){
-		return this.inventory;
+		return inventory;
 	}
 
 }

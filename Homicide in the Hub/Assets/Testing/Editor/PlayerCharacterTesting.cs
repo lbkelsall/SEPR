@@ -1,16 +1,21 @@
-﻿using UnityEngine;
-using UnityEditor;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 public class PlayerCharacterTesting {
 
-	[Test]
+    private string[] questioningStyles = {"style1","style2","style3"};
+    private string questioningStyle = "My Questioning Style";
+    private string description = "My Description";
+    private PlayerCharacter player;
+
+    [TestFixtureSetUp]
+    public void TestSetup()
+    {
+        player = new PlayerCharacter(null,null, null,questioningStyle,questioningStyles,description);
+    }
+
+    [Test]
 	public void GetQuestioningStylesTest()
 	{
-		//Arrange
-		string[] questioningStyles = {"style1","style2","style3"};
-		var player = new PlayerCharacter(null,null, null,null,questioningStyles,null);
-
 		//Assert
 		//The object has a new name
 		Assert.AreSame(questioningStyles, player.GetQuestioningStyles ());
@@ -19,10 +24,6 @@ public class PlayerCharacterTesting {
 	[Test]
 	public void GetOverallQuestioningStyleTest()
 	{
-		//Arrange
-		var questioningStyle = "My Questioning Style";
-		var player = new PlayerCharacter(null,null, null,questioningStyle,null,null);
-
 		//Assert
 		//The object has a new name
 		Assert.AreSame(questioningStyle, player.GetOverallQuestioningStyle ());
@@ -31,10 +32,6 @@ public class PlayerCharacterTesting {
 	[Test]
 	public void GetDescriptionTest()
 	{
-		//Arrange
-		var description = "My Description";
-		var player = new PlayerCharacter(null,null, null,null,null,description);
-
 		//Assert
 		//The object has a new name
 		Assert.AreSame(description, player.GetDescription ());

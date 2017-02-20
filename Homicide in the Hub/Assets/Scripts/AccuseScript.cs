@@ -23,7 +23,7 @@ public class AccuseScript : MonoBehaviour {
 	public void Start() {
 		character = InterrogationScript.instance.GetInterrogationCharacter();
 		NotebookManager.instance.UpdateNotebook ();
-		notebookMenu = GameObject.Find("Notebook Canvas").transform.GetChild(0).gameObject;
+		notebookMenu = GameObject.Find("NotebookCanvas").transform.GetChild(0).gameObject;
 		notebookMenu.SetActive (true);
 		Button backButton = GameObject.FindGameObjectWithTag ("Back").GetComponent<Button>();
 		Button submitButton = GameObject.FindGameObjectWithTag ("Submit").GetComponent<Button>();
@@ -82,11 +82,12 @@ public class AccuseScript : MonoBehaviour {
 			notebookMenu.SetActive (false);
 			SceneManager.LoadScene ("Win Screen");
 		} else {
-			//If not display accusation failed message
+			//If not display accusation failed message, block character and penalise score
 			notebookMenu.SetActive (false);
 			verbal.SetActive (true);
 			verbalText.text = "You don't have enough evidence to accuse me of murder!";
-
+			GameMaster.instance.Penalise (200); //ADDITION BY WEDUNNIT
+			if(NotebookManager.instance.inventory.GetSize() < 9 ) character.BlockCharacterQuestioning(); //ADDITION BY WEDUNNIT //Only block if there are still clues to find, or the player might get stucku
 		}
 	}
 

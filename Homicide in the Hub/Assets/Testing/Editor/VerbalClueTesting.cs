@@ -2,18 +2,23 @@
 using UnityEditor;
 using NUnit.Framework;
 
-public class VerbalClueTesting {
+public class VerbalClueTesting
+{
+
+    private VerbalClue verbalClue;
+    private NonPlayerCharacter owner;
+
+    [TestFixtureSetUp]
+    public void TestSetup()
+    {
+        verbalClue = new VerbalClue(null,null);
+        owner = new NonPlayerCharacter (null,null,null,null,null,null);
+        verbalClue.SetOwner (owner);
+    }
 
 	[Test]
 	public void SetOwnerTest()
 	{
-		//Arrange
-		var verbalClue = new VerbalClue(null,null);
-		var owner = new NonPlayerCharacter (null,null,null,null,null,null);
-
-		//Act
-		verbalClue.SetOwner (owner);
-	
 		//Assert
 		Assert.AreSame(verbalClue.GetOwner (), owner);
 	}
@@ -21,10 +26,6 @@ public class VerbalClueTesting {
 	[Test]
 	public void GetOwnerTest()
 	{
-		//Arrange
-		var verbalClue = new VerbalClue(null,null);
-		var owner = new NonPlayerCharacter (null,null,null,null,null,null);
-		verbalClue.SetOwner (owner);
 		//Act
 		//Try to rename the GameObject
 		var fetchedOwner = verbalClue.GetOwner ();

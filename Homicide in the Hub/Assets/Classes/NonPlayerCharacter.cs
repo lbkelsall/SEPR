@@ -10,25 +10,25 @@ public class NonPlayerCharacter : Character {
 	private VerbalClue verbalClue = null;
 	private GameObject prefab;
 	private List<string> weaknesses;
-	private string[] questioningResponses;
+	private List<string> questioningResponses;
 	// Use this for initialization
 
 	//__Constructor__
 	//Inherits characterID, sprite and nickname from the Character class. All passed variablkes are stored in this instance
-	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, string[] questioningResponces) :  base(characterID, sprite, nickname) {
+	public NonPlayerCharacter (string characterID, Sprite sprite, string nickname, GameObject prefab, List<string> weaknesses, List<string> questioningResponces1) :  base(characterID, sprite, nickname) {
 		this.prefab = prefab;
 		this.weaknesses = weaknesses;
-		this.questioningResponses = questioningResponces;
+		questioningResponses = questioningResponces1;
 	}
 
 	//__Methods__
 	public bool IsMurderer(){
-		return this.isMurderer;
+		return isMurderer;
 	}
 
 	//Setters
 	public void SetAsMurderer(){
-		this.isMurderer = true;
+		isMurderer = true;
 	}
 
 	public void setVerbalClue (VerbalClue clue) {
@@ -58,6 +58,15 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [1];
 		case ("Intimidating"):
 			return questioningResponses [2];
+		case ("ForcefulButBlocked"):
+			return questioningResponses [9];
+		case ("CondescendingButBlocked"):
+			return questioningResponses [9];
+		case ("IntimidatingButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
+
 		//Johnny Chase Questioning Styles
 		case ("Coaxing"):
 			return questioningResponses [3];
@@ -65,6 +74,14 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [4];
 		case ("Rushed"):
 			return questioningResponses [5];
+		case ("CoaxingButBlocked"):
+			return questioningResponses [9];
+		case ("WisecrackingButBlocked"):
+			return questioningResponses [9];
+		case ("RushedButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
 		//Adam Founder Questioning Styles
 		case ("Inquisitive"):
 			return questioningResponses [6];
@@ -72,6 +89,14 @@ public class NonPlayerCharacter : Character {
 			return questioningResponses [7];
 		case ("Inspiring"):
 			return questioningResponses [8];
+		case ("InquisitiveButBlocked"):
+			return questioningResponses [9];
+		case ("KindButBlocked"):
+			return questioningResponses [9];
+		case ("InspiringButBlocked"):
+			return questioningResponses [9];
+		//TODO: ADD MORE RESPONSES FOR EACH QUESTION TYPE
+
 		default: 
 			return "..."; //Used if null
 
